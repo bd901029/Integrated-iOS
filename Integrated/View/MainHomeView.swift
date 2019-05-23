@@ -1,0 +1,108 @@
+//
+//  MainHomeView.swift
+//  Integrated
+//
+//  Created by developer on 2019/5/22.
+//  Copyright © 2019 developer. All rights reserved.
+//
+
+import UIKit
+
+class MainHomeView: UIView {
+	
+	@IBOutlet weak var calorieChartContainer: UIView!
+	var calorieChart: CircleProgress!
+	@IBOutlet weak var calorieConsumedView: UILabel!
+	@IBOutlet weak var calorieGoalView: UILabel!
+	
+	@IBOutlet weak var tableView: UITableView!
+	var blogs = [Blog]()
+	
+	static func create() -> MainHomeView! {
+		let view = UINib(nibName: "MainHomeView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! MainHomeView
+		return view
+	}
+
+	override func awakeFromNib() {
+		super.awakeFromNib()
+		
+		self.initUI()
+	}
+	
+	func initUI() {
+		self.calorieChart = CircleProgress(rectframe: calorieChartContainer.bounds, type: CircleProgressType.Closed)
+		self.calorieChart.backgroundColor = UIColor.clear
+		self.calorieChart.fillColor = UIColor(red: 16/255, green: 119/255, blue: 234/255, alpha: 1.0)
+		self.calorieChart.strokeColor = UIColor(red:16/255, green: 119/255, blue: 234/255, alpha: 1.0)
+		self.calorieChart.radiusPercent = 0.45
+		self.calorieChartContainer.addSubview(self.calorieChart)
+		self.calorieChart.loadIndicator()
+		
+		self.tableView.register(UINib(nibName: "BlogCell", bundle: nil), forCellReuseIdentifier: "BlogCell") 
+		self.tableView.dataSource = self
+		self.tableView.delegate = self
+		
+		updateUI()
+	}
+	
+	func updateUI() {
+		let dietaries = DietaryManager.sharedInstance.dietariesByDate(Date())
+		var calorieConsumed: Float = 0
+		for dietary in dietaries {
+			calorieConsumed += dietary.caloriesInKCal() * Float(dietary.count)
+		}
+		calorieConsumedView.text = "\(Int(calorieConsumed))"
+		
+		let calorieGoal = User.sharedInstance.isOverride() ? User.sharedInstance.customGoal() : User.sharedInstance.calorieGoal()
+		self.calorieGoalView.text = "\(Int(calorieGoal))"
+		
+		let calorieProgress: Float = calorieConsumed / calorieGoal * 100.0 + 0.5;
+		if (calorieProgress < NutrientCalculator.MAX_PERCENT) {
+			self.calorieChart.strokeColor = UIColor.notFull()
+			self.calorieChart.updateWithTotalBytes(bytes: 100.0, downloadedBytes: CGFloat(calorieProgress))
+		} else {
+			self.calorieChart.strokeColor = UIColor.full()
+			self.calorieChart.updateWithTotalBytes(bytes: CGFloat(calorieProgress), downloadedBytes: CGFloat(calorieProgress))
+		}		
+		
+		self.blogs = BlogManager.sharedInstance.blogs
+		self.tableView.reloadData()
+	}
+}
+
+extension MainHomeView: UITableViewDelegate, UITableViewDataSource {
+	func numberOfSections(in tableView: UITableView) -> Int {
+		return 1
+	}
+	
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return self.blogs.count
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cellIdentifier = "BlogCell"
+		let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! BlogCell
+		cell.blog = self.blogs[indexPath.row]
+		return cell
+	}
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let storyboard = UIStoryboard(name: "Main", bundle: nil)
+		let blogDetailVC = storyboard.instantiateViewController(withIdentifier: "BlogDetailVC") as! BlogDetailVC
+		blogDetailVC.blog = self.blogs[indexPath.row]
+		self.parentViewController?.present(blogDetailVC, animated: true, completion: nil)
+	}
+}
+
+extension UIView {
+	var parentViewController: UIViewController? {
+		var parentResponder: UIResponder? = self
+		while parentResponder != nil {
+			parentResponder = parentResponder!.next
+			if let viewController = parentResponder as? UIViewController {
+				return viewController
+			}
+		}
+		return nil
+	}
+}
