@@ -17,8 +17,8 @@ class State: PFObject, PFSubclassing {
 	@NSManaged var userId: String
 	@NSManaged var type: String
 	@NSManaged var name: String
-	@NSManaged var minValue: Int
-	@NSManaged var maxValue: Int
+	@NSManaged var minValue: Float
+	@NSManaged var maxValue: Float
 	
 	class Key {
 		static let UserId = "userId"
@@ -91,7 +91,7 @@ class State: PFObject, PFSubclassing {
 			return UIColor.rgb(51, 51, 204)
 		}
 		
-		return UIColor.random()
+		return UIColor.random
 	}
 	
 	public func isCustom() -> Bool {
@@ -110,8 +110,12 @@ class State: PFObject, PFSubclassing {
 		self.name = name
 	}
 	
+	public func value() -> Int {
+		return Int(self.minValue)
+	}
+	
 	public func valueInLBS() -> Int {
-		return Int(UnitHelper.lbsFromKG(Float(self.minValue)))
+		return Int(UnitHelper.lbsFromKG(self.minValue))
 	}
 	
 	public func setValue(_ value: Int) {
@@ -120,11 +124,11 @@ class State: PFObject, PFSubclassing {
 	}
 	
 	public func setMinValue(_ value: Int) {
-		self.minValue = Int(value)
+		self.minValue = Float(value)
 	}
 	
 	public func setMaxValue(_ value: Int) {
-		self.maxValue = Int(value)
+		self.maxValue = Float(value)
 	}
 	
 	public func date() -> Date {

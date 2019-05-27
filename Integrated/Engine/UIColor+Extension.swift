@@ -28,11 +28,11 @@ extension UIColor {
 		)
 	}
 	
-	static func random() -> UIColor {
-		let red = Int.random(in: 0 ..< 256)
-		let green = Int.random(in: 0 ..< 256)
-		let blue = Int.random(in: 0 ..< 256)
-		return UIColor.rgb(red, green, blue)
+	public static var random: UIColor {
+		let r = Int(arc4random_uniform(255))
+		let g = Int(arc4random_uniform(255))
+		let b = Int(arc4random_uniform(255))
+		return UIColor.rgb(r, g, b)
 	}
 	
 	static func primary() -> UIColor {

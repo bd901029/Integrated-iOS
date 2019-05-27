@@ -57,9 +57,11 @@ class DietaryManager: ApiManager {
 		}
 		
 		let url = "https://trackapi.nutritionix.com/v2/search/item?upc=" + barcode!
-		let params: [String: Any] = ["upc": barcode!]
-		let header: HTTPHeaders = ["Content-Type": "application/json", "x-app-id": NUTRITIONIX_ID, "x-app-key": NUTRITIONIX_KEY]
-		let request = Alamofire.request(url, method: HTTPMethod.get, parameters: params, headers: header)
+//		let params: [String: Any] = ["upc": (barcode! as NSString).intValue]
+		let header: HTTPHeaders = ["Content-Type": "application/json",
+								   "x-app-id": NUTRITIONIX_ID,
+								   "x-app-key": NUTRITIONIX_KEY]
+		let request = Alamofire.request(url, method: HTTPMethod.get, headers: header)
 		request.responseJSON { (response) in
 			guard response.result.isSuccess, let jsonInfo = response.result.value as? [String: Any] else {
 				print("Error while fetching colors: \(String(describing: response.result.error))")
@@ -88,9 +90,8 @@ class DietaryManager: ApiManager {
 		}
 		
 		let url = "https://trackapi.nutritionix.com/v2/search/item?nix_item_id=" + nixId!
-		let params: [String: Any] = ["upc": nixId!]
 		let header: HTTPHeaders = ["Content-Type": "application/json", "x-app-id": NUTRITIONIX_ID, "x-app-key": NUTRITIONIX_KEY]
-		let request = Alamofire.request(url, method: HTTPMethod.get, parameters: params, headers: header)
+		let request = Alamofire.request(url, method: HTTPMethod.get, headers: header)
 		request.responseJSON { (response) in
 			guard response.result.isSuccess, let jsonInfo = response.result.value as? [String: Any] else {
 				print("Error while fetching colors: \(String(describing: response.result.error))")

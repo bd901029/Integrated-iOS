@@ -38,6 +38,20 @@ class MainPhysicalView: UIView {
 		let calorieBurned = User.sharedInstance.calorieBurned()
 		caloriesBurnedView.text = "\(Int(calorieBurned))"
 	}
+	
+	@IBAction func onYourWorkoutBtnClicked(_ sender: UIButton) {
+		let workoutVC = WorkoutVC.instance()
+		let navController = UINavigationController(rootViewController: workoutVC)
+		navController.isNavigationBarHidden = true
+		self.parentViewController?.present(navController, animated: true, completion: nil)
+	}
+	
+	@IBAction func onProgressTrackerBtnClicked(_ sender: UIButton) {
+		let progressTrackerVC = ProgressTrackerVC.instance()
+		let navController = UINavigationController(rootViewController: progressTrackerVC)
+		navController.isNavigationBarHidden = true
+		self.parentViewController?.present(navController, animated: true, completion: nil)
+	}
 }
 
 extension MainPhysicalView: UITableViewDataSource, UITableViewDelegate {

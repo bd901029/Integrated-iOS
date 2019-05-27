@@ -29,6 +29,12 @@ class MainHomeView: UIView {
 		self.initUI()
 	}
 	
+	@IBAction func onScanFoodBtnClicked(_ sender: Any) {
+		if let mainVC = self.parentViewController as? MainVC {
+			mainVC.openBarcodeScanner()
+		}
+	}
+	
 	func initUI() {
 		self.calorieChart = CircleProgress(rectframe: calorieChartContainer.bounds, type: CircleProgressType.Closed)
 		self.calorieChart.backgroundColor = UIColor.clear

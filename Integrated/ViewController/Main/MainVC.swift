@@ -8,6 +8,7 @@
 
 import UIKit
 import LMSideBarController
+import BarcodeScanner
 
 class MainVC: UIViewController {
 
@@ -38,10 +39,6 @@ class MainVC: UIViewController {
 	
 	@IBAction func onBottomBtnClicked(_ sender: UIButton) {
 		let selectedIndex = self.bottomButtons.index(of: sender)!
-		for i in 0 ... self.bottomButtons.count-1 {
-			self.bottomButtons[i].backgroundColor = i == selectedIndex ? self.bottomButtonColors[selectedIndex] : UIColor.primary()
-		}
-		
 		self.viewPager.scrollToPage(index: selectedIndex+1)
 	}
 	
@@ -51,9 +48,14 @@ class MainVC: UIViewController {
 	
 	private func initUI() {
 		viewPager.dataSource = self
+		viewPager.delegate = self
 		viewPager.pageControl.isHidden = true
-		viewPager.scrollToPage(index: 0)
-		self.view.sendSubviewToBack(viewPager)
+		self.view.sendSubview(toBack: viewPager)
+		
+		for i in 0 ... self.bottomButtons.count-1 {
+			let button = self.bottomButtons[i]
+			button.setBackgroundColor(color: self.bottomButtonColors[i], forState: UIControl.State.selected)
+		}
 	}
 	
 	private func updateUI() {
@@ -77,10 +79,38 @@ class MainVC: UIViewController {
 		
 		return nil
 	}
+	
+	func openBarcodeScanner() {
+		let viewController = BarcodeScannerViewController()
+		viewController.codeDelegate = self
+		viewController.errorDelegate = self
+		viewController.dismissalDelegate = self
+		
+		present(viewController, animated: true, completion: nil)
+	}
+	
+	func openAddDietary(_ dietary: Dietary) {
+		Helper.showLoading(target: self)
+		DietaryManager.sharedInstance.fetchInformation(dietary.nixId) { (results, error) in
+			Helper.hideLoading(target: self)
+			if error != nil {
+				Helper.showErrorAlert(target: self, message: error!.localizedDescription)
+				return
+			}
+			
+			if results!.count > 0 {
+				let storyboard = UIStoryboard(name: "Main", bundle: nil)
+				let addDietaryVC = storyboard.instantiateViewController(withIdentifier: "AddDietaryVC") as! AddDietaryVC
+				addDietaryVC.dietary = results!.first as? Dietary
+				addDietaryVC.modalPresentationStyle = .popover
+				self.present(addDietaryVC, animated: true, completion: nil)
+			}
+		}
+	}
 }
 
 
-extension MainVC: ViewPagerDataSource {
+extension MainVC: ViewPagerDataSource, ViewPagerDelegate {
 	func numberOfItems(viewPager:ViewPager) -> Int {
 		return 4;
 	}
@@ -110,5 +140,39 @@ extension MainVC: ViewPagerDataSource {
 		}
 		
 		return view!
+	}
+	
+	func viewPager(_ viewPager: ViewPager, didSelectedItem itemIndex: Int) {
+		for i in 0 ... self.bottomButtons.count-1 {
+			self.bottomButtons[i].isSelected = i == itemIndex
+		}
+	}
+}
+
+extension MainVC: BarcodeScannerCodeDelegate, BarcodeScannerErrorDelegate, BarcodeScannerDismissalDelegate {
+	func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
+		self.dismiss(animated: true, completion: nil)
+		print(code)
+		
+		Helper.showLoading(target: self)
+		DietaryManager.sharedInstance.searchByBarcode(code) { (results, error) in
+			Helper.hideLoading(target: self)
+			if error != nil {
+				Helper.showErrorAlert(target: self, message: error!.localizedDescription)
+				return
+			}
+			
+			if results!.count > 0 {
+				self.openAddDietary(results?.first as! Dietary)
+			}
+		}
+	}
+	
+	func scanner(_ controller: BarcodeScannerViewController, didReceiveError error: Error) {
+		print(error)
+	}
+	
+	func scannerDidDismiss(_ controller: BarcodeScannerViewController) {
+		
 	}
 }

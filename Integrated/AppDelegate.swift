@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+		
+		IQKeyboardManager.shared.enable = true
 		
 		let parseConfig = ParseClientConfiguration {
 			$0.applicationId = "C7KUg5qU62YnXXPoOfMZeFF1h5nzF6ygTyCq4qX8"

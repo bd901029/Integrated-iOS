@@ -66,7 +66,7 @@ class Goal: PFObject, PFSubclassing {
 			return UIColor.rgb(51, 51, 204);
 		}
 		
-		return UIColor.random()
+		return UIColor.random
 	}
 	
 	public func setUserId(_ userId: String) {

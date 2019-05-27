@@ -33,12 +33,16 @@ class Gallery: PFObject, PFSubclassing {
 		return gallery
 	}
 	
+	static func emptyImage() -> UIImage? {
+		return UIImage(named: "blank_avatar")
+	}
+	
 	public func setUserId(_ userId: String) {
 		self.userId = userId
 	}
 	
 	public func setImage(_ image: UIImage) {
-		let file = PFFileObject(name: "image.jpg", data: image.jpegData(compressionQuality: 0.5)!)
+		let file = PFFileObject(name: "image.jpg", data: UIImageJPEGRepresentation(image, 0.5)!)
 		self.image = file!
 	}
 	
@@ -47,7 +51,7 @@ class Gallery: PFObject, PFSubclassing {
 	}
 	
 	public func weightInLbs() -> Float {
-		return UnitHelper.lbsFromKG(weightInKG());
+		return UnitHelper.lbsFromKG(weightInKG())
 	}
 	
 	public func setWeightInKG(_ weightInKG: Float) {

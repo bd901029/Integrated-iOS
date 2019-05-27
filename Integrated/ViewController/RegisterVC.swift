@@ -92,8 +92,8 @@ extension RegisterVC: UIImagePickerControllerDelegate, UINavigationControllerDel
 		self.dismiss(animated: true, completion: nil)
 	}
 	
-	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-		self.avatar = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+		self.avatar = info[UIImagePickerControllerOriginalImage] as? UIImage
 		self.dismiss(animated: true, completion: nil)
 	}
 }

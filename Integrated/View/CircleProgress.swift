@@ -177,7 +177,7 @@ class CircleProgress: UIView {
                 let center: CGPoint = CGPoint(x: self.bounds.size.width / 2, y: self.bounds.size.height / 2)
                 let coverPath: UIBezierPath = UIBezierPath()
                 coverPath.lineWidth = coverWidth
-				coverPath.addArc(withCenter: center, radius: radius, startAngle: CGFloat(0), endAngle: CGFloat(2 * M_PI), clockwise: true)
+				coverPath.addArc(withCenter: center, radius: radius, startAngle: CGFloat(0), endAngle: CGFloat(2 * Double.pi), clockwise: true)
                 closedIndicatorBackgroundStrokeColor.set()
                 coverPath.lineWidth = self.coverWidth
                 coverPath.stroke()
@@ -197,7 +197,7 @@ class CircleProgress: UIView {
         let pathAnimation: CAKeyframeAnimation = CAKeyframeAnimation(keyPath: "path")
         pathAnimation.values = paths
         pathAnimation.duration = CFTimeInterval(animationDuration)
-		pathAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+		pathAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
 		pathAnimation.isRemovedOnCompletion = true
 		animatingLayer.add(pathAnimation, forKey: "path")
         if downloadedBytes >= bytes{
@@ -212,7 +212,7 @@ class CircleProgress: UIView {
     
     func degreeToRadian(degree: CGFloat) -> CGFloat
     {
-        return (CGFloat(degree) * CGFloat(M_PI)) / CGFloat(180.0);
+        return (CGFloat(degree) * CGFloat(Double.pi)) / CGFloat(180.0);
     }
 //    
 //    func setLayerFillColor(fillColor: UIColor) {

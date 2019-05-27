@@ -19,6 +19,7 @@
 		8B0D77BF2292CD870027773E /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D77BE2292CD870027773E /* UIColor+Extension.swift */; };
 		8B0D77C12292D1AF0027773E /* StateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D77C02292D1AF0027773E /* StateManager.swift */; };
 		8B37FC09228FF32200E8504F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B37FC08228FF32200E8504F /* LoginVC.swift */; };
+		8B3D7CD2229BF2E800819D26 /* ic_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B3D7CD1229BF2E800819D26 /* ic_close.png */; };
 		8B42FB132294DC840016147A /* SurveyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B42FB122294DC840016147A /* SurveyVC.swift */; };
 		8B42FB152294E7970016147A /* ViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B42FB142294E7970016147A /* ViewPager.swift */; };
 		8B4FD0C72296EDBE00B478E4 /* MainPhysicalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4FD0C62296EDBE00B478E4 /* MainPhysicalView.swift */; };
@@ -28,9 +29,17 @@
 		8B50449D2292B968004F5DE5 /* DietaryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50449C2292B968004F5DE5 /* DietaryManager.swift */; };
 		8B616AD82292509100A20E1E /* NutrientCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B616AD72292509100A20E1E /* NutrientCalculator.swift */; };
 		8B616ADA2292676400A20E1E /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B616AD92292676400A20E1E /* Helper.swift */; };
+		8B6251E0229945F100CE948F /* ProgressTrackerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6251DF229945F100CE948F /* ProgressTrackerVC.swift */; };
+		8B67FDB02298292100A79FB2 /* AddDietaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B67FDAF2298292100A79FB2 /* AddDietaryVC.swift */; };
 		8B6C72742291CEE200ED668B /* Dietary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6C72732291CEE200ED668B /* Dietary.swift */; };
+		8B6DDDA822984B8E0005288E /* WorkoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6DDDA722984B8E0005288E /* WorkoutVC.swift */; };
+		8B6DDDAA22984E5D0005288E /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6DDDA922984E5D0005288E /* Workout.swift */; };
+		8B6DDDAC229851770005288E /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6DDDAB229851770005288E /* WorkoutManager.swift */; };
+		8B6DDDAE229851C30005288E /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6DDDAD229851C30005288E /* Exercise.swift */; };
+		8B6DDDB4229870F10005288E /* ExerciseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6DDDB3229870F10005288E /* ExerciseVC.swift */; };
 		8B7667C02296C92F00814237 /* MainNutritionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7667BF2296C92F00814237 /* MainNutritionView.swift */; };
 		8B7667C22296C93900814237 /* MainNutritionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B7667C12296C93900814237 /* MainNutritionView.xib */; };
+		8B78A2BA229B76BF00C5A97C /* AddPhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B78A2B9229B76BF00C5A97C /* AddPhotoVC.swift */; };
 		8B7B4000229643E900DA5657 /* BlogDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7B3FFF229643E900DA5657 /* BlogDetailVC.swift */; };
 		8B7B4004229645F900DA5657 /* ic_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7B4003229645F900DA5657 /* ic_back.png */; };
 		8B874CC5228EEDD800C856D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B874CC4228EEDD800C856D0 /* AppDelegate.swift */; };
@@ -80,6 +89,8 @@
 		8BAC75B92295FABE003F57FF /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC75B32295FABD003F57FF /* MainVC.swift */; };
 		8BAC75BA2295FABE003F57FF /* MainMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC75B42295FABD003F57FF /* MainMenuVC.swift */; };
 		8BAC75BF229611D0003F57FF /* CircleProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC75BE229611D0003F57FF /* CircleProgress.swift */; };
+		8BB43BE1229ADB3000CA6DCC /* ProgressTrackerStateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB43BE0229ADB3000CA6DCC /* ProgressTrackerStateCell.xib */; };
+		8BB43BE4229AF4A800CA6DCC /* GalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB43BE3229AF4A800CA6DCC /* GalleryVC.swift */; };
 		8BFA80E12292EE4700F424A6 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA80E02292EE4700F424A6 /* Goal.swift */; };
 		8BFA80E32292F1F500F424A6 /* GoalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA80E22292F1F500F424A6 /* GoalManager.swift */; };
 		8BFA80E52292FC9400F424A6 /* Reflection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFA80E42292FC9400F424A6 /* Reflection.swift */; };
@@ -106,6 +117,7 @@
 		8B0D77C02292D1AF0027773E /* StateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateManager.swift; sourceTree = "<group>"; };
 		8B37FC05228FF2D200E8504F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		8B37FC08228FF32200E8504F /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		8B3D7CD1229BF2E800819D26 /* ic_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_close.png; sourceTree = "<group>"; };
 		8B42FB122294DC840016147A /* SurveyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyVC.swift; sourceTree = "<group>"; };
 		8B42FB142294E7970016147A /* ViewPager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPager.swift; sourceTree = "<group>"; };
 		8B4FD0C62296EDBE00B478E4 /* MainPhysicalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPhysicalView.swift; sourceTree = "<group>"; };
@@ -115,9 +127,17 @@
 		8B50449C2292B968004F5DE5 /* DietaryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietaryManager.swift; sourceTree = "<group>"; };
 		8B616AD72292509100A20E1E /* NutrientCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientCalculator.swift; sourceTree = "<group>"; };
 		8B616AD92292676400A20E1E /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		8B6251DF229945F100CE948F /* ProgressTrackerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTrackerVC.swift; sourceTree = "<group>"; };
+		8B67FDAF2298292100A79FB2 /* AddDietaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDietaryVC.swift; sourceTree = "<group>"; };
 		8B6C72732291CEE200ED668B /* Dietary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dietary.swift; sourceTree = "<group>"; };
+		8B6DDDA722984B8E0005288E /* WorkoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutVC.swift; sourceTree = "<group>"; };
+		8B6DDDA922984E5D0005288E /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		8B6DDDAB229851770005288E /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		8B6DDDAD229851C30005288E /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		8B6DDDB3229870F10005288E /* ExerciseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseVC.swift; sourceTree = "<group>"; };
 		8B7667BF2296C92F00814237 /* MainNutritionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNutritionView.swift; sourceTree = "<group>"; };
 		8B7667C12296C93900814237 /* MainNutritionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainNutritionView.xib; sourceTree = "<group>"; };
+		8B78A2B9229B76BF00C5A97C /* AddPhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoVC.swift; sourceTree = "<group>"; };
 		8B7B3FFF229643E900DA5657 /* BlogDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogDetailVC.swift; sourceTree = "<group>"; };
 		8B7B4003229645F900DA5657 /* ic_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_back.png; sourceTree = "<group>"; };
 		8B874CC1228EEDD800C856D0 /* Integrated.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Integrated.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +189,9 @@
 		8BAC75B32295FABD003F57FF /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		8BAC75B42295FABD003F57FF /* MainMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuVC.swift; sourceTree = "<group>"; };
 		8BAC75BE229611D0003F57FF /* CircleProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgress.swift; sourceTree = "<group>"; };
+		8BB43BE0229ADB3000CA6DCC /* ProgressTrackerStateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressTrackerStateCell.xib; sourceTree = "<group>"; };
+		8BB43BE2229AE34B00CA6DCC /* ProgressTrackerGoalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressTrackerGoalCell.xib; sourceTree = "<group>"; };
+		8BB43BE3229AF4A800CA6DCC /* GalleryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryVC.swift; sourceTree = "<group>"; };
 		8BFA80E02292EE4700F424A6 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		8BFA80E22292F1F500F424A6 /* GoalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalManager.swift; sourceTree = "<group>"; };
 		8BFA80E42292FC9400F424A6 /* Reflection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reflection.swift; sourceTree = "<group>"; };
@@ -303,6 +326,9 @@
 		8B0C994922916AF500D913F9 /* Workout */ = {
 			isa = PBXGroup;
 			children = (
+				8B6DDDA922984E5D0005288E /* Workout.swift */,
+				8B6DDDAB229851770005288E /* WorkoutManager.swift */,
+				8B6DDDAD229851C30005288E /* Exercise.swift */,
 			);
 			path = Workout;
 			sourceTree = "<group>";
@@ -317,11 +343,17 @@
 		8B37FC07228FF32200E8504F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8B67FDAF2298292100A79FB2 /* AddDietaryVC.swift */,
+				8B78A2B9229B76BF00C5A97C /* AddPhotoVC.swift */,
 				8B7B3FFF229643E900DA5657 /* BlogDetailVC.swift */,
+				8B6DDDB3229870F10005288E /* ExerciseVC.swift */,
+				8BB43BE3229AF4A800CA6DCC /* GalleryVC.swift */,
 				8B37FC08228FF32200E8504F /* LoginVC.swift */,
+				8BAC75AB2295F832003F57FF /* Main */,
+				8B6251DF229945F100CE948F /* ProgressTrackerVC.swift */,
 				8BFA80F62293124A00F424A6 /* RegisterVC.swift */,
 				8B42FB122294DC840016147A /* SurveyVC.swift */,
-				8BAC75AB2295F832003F57FF /* Main */,
+				8B6DDDA722984B8E0005288E /* WorkoutVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -347,15 +379,15 @@
 		8B874CC3228EEDD800C856D0 /* Integrated */ = {
 			isa = PBXGroup;
 			children = (
+				8B0C994022916AF500D913F9 /* Engine */,
+				8BFA80F82293146700F424A6 /* View */,
+				8B37FC07228FF32200E8504F /* ViewController */,
+				8BA2BB86229022A000AFBB7D /* Resource */,
 				8B874CD0228EEDDA00C856D0 /* Info.plist */,
 				8B874CC4228EEDD800C856D0 /* AppDelegate.swift */,
 				8B874CCB228EEDDA00C856D0 /* Assets.xcassets */,
-				8B0C994022916AF500D913F9 /* Engine */,
 				8B874CCD228EEDDA00C856D0 /* LaunchScreen.storyboard */,
 				8B874CC8228EEDD800C856D0 /* Main.storyboard */,
-				8BA2BB86229022A000AFBB7D /* Resource */,
-				8BFA80F82293146700F424A6 /* View */,
-				8B37FC07228FF32200E8504F /* ViewController */,
 			);
 			path = Integrated;
 			sourceTree = "<group>";
@@ -381,6 +413,7 @@
 		8BA2BB8A229022A000AFBB7D /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				8B3D7CD1229BF2E800819D26 /* ic_close.png */,
 				8B7B4003229645F900DA5657 /* ic_back.png */,
 				8BA2BB8B229022A000AFBB7D /* background.png */,
 				8BA2BB8C229022A000AFBB7D /* blank_avatar.png */,
@@ -438,14 +471,16 @@
 				8BFA80F92293147D00F424A6 /* CustomButton.swift */,
 				8BA5E23A229581E5004E88C2 /* MainHomeView.swift */,
 				8BA5E23C229581F5004E88C2 /* MainHomeView.xib */,
+				8B4FD0CA2296F8E800B478E4 /* MainMentalView.swift */,
+				8B4FD0CD2296FF8700B478E4 /* MainMentalView.xib */,
 				8B7667BF2296C92F00814237 /* MainNutritionView.swift */,
 				8B7667C12296C93900814237 /* MainNutritionView.xib */,
 				8B4FD0C62296EDBE00B478E4 /* MainPhysicalView.swift */,
 				8B4FD0C82296EDDF00B478E4 /* MainPhysicalView.xib */,
+				8BB43BE2229AE34B00CA6DCC /* ProgressTrackerGoalCell.xib */,
+				8BB43BE0229ADB3000CA6DCC /* ProgressTrackerStateCell.xib */,
 				8BFA80FB229317B000F424A6 /* RoundTextField.swift */,
 				8B42FB142294E7970016147A /* ViewPager.swift */,
-				8B4FD0CA2296F8E800B478E4 /* MainMentalView.swift */,
-				8B4FD0CD2296FF8700B478E4 /* MainMentalView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -513,10 +548,12 @@
 				8BA2BBC4229022A000AFBB7D /* ic_target.png in Resources */,
 				8BA2BBC9229022A000AFBB7D /* play.png in Resources */,
 				8BA2BBC0229022A000AFBB7D /* home_menu_background.png in Resources */,
+				8BB43BE1229ADB3000CA6DCC /* ProgressTrackerStateCell.xib in Resources */,
 				8B874CCF228EEDDA00C856D0 /* LaunchScreen.storyboard in Resources */,
 				8BA5E23D229581F5004E88C2 /* MainHomeView.xib in Resources */,
 				8B7667C22296C93900814237 /* MainNutritionView.xib in Resources */,
 				8BA5E451229632FB00E69F16 /* BlogCell.xib in Resources */,
+				8B3D7CD2229BF2E800819D26 /* ic_close.png in Resources */,
 				8B4FD0CE2296FF8700B478E4 /* MainMentalView.xib in Resources */,
 				8BA2BBC8229022A000AFBB7D /* nutrition_statistics.png in Resources */,
 				8BA2BBB8229022A000AFBB7D /* daily_reflection.png in Resources */,
@@ -594,6 +631,8 @@
 				"${BUILT_PRODUCTS_DIR}/BarcodeScanner/BarcodeScanner.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts-Swift/BoltsSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/LMSideBarController/LMSideBarController.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
@@ -608,6 +647,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BarcodeScanner.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BoltsSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LMSideBarController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
@@ -626,10 +667,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B6251E0229945F100CE948F /* ProgressTrackerVC.swift in Sources */,
+				8B6DDDB4229870F10005288E /* ExerciseVC.swift in Sources */,
 				8BFA80E72292FDA500F424A6 /* ReflectionManager.swift in Sources */,
 				8BAC75AD2295F843003F57FF /* MainRootVC.swift in Sources */,
 				8BAC75AF2295F89B003F57FF /* MainNavVC.swift in Sources */,
+				8B6DDDAA22984E5D0005288E /* Workout.swift in Sources */,
 				8B616AD82292509100A20E1E /* NutrientCalculator.swift in Sources */,
+				8B6DDDAE229851C30005288E /* Exercise.swift in Sources */,
 				8BAC75B92295FABE003F57FF /* MainVC.swift in Sources */,
 				8B0C9954229198D100D913F9 /* BlogManager.swift in Sources */,
 				8B0D77BB2292C3C60027773E /* GalleryManager.swift in Sources */,
@@ -637,6 +682,8 @@
 				8BA5E450229632FB00E69F16 /* BlogCell.swift in Sources */,
 				8B6C72742291CEE200ED668B /* Dietary.swift in Sources */,
 				8B0D77BD2292C6430027773E /* State.swift in Sources */,
+				8B67FDB02298292100A79FB2 /* AddDietaryVC.swift in Sources */,
+				8BB43BE4229AF4A800CA6DCC /* GalleryVC.swift in Sources */,
 				8BFA80E52292FC9400F424A6 /* Reflection.swift in Sources */,
 				8B0D77B92292C1210027773E /* Gallery.swift in Sources */,
 				8B7667C02296C92F00814237 /* MainNutritionView.swift in Sources */,
@@ -647,8 +694,10 @@
 				8BAC75BA2295FABE003F57FF /* MainMenuVC.swift in Sources */,
 				8BFA80F72293124A00F424A6 /* RegisterVC.swift in Sources */,
 				8B4FD0CB2296F8E800B478E4 /* MainMentalView.swift in Sources */,
+				8B78A2BA229B76BF00C5A97C /* AddPhotoVC.swift in Sources */,
 				8B4FD0C72296EDBE00B478E4 /* MainPhysicalView.swift in Sources */,
 				8BFA80FA2293147D00F424A6 /* CustomButton.swift in Sources */,
+				8B6DDDAC229851770005288E /* WorkoutManager.swift in Sources */,
 				8B7B4000229643E900DA5657 /* BlogDetailVC.swift in Sources */,
 				8BFA80FC229317B000F424A6 /* RoundTextField.swift in Sources */,
 				8BFA80E92292FE9400F424A6 /* DateHelper.swift in Sources */,
@@ -656,6 +705,7 @@
 				8BFA80E12292EE4700F424A6 /* Goal.swift in Sources */,
 				8BA5E23B229581E5004E88C2 /* MainHomeView.swift in Sources */,
 				8B0D77BF2292CD870027773E /* UIColor+Extension.swift in Sources */,
+				8B6DDDA822984B8E0005288E /* WorkoutVC.swift in Sources */,
 				8B0C99522291963A00D913F9 /* Blog.swift in Sources */,
 				8B616ADA2292676400A20E1E /* Helper.swift in Sources */,
 				8B0C994C22916B0800D913F9 /* User.swift in Sources */,
@@ -820,7 +870,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.matt.ming.Integrated;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -840,7 +890,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.matt.ming.Integrated;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

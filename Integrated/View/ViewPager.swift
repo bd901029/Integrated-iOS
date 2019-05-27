@@ -15,6 +15,10 @@ import UIKit
     
 }
 
+protocol ViewPagerDelegate {
+	func viewPager(_ viewPager: ViewPager, didSelectedItem itemIndex: Int)
+}
+
 public class ViewPager: UIView {
     
     var pageControl:UIPageControl = UIPageControl()
@@ -26,6 +30,7 @@ public class ViewPager: UIView {
             reloadData()
         }
     }
+	var delegate: ViewPagerDelegate? = nil
     
     var numberOfItems:Int = 0
     var itemViews:Dictionary<Int, UIView> = [:]
@@ -183,7 +188,7 @@ public class ViewPager: UIView {
 extension ViewPager:UIScrollViewDelegate{
     
     public func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
-        NSObject.cancelPreviousPerformRequests(withTarget: self)
+//        NSObject.cancelPreviousPerformRequests(withTarget: self)
         var pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
         pageNumber = pageNumber + 1
         pageControl.currentPage = Int(pageNumber)
@@ -193,8 +198,11 @@ extension ViewPager:UIScrollViewDelegate{
     
     //http://stackoverflow.com/a/1857162
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        NSObject.cancelPreviousPerformRequests(withTarget: scrollView)
-        self.perform(#selector(self.scrollViewDidEndScrollingAnimation(_:)), with: scrollView, afterDelay: 0.3)
+//        NSObject.cancelPreviousPerformRequests(withTarget: scrollView)
+//        self.perform(#selector(self.scrollViewDidEndScrollingAnimation(_:)), with: scrollView, afterDelay: 0.1)
+		
+		let index = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
+		self.delegate?.viewPager(self, didSelectedItem: index)
     }
     
 }

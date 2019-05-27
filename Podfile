@@ -14,4 +14,6 @@ target 'Integrated' do
   pod 'LMSideBarController'
   pod 'Alamofire'
   pod 'BarcodeScanner'
+  pod 'Charts'
+  pod 'IQKeyboardManagerSwift'
 end

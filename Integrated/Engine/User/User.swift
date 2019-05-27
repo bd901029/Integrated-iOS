@@ -176,7 +176,7 @@ class User: ApiManager {
 	}
 	
 	public func setAvatar(_ image: UIImage) {
-		let file = PFFileObject(name: "image.jpg", data: image.jpegData(compressionQuality: 0.5)!)
+		let file = PFFileObject(name: "image.jpg", data: UIImageJPEGRepresentation(image, 0.5)!)
 		self.object[Key.Avatar] = file
 	}
 	

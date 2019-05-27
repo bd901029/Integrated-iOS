@@ -10,8 +10,7 @@ import UIKit
 
 class UnitHelper {
 	public static func round(_ value: Float) -> Float {
-		let decimalValue = pow(10, 2) as Float
-		return round(value * decimalValue) / decimalValue
+		return Float((value * 100).rounded() / 100)
 	}
 	
 	public static func kgFromLBS(_ lbs: Float) -> Float {
