@@ -47,24 +47,23 @@ class GalleryVC: UIViewController {
 	private func initUI() {
 		let cellSpace: CGFloat = 10
 		let numCol: CGFloat = 3
-		self.cellSize = CGSize(width: (self.collectionView.frame.width-cellSpace*(numCol-1))/numCol,
+		self.cellSize = CGSize(width: (self.collectionView.frame.width-cellSpace*numCol)/numCol,
 							   height: 190)
 	}
 	
-	private func updateUI() {
+	func updateUI() {
 		self.items = GalleryManager.sharedInstance.items
 		self.collectionView.reloadData()
 	}
 }
 
-extension GalleryVC: UICollectionViewDataSource, UICollectionViewDelegate {
+extension GalleryVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 	func numberOfSections(in collectionView: UICollectionView) -> Int {
 		return 1
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		return self.cellSize!
-		
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -102,7 +101,7 @@ class GalleryCell: UICollectionViewCell {
 				self.dateView.text = dateFormatter.string(from: date)
 			}
 			
-			weightView.text = String(format: "%dlbs", self.gallery!.weightInLbs())
+			weightView.text = String(format: "%dlbs", Int(self.gallery!.weightInLbs()))
 		}
 	}
 	
@@ -111,5 +110,37 @@ class GalleryCell: UICollectionViewCell {
 	}
 	
 	@IBAction func onDeleteBtnClicked(_ sender: UIButton) {
+		self.showDeleteConfirmation()
+	}
+	
+	private func showDeleteConfirmation() {
+		let alertController = UIAlertController(title: nil, message: "Are you sure you want to delete?", preferredStyle: .alert)
+		
+		let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { (action: UIAlertAction) in
+			self.deleteGallery()
+		}
+		alertController.addAction(deleteAction)
+		
+		let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action: UIAlertAction) in
+			self.deleteGallery()
+		}
+		alertController.addAction(cancelAction)
+		
+		self.parentViewController!.present(alertController, animated: true, completion: nil)
+	}
+	
+	private func deleteGallery() {
+		let vc = self.parentViewController as! GalleryVC
+		
+		Helper.showLoading(target: vc)
+		GalleryManager.sharedInstance.delete(self.gallery!) { (error) in
+			Helper.hideLoading(target: vc)
+			if error != nil {
+				Helper.showErrorAlert(target: vc, message: error!.localizedDescription)
+				return
+			}
+			
+			vc.updateUI()
+		}
 	}
 }

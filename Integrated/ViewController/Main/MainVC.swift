@@ -173,6 +173,6 @@ extension MainVC: BarcodeScannerCodeDelegate, BarcodeScannerErrorDelegate, Barco
 	}
 	
 	func scannerDidDismiss(_ controller: BarcodeScannerViewController) {
-		
+		self.dismiss(animated: true, completion: nil)
 	}
 }

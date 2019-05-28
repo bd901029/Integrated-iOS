@@ -64,7 +64,7 @@ class AddPhotoVC: UIViewController {
 	
 	@IBAction func onAddBtnTapped(_ sender: Any) {
 		let strWeight = weightView.text
-		if strWeight == "" || self.selectedPhoto == nil {
+		if strWeight == "" || self.selectedPhoto == nil || !strWeight!.isNumeric() {
 			Helper.showErrorAlert(target: self, message: "Please fulfill all data.")
 			return
 		}

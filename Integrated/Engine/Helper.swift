@@ -132,6 +132,15 @@ extension String {
 	var floatValue: Float {
 		return (self as NSString).floatValue
 	}
+	
+	func isNumeric() -> Bool {
+		if let floatValue = Float(self) {
+			if floatValue >= 0 {
+				return true
+			}
+		}
+		return false
+	}
 }
 
 
