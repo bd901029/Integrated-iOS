@@ -16,4 +16,6 @@ target 'Integrated' do
   pod 'BarcodeScanner'
   pod 'Charts'
   pod 'IQKeyboardManagerSwift'
+  pod 'PINRemoteImage'
+  pod 'FSCalendar'
 end
