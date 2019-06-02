@@ -185,7 +185,7 @@ public class ViewPager: UIView {
     
 }
 
-extension ViewPager:UIScrollViewDelegate{
+extension ViewPager: UIScrollViewDelegate {
     
     public func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
 //        NSObject.cancelPreviousPerformRequests(withTarget: self)
@@ -194,6 +194,9 @@ extension ViewPager:UIScrollViewDelegate{
         pageControl.currentPage = Int(pageNumber)
         currentPosition = pageControl.currentPage
         scrollToPage(index: Int(pageNumber))
+		
+		let index = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
+		self.delegate?.viewPager(self, didSelectedItem: index)
     }
     
     //http://stackoverflow.com/a/1857162
@@ -201,10 +204,14 @@ extension ViewPager:UIScrollViewDelegate{
 //        NSObject.cancelPreviousPerformRequests(withTarget: scrollView)
 //        self.perform(#selector(self.scrollViewDidEndScrollingAnimation(_:)), with: scrollView, afterDelay: 0.1)
 		
+//		let index = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
+//		self.delegate?.viewPager(self, didSelectedItem: index)
+    }
+	
+	public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
 		let index = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
 		self.delegate?.viewPager(self, didSelectedItem: index)
-    }
-    
+	}
 }
 
 extension ViewPager{

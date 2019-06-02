@@ -26,6 +26,16 @@ class MainNutritionView: UIView {
 		initUI()
 	}
 	
+	@IBAction func onNutritionStatisticsBtnTapped(_ sender: Any) {
+		let vc = NutritionStatisticsVC.instance()
+		self.parentViewController?.present(vc, animated: true, completion: nil)
+	}
+	
+	@IBAction func onDietaryJournalBtnClicked(_ sender: UIButton) {
+		let vc = DietaryJournalVC.instance()
+		self.parentViewController?.present(vc, animated: true, completion: nil)
+	}
+	
 	func initUI() {
 		self.tableView.register(UINib(nibName: "BlogCell", bundle: nil), forCellReuseIdentifier: "BlogCell")
 		self.tableView.dataSource = self

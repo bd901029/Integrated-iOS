@@ -174,6 +174,9 @@ class NutrientCalculator: NSObject {
 	}
 	
 	/// Fats
+	public static func percentFat(_ value: Float) -> Float {
+	return (value / 77.4 * MAX_PERCENT + 0.5)
+	}
 	public static func percentMonounsaturated(_ value: Float) -> Float {
 	return (value / Float(1.7) * MAX_PERCENT + Float(0.5))
 	}

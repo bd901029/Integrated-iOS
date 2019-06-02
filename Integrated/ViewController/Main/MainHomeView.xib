@@ -24,26 +24,23 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MMz-GM-0o8">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MMz-GM-0o8">
                     <rect key="frame" x="0.0" y="70" width="414" height="666"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bhk-C9-jqv">
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W2b-eF-4bi">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kA4-Dg-shq">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kA4-Dg-shq">
                             <rect key="frame" x="0.0" y="0.0" width="138" height="70"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bM7-f3-C3l">
-                                    <rect key="frame" x="37" y="3" width="65" height="65"/>
+                                    <rect key="frame" x="37" y="2" width="65" height="65"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1810" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMI-19-lJn">
-                                    <rect key="frame" x="37" y="13" width="65" height="20"/>
+                                    <rect key="frame" x="37" y="13" width="65" height="21"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" name="Futura-CondensedBold" family="Futura" pointSize="15"/>
@@ -51,7 +48,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8V-5n-40z">
-                                    <rect key="frame" x="47" y="24" width="43" height="33"/>
+                                    <rect key="frame" x="47" y="25" width="44" height="31"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <string key="text">Calories
@@ -61,63 +58,83 @@ Consumed</string>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                             </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jb5-9z-FdT">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jb5-9z-FdT">
                             <rect key="frame" x="138" y="0.0" width="138" height="70"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_target.png" translatesAutoresizingMaskIntoConstraints="NO" id="6xE-5Q-cqw">
-                                    <rect key="frame" x="44" y="4" width="50" height="50"/>
+                                    <rect key="frame" x="44" y="7" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calorie Target" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8df-LL-Vqa">
-                                    <rect key="frame" x="45" y="55" width="47" height="13"/>
+                                    <rect key="frame" x="45" y="57" width="48" height="13"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" name="FuturaCondMedium" family="Futura Condensed" pointSize="10"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1810" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVq-kf-LAh">
-                                    <rect key="frame" x="44" y="19" width="50" height="20"/>
+                                    <rect key="frame" x="44" y="22" width="50" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" name="Futura-CondensedBold" family="Futura" pointSize="15"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tgN-c1-tRq">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tgN-c1-tRq">
                             <rect key="frame" x="276" y="0.0" width="138" height="70"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ico_barcode.png" translatesAutoresizingMaskIntoConstraints="NO" id="1rg-f8-olE">
-                                    <rect key="frame" x="44" y="14" width="50" height="35"/>
+                                    <rect key="frame" x="44" y="7" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scan Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPL-cC-iFJ">
-                                    <rect key="frame" x="52" y="55" width="34" height="13"/>
+                                    <rect key="frame" x="52" y="57" width="34" height="13"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" name="FuturaCondMedium" family="Futura Condensed" pointSize="10"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVE-ra-KSD">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVE-ra-KSD">
                                     <rect key="frame" x="0.0" y="0.0" width="138" height="70"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="7OK-Mq-mE0"/>
+                                    </constraints>
                                     <connections>
                                         <action selector="onScanFoodBtnClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ddf-Cz-qwd"/>
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="BVE-ra-KSD" secondAttribute="bottom" id="BUQ-ZL-RSz"/>
+                                <constraint firstItem="BVE-ra-KSD" firstAttribute="top" secondItem="tgN-c1-tRq" secondAttribute="top" id="MuI-Sy-cXG"/>
+                                <constraint firstAttribute="trailing" secondItem="BVE-ra-KSD" secondAttribute="trailing" id="NIV-rm-ohb"/>
+                                <constraint firstItem="BVE-ra-KSD" firstAttribute="leading" secondItem="tgN-c1-tRq" secondAttribute="leading" id="Y3L-MX-lkp"/>
+                            </constraints>
                         </view>
                     </subviews>
                     <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="A6J-kU-ZYv"/>
+                        <constraint firstItem="Jb5-9z-FdT" firstAttribute="width" secondItem="tgN-c1-tRq" secondAttribute="width" id="PMJ-li-5fo"/>
+                        <constraint firstItem="kA4-Dg-shq" firstAttribute="width" secondItem="Jb5-9z-FdT" secondAttribute="width" id="oI3-UF-tBW"/>
+                    </constraints>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="MMz-GM-0o8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="42R-Mw-AOF"/>
+                <constraint firstItem="MMz-GM-0o8" firstAttribute="top" secondItem="W2b-eF-4bi" secondAttribute="bottom" id="CCj-h1-77l"/>
+                <constraint firstItem="W2b-eF-4bi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="JQe-18-21F"/>
+                <constraint firstItem="MMz-GM-0o8" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="jX1-P6-Ik1"/>
+                <constraint firstItem="W2b-eF-4bi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="nKK-yn-4wn"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="W2b-eF-4bi" secondAttribute="trailing" id="sFh-e4-4KM"/>
+                <constraint firstItem="MMz-GM-0o8" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="tWe-oU-6XO"/>
+            </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>

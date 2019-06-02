@@ -91,7 +91,7 @@ class MainVC: UIViewController {
 	
 	func openAddDietary(_ dietary: Dietary) {
 		Helper.showLoading(target: self)
-		DietaryManager.sharedInstance.fetchInformation(dietary.nixId) { (results, error) in
+		DietaryManager.sharedInstance.fetchInformation(dietary.nix_item_id) { (results, error) in
 			Helper.hideLoading(target: self)
 			if error != nil {
 				Helper.showErrorAlert(target: self, message: error!.localizedDescription)
@@ -99,11 +99,9 @@ class MainVC: UIViewController {
 			}
 			
 			if results!.count > 0 {
-				let storyboard = UIStoryboard(name: "Main", bundle: nil)
-				let addDietaryVC = storyboard.instantiateViewController(withIdentifier: "AddDietaryVC") as! AddDietaryVC
-				addDietaryVC.dietary = results!.first as? Dietary
-				addDietaryVC.modalPresentationStyle = .popover
-				self.present(addDietaryVC, animated: true, completion: nil)
+				let vc = AddDietaryVC.instance(results!.first as? Dietary)
+				vc.delegate = self
+				self.present(vc, animated: true, completion: nil)
 			}
 		}
 	}
@@ -174,5 +172,11 @@ extension MainVC: BarcodeScannerCodeDelegate, BarcodeScannerErrorDelegate, Barco
 	
 	func scannerDidDismiss(_ controller: BarcodeScannerViewController) {
 		self.dismiss(animated: true, completion: nil)
+	}
+}
+
+extension MainVC: AddDietaryVCDelegate {
+	func addDietaryCompleted(_ vc: AddDietaryVC) {
+		self.updateUI()
 	}
 }

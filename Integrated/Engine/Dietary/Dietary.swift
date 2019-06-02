@@ -17,15 +17,15 @@ class Dietary: PFObject, PFSubclassing {
 	@NSManaged var userId: String
 	@NSManaged var count: Int
 	
-	@NSManaged var nixId: String
-	@NSManaged var name: String
+	@NSManaged var nix_item_id: String
+	@NSManaged var food_name: String
 	@NSManaged var thumb: String
-	@NSManaged var servingQuantity: Int
-	@NSManaged var servingUnit: String
+	@NSManaged var quantity: Int
+	@NSManaged var unit: String
 	@NSManaged var calories: Float
 
-	@NSManaged var date: Date
-	@NSManaged var nixDate: Date
+	@NSManaged var date: Date?
+	@NSManaged var nix_date: Date
 	
 	@NSManaged var nutritionInfo: String
 	
@@ -164,7 +164,7 @@ class Dietary: PFObject, PFSubclassing {
 		static let TransFat = "605";
 		static let Cholesterol = "601";
 		static let Omega3 = "851";
-		static let Omega6 = "";
+		static let Omega6 = "Omega6";
 	}
 	
 	private static let nutritionKeys: [String: String] = [NutritionIxKey.VitaminB1: Key.VitaminB1,
@@ -257,13 +257,19 @@ class Dietary: PFObject, PFSubclassing {
 		return dietary
 	}
 	
+	static var units: [String] {
+		return ["g", "oz"]
+	}
+	
 	var nutritionDict: [String: Any]? = nil
 	private func loadNutritionInfo(_ infos: [[String: Any]]) {
 		self.nutritionDict = [String: Any]()
 		for info in infos {
-			guard let nixKey = info[NutritionIxKey.NutrientId] as? String else {
+			guard (info[NutritionIxKey.NutrientId] != nil) else {
 				continue
 			}
+			
+			let nixKey = String(info[NutritionIxKey.NutrientId] as! Int)
 			
 			guard let key = Dietary.nutritionKeys[nixKey] else {
 				continue
@@ -275,14 +281,16 @@ class Dietary: PFObject, PFSubclassing {
 			
 			nutritionDict![key] = value
 		}
-		let strNutritionInfo = String(describing: self.nutritionDict)
+		let strNutritionInfo = Helper.JSONStringify(value: self.nutritionDict as AnyObject)
 		self.nutritionInfo = strNutritionInfo
 	}
 		
 	private func getNutritionInfo() -> [String: Any] {
 		do {
-			let data = (self[Key.NutritionInfo] as? String)?.data(using: .utf8)
-			self.nutritionDict = try JSONSerialization.jsonObject(with: data!, options: [.allowFragments]) as? [String: Any]
+			if self.nutritionDict == nil || self.nutritionDict!.isEmpty {
+				let data: Data? = self.nutritionInfo.data(using: .utf8)
+				self.nutritionDict = try JSONSerialization.jsonObject(with: data!, options: [.allowFragments]) as? [String: Any]
+			}
 		} catch let error {
 			print(error)
 			self.nutritionDict = [String: Any]()
@@ -299,11 +307,15 @@ class Dietary: PFObject, PFSubclassing {
 	}
 	
 	func setNixId(_ id: String) {
-		self.nixId = id
+		self.nix_item_id = id
+	}
+	
+	func name() -> String {
+		return food_name
 	}
 	
 	func setName(_ name: String) {
-		self.name = name
+		self.food_name = name
 	}
 	
 	func setThumb(_ imagePath: String) {
@@ -311,15 +323,15 @@ class Dietary: PFObject, PFSubclassing {
 	}
 	
 	func setServingQuantity(_ servingQuantity: Int) {
-		self.servingQuantity = servingQuantity
+		self.quantity = servingQuantity
 	}
 	
 	func isG() -> Bool {
-		return self.servingUnit == "g"
+		return self.unit == "g"
 	}
 	
 	func isOZ() -> Bool {
-		return self.servingUnit == "oz"
+		return self.unit == "oz"
 	}
 	
 	func isGorOZ() -> Bool {
@@ -327,7 +339,7 @@ class Dietary: PFObject, PFSubclassing {
 	}
 	
 	func setServingUnit(_ servingUnit: String) {
-		self.servingUnit = servingUnit
+		self.unit = servingUnit
 	}
 	
 	func caloriesInKCal() -> Float {
@@ -351,9 +363,13 @@ class Dietary: PFObject, PFSubclassing {
 	}
 	
 	func nixDateText() -> String {
+		guard (self.date != nil) else {
+			return ""
+		}
+		
 		let dateFormatter = DateFormatter()
 		dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-		return dateFormatter.string(from: self.date)
+		return dateFormatter.string(from: self.date!)
 	}
 	
 	func setNixDate(_ strDate: String) {
@@ -369,173 +385,122 @@ class Dietary: PFObject, PFSubclassing {
 		self.count = count
 	}
 	
+	func nutrientValue(_ key: String) -> Float {
+		guard let result = self.getNutritionInfo()[key] as? Float else { return 0 }
+		return result
+	}
+	
 	func vitaminB1InMG() -> Float {
-		return self.getNutritionInfo()[Key.VitaminB1] as! Float
+		return self.nutrientValue(Key.VitaminB1)
 	}
 	
 	func vitaminB2InMG() -> Float {
-		return self.getNutritionInfo()[Key.VitaminB2] as! Float
+		return self.nutrientValue(Key.VitaminB2)
 	}
 	
 	func vitaminB3InMG() -> Float {
-		return self.getNutritionInfo()[Key.VitaminB3] as! Float
+		return self.nutrientValue(Key.VitaminB3)
 	}
 	
 	func vitaminB5InMG() -> Float {
-		return self.getNutritionInfo()[Key.VitaminB5] as! Float
+		return self.nutrientValue(Key.VitaminB5)
 	}
 	
 	func vitaminB6InMG() -> Float {
-		return self.getNutritionInfo()[Key.VitaminB6] as! Float
+		return self.nutrientValue(Key.VitaminB6)
 	}
 	
 	func vitaminB9InAMG() -> Float {
-		return self.getNutritionInfo()[Key.VitaminB9] as! Float
+		return self.nutrientValue(Key.VitaminB9)
 	}
 	
 	func vitaminB12InAMG() -> Float {
-		return self.getNutritionInfo()[Key.VitaminB12] as! Float
+		return self.nutrientValue(Key.VitaminB12)
 	}
 	
 	func vitaminAInIU() -> Float {
-		return self.getNutritionInfo()[Key.VitaminA] as! Float
+		return self.nutrientValue(Key.VitaminA)
 	}
 	
 	func vitaminCInMG() -> Float {
-		return self.getNutritionInfo()[Key.VitaminC] as! Float
+		return self.nutrientValue(Key.VitaminC)
 	}
 	
 	func vitaminDInIU() -> Float {
-		return self.getNutritionInfo()[Key.VitaminD] as! Float
+		return self.nutrientValue(Key.VitaminD)
 	}
 	
 	func vitaminEInMG() -> Float {
-		return self.getNutritionInfo()[Key.VitaminE] as! Float
+		return self.nutrientValue(Key.VitaminE)
 	}
 	
 	func vitaminKInAMG() -> Float {
-		return self.getNutritionInfo()[Key.VitaminK] as! Float
+		return self.nutrientValue(Key.VitaminK)
 	}
 	
-	func calciumInMG() -> Float {
-		return self.getNutritionInfo()[Key.Calcium] as! Float
-	}
+	func calciumInMG() -> Float { 			return self.nutrientValue(Key.Calcium)		}
 	
-	func copperInMG() -> Float {
-		return self.getNutritionInfo()[Key.Copper] as! Float
-	}
+	func copperInMG() -> Float {			return self.nutrientValue(Key.Copper)		}
 	
-	func ironInMG() -> Float {
-		return self.getNutritionInfo()[Key.Iron] as! Float
-	}
+	func ironInMG() -> Float {				return self.nutrientValue(Key.Iron)			}
 	
-	func magnesiumInMG() -> Float {
-		return self.getNutritionInfo()[Key.Magnesium] as! Float
-	}
+	func magnesiumInMG() -> Float {			return self.nutrientValue(Key.Magnesium)		}
 	
-	func manganeseInMG() -> Float {
-		return self.getNutritionInfo()[Key.Manganese] as! Float
-	}
+	func manganeseInMG() -> Float {			return self.nutrientValue(Key.Manganese)		}
 	
-	func phosphorusInMG() -> Float {
-		return self.getNutritionInfo()[Key.Phosphorus] as! Float
-	}
+	func phosphorusInMG() -> Float {		return self.nutrientValue(Key.Phosphorus)	}
 	
-	func potassiumInMG() -> Float {
-		return self.getNutritionInfo()[Key.Potassium] as! Float
-	}
+	func potassiumInMG() -> Float {			return self.nutrientValue(Key.Potassium)		}
 	
-	func seleniumInAMG() -> Float {
-		return self.getNutritionInfo()[Key.Selenium] as! Float
-	}
+	func seleniumInAMG() -> Float {			return self.nutrientValue(Key.Selenium)		}
 	
-	func sodiumInMG() -> Float {
-		return self.getNutritionInfo()[Key.Sodium] as! Float
-	}
+	func sodiumInMG() -> Float {			return self.nutrientValue(Key.Sodium)		}
 	
-	func zincInMG() -> Float {
-		return self.getNutritionInfo()[Key.Zinc] as! Float
-	}
+	func zincInMG() -> Float {				return self.nutrientValue(Key.Zinc)			}
 	
-	func carbohydrateInG() -> Float {
-		return self.getNutritionInfo()[Key.Carbohydrate] as! Float
-	}
+	func carbohydrateInG() -> Float {		return self.nutrientValue(Key.Carbohydrate)	}
 	
 	func carbohydrateInKCal() -> Float {
 		return NutrientCalculator.calories(carbohydrateInG(), NutrientCalculator.CALORIES_PER_CARBO_ING)
 	}
 	
-	func fiberInG() -> Float {
-		return self.getNutritionInfo()[Key.Fiber] as! Float
-	}
+	func fiberInG() -> Float {				return self.nutrientValue(Key.Fiber)			}
 	
-	func sugarInG() -> Float {
-		return self.getNutritionInfo()[Key.Sugar] as! Float
-	}
+	func sugarInG() -> Float {				return self.nutrientValue(Key.Sugar)			}
 	
-	func starchInG() -> Float {
-		return self.getNutritionInfo()[Key.Starch] as! Float
-	}
+	func starchInG() -> Float {				return self.nutrientValue(Key.Starch)		}
 	
-	func netCarbohydrates() -> Float {
-		return self.getNutritionInfo()[Key.NetCarbohydrates] as! Float
-	}
+	func netCarbohydrates() -> Float {		return self.nutrientValue(Key.NetCarbohydrates) }
 	
-	func proteinInG() -> Float {
-		return self.getNutritionInfo()[Key.Protein] as! Float
-	}
+	func proteinInG() -> Float {			return self.nutrientValue(Key.Protein)		}
 	
 	func proteinInKCal() -> Float {
 		return NutrientCalculator.calories(proteinInG(), NutrientCalculator.CALORIES_PER_PROTEIN_ING)
 	}
 	
-	func cystineInG() -> Float {
-		return self.getNutritionInfo()[Key.Cystine] as! Float
-	}
+	func cystineInG() -> Float {			return self.nutrientValue(Key.Cystine)		}
 	
-	func histidineInG() -> Float {
-		return self.getNutritionInfo()[Key.Histidine] as! Float
-	}
+	func histidineInG() -> Float {			return self.nutrientValue(Key.Histidine)		}
 	
-	func isoleucineInG() -> Float {
-		return self.getNutritionInfo()[Key.Isoleucine] as! Float
-	}
+	func isoleucineInG() -> Float {			return self.nutrientValue(Key.Isoleucine)	}
 	
-	func leucineInG() -> Float {
-		return self.getNutritionInfo()[Key.Leucine] as! Float
-	}
+	func leucineInG() -> Float {			return self.nutrientValue(Key.Leucine)		}
 	
-	func lysineInG() -> Float {
-		return self.getNutritionInfo()[Key.Lysine] as! Float
-	}
+	func lysineInG() -> Float {				return self.nutrientValue(Key.Lysine)		}
 	
-	func methionineInG() -> Float {
-		return self.getNutritionInfo()[Key.Methionine] as! Float
-	}
+	func methionineInG() -> Float {			return self.nutrientValue(Key.Methionine)	}
 	
-	func phenylalanineInG() -> Float {
-		return self.getNutritionInfo()[Key.Phenylalanine] as! Float
-	}
+	func phenylalanineInG() -> Float {		return self.nutrientValue(Key.Phenylalanine)	}
 	
-	func threonineInG() -> Float {
-		return self.getNutritionInfo()[Key.Threonine] as! Float
-	}
+	func threonineInG() -> Float {			return self.nutrientValue(Key.Threonine)		}
 	
-	func tryptophanInG() -> Float {
-		return self.getNutritionInfo()[Key.Tryptophan] as! Float
-	}
+	func tryptophanInG() -> Float {			return self.nutrientValue(Key.Tryptophan)	}
 	
-	func tyrosineInG() -> Float {
-		return self.getNutritionInfo()[Key.Tyrosine] as! Float
-	}
+	func tyrosineInG() -> Float {			return self.nutrientValue(Key.Tyrosine)		}
 	
-	func valineInG() -> Float {
-		return self.getNutritionInfo()[Key.Valine] as! Float
-	}
+	func valineInG() -> Float {				return self.nutrientValue(Key.Valine)		}
 	
-	func fatInG() -> Float {
-		return self.getNutritionInfo()[Key.Fat] as! Float
-	}
+	func fatInG() -> Float {				return self.nutrientValue(Key.Fat)			}
 	
 	func totalFatInG() -> Float {
 		return fatInG() * Float(count)
@@ -549,32 +514,18 @@ class Dietary: PFObject, PFSubclassing {
 		return fatInKCal() * Float(count)
 	}
 	
-	func monounsaturatedInG() -> Float {
-		return self.getNutritionInfo()[Key.Monounsaturated] as! Float
-	}
+	func monounsaturatedInG() -> Float {	return self.nutrientValue(Key.Monounsaturated)	}
 	
-	func polyunsaturatedInG() -> Float {
-		return self.getNutritionInfo()[Key.Polyunsaturated] as! Float
-	}
+	func polyunsaturatedInG() -> Float {	return self.nutrientValue(Key.Polyunsaturated)	}
 	
-	func saturatedInG() -> Float {
-		return self.getNutritionInfo()[Key.Saturated] as! Float
-	}
+	func saturatedInG() -> Float {			return self.nutrientValue(Key.Saturated)			}
 	
-	func transFatInG() -> Float {
-		return self.getNutritionInfo()[Key.TransFat] as! Float
-	}
+	func transFatInG() -> Float {			return self.nutrientValue(Key.TransFat)			}
 	
-	func cholesterolInMG() -> Float {
-		return self.getNutritionInfo()[Key.Cholesterol] as! Float
-	}
+	func cholesterolInMG() -> Float {		return self.nutrientValue(Key.Cholesterol)		}
 	
-	func omega3InG() -> Float {
-		return self.getNutritionInfo()[Key.Omega3] as! Float
-	}
+	func omega3InG() -> Float {				return self.nutrientValue(Key.Omega3)			}
 	
-	func omega6() -> Float {
-		return self.getNutritionInfo()[Key.Omega6] as! Float
-	}
+	func omega6() -> Float {				return self.nutrientValue(Key.Omega6)			}
 
 }

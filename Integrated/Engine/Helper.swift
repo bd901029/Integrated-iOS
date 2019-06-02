@@ -101,6 +101,21 @@ public class Helper {
 		formatter.dateFormat = "dd/MM/yyyy"
 		return formatter
 	}
+	
+	static func JSONStringify(value: AnyObject, prettyPrinted: Bool = false) -> String {
+		do {
+			let options = JSONSerialization.WritingOptions.prettyPrinted
+			if JSONSerialization.isValidJSONObject(value) {
+				let data = try JSONSerialization.data(withJSONObject: value, options: options)
+				if let string = NSString(data: data, encoding: String.Encoding.utf8.rawValue) {
+					return string as String
+				}
+			}
+		} catch let error {
+			print(error)
+		}
+		return ""
+	}
 }
 
 extension String {
@@ -147,10 +162,10 @@ extension String {
 extension UIButton {
 	func setBackgroundColor(color: UIColor, forState: UIControl.State) {
 		self.clipsToBounds = true  // add this to maintain corner radius
-		UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
+		UIGraphicsBeginImageContext(CGSize(width: self.bounds.width, height: self.bounds.height))
 		if let context = UIGraphicsGetCurrentContext() {
 			context.setFillColor(color.cgColor)
-			context.fill(CGRect(x: 0, y: 0, width: 1, height: 1))
+			context.fill(CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height))
 			let colorImage = UIGraphicsGetImageFromCurrentImageContext()
 			UIGraphicsEndImageContext()
 			self.setBackgroundImage(colorImage, for: forState)
@@ -219,5 +234,19 @@ extension UIImage {
 		
 		guard let newCGImage = ctx.makeImage() else { return nil }
 		return UIImage.init(cgImage: newCGImage, scale: 1, orientation: .up)
+	}
+	
+	func scaleToWidth(_ width: CGFloat) -> UIImage? {
+		let oldWidth = self.size.width
+		let scaleFactor = width / oldWidth
+		
+		let newHeight = self.size.height * scaleFactor
+		let newWidth = oldWidth * scaleFactor
+		
+		UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+		self .draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
+		let newImage = UIGraphicsGetImageFromCurrentImageContext()
+		UIGraphicsEndImageContext()
+		return newImage
 	}
 }

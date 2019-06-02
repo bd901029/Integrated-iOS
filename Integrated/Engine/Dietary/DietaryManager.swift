@@ -19,19 +19,25 @@ class DietaryManager: ApiManager {
 	let NUTRITIONIX_ID = "2b7eb7fc"
 	let NUTRITIONIX_KEY = "7ff2633984803ffd3e48b0e4ff03ab88"
 	
-	func searchByName(_ name: String?, _ callback: @escaping ((_ results: [Any]?, _ error: Error?) -> Void)) {
-		if name == nil || name == "" {
+	func searchByName(_ name: String, _ callback: @escaping ((_ results: [Any]?, _ error: Error?) -> Void)) {
+		Alamofire.SessionManager.default.session.getTasksWithCompletionHandler { (dataTasks, uploadTasks, downloadTasks) in
+			dataTasks.forEach({ $0.cancel() })
+			uploadTasks.forEach({ $0.cancel() })
+			downloadTasks.forEach({ $0.cancel() })
+		}
+		
+		if name == "" {
 			self.runCallback(callback, [Any](), nil)
 			return
 		}
 		
-		let url = "https://trackapi.nutritionix.com/v2/search/instant"
-		let params: [String: Any] = ["query": name!, "branded": true, "detailed": true]
-		let header: HTTPHeaders = ["Content-Type": "application/json", "x-app-id": NUTRITIONIX_ID, "x-app-key": NUTRITIONIX_KEY]
-		let request = Alamofire.request(url, method: HTTPMethod.post, parameters: params, headers: header)
+		let url = "https://trackapi.nutritionix.com/v2/search/instant?query=\(name)&branded=true&detailed=true"
+		let header: HTTPHeaders = ["Content-Type": "application/json",
+								   "x-app-id": NUTRITIONIX_ID,
+								   "x-app-key": NUTRITIONIX_KEY]
+		let request = Alamofire.SessionManager.default.request(url, method: HTTPMethod.get, headers: header)
 		request.responseJSON { (response) in
 			guard response.result.isSuccess, let jsonInfo = response.result.value as? [String: Any] else {
-				print("Error while fetching colors: \(String(describing: response.result.error))")
 				self.runCallback(callback, nil, response.result.error)
 				return
 			}
@@ -121,11 +127,11 @@ class DietaryManager: ApiManager {
 	
 	func add(_ dietary: Dietary) {
 		for temp in dietaries {
-			if temp.nixId != dietary.nixId {
+			if temp.nix_item_id != dietary.nix_item_id {
 				continue
 			}
 			
-			if temp.date.timeIntervalSince1970 == dietary.date.timeIntervalSince1970 {
+			if temp.createdAt!.timeIntervalSince1970 == dietary.createdAt!.timeIntervalSince1970 {
 				temp.setCount(dietary.count)
 				return
 			}

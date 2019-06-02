@@ -49,19 +49,25 @@ class DateHelper: NSObject {
 	}
 	
 	public static func prevDay(_ date: Date) -> Date {
-		return Calendar.current.date(byAdding: .day, value: -1, to: date)!
+		let date = Calendar.current.date(byAdding: .day, value: -1, to: date)!
+		return date
 	}
 	
 	public static func nextDay(_ date: Date) -> Date {
-		return Calendar.current.date(byAdding: .day, value: 1, to: date)!
+		let date = Calendar.current.date(byAdding: .day, value: 1, to: date)!
+		return date
 	}
 	
 	public static func isStartOfMonth(_ date: Date) -> Bool {
-		return DateHelper.month(date) == DateHelper.month(DateHelper.prevDay(date))
+		let month = DateHelper.month(date)
+		let tempMonth = DateHelper.month(DateHelper.prevDay(date))
+		return month != tempMonth
 	}
 	
 	public static func isEndOfMonth(_ date: Date) -> Bool {
-		return DateHelper.month(date) == DateHelper.month(DateHelper.nextDay(date))
+		let month = DateHelper.month(date)
+		let tempMonth = DateHelper.month(DateHelper.nextDay(date))
+		return month != tempMonth
 	}
 	
 	public static func isSameDay(_ date1: Date?, _ date2: Date?) -> Bool {
