@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xK3-pl-Gpl">
-                    <rect key="frame" x="40" y="388" width="334" height="120"/>
+                    <rect key="frame" x="40" y="378" width="334" height="140"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Optimizing Your Profile" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRf-l2-roR">
                             <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -34,7 +34,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="MxL-rg-05b">
-                            <rect key="frame" x="142" y="70" width="50" height="50"/>
+                            <rect key="frame" x="142" y="90" width="50" height="50"/>
                             <color key="tintColor" red="0.92941176469999998" green="0.10980392160000001" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="HtC-ij-zUt"/>
@@ -48,9 +48,9 @@
                         <constraint firstItem="MRf-l2-roR" firstAttribute="top" secondItem="xK3-pl-Gpl" secondAttribute="top" id="CRK-HN-g2r"/>
                         <constraint firstItem="MxL-rg-05b" firstAttribute="centerX" secondItem="xK3-pl-Gpl" secondAttribute="centerX" id="QUf-ZU-1TN"/>
                         <constraint firstItem="MRf-l2-roR" firstAttribute="leading" secondItem="xK3-pl-Gpl" secondAttribute="leading" id="S64-Sc-jgc"/>
-                        <constraint firstAttribute="height" constant="120" id="gwa-mb-diB"/>
+                        <constraint firstAttribute="height" constant="140" id="gwa-mb-diB"/>
                         <constraint firstAttribute="trailing" secondItem="MRf-l2-roR" secondAttribute="trailing" id="huZ-AB-6Px"/>
-                        <constraint firstItem="MxL-rg-05b" firstAttribute="top" secondItem="MRf-l2-roR" secondAttribute="bottom" constant="20" id="mgj-ns-pSG"/>
+                        <constraint firstItem="MxL-rg-05b" firstAttribute="top" secondItem="MRf-l2-roR" secondAttribute="bottom" constant="40" id="mgj-ns-pSG"/>
                     </constraints>
                 </view>
             </subviews>

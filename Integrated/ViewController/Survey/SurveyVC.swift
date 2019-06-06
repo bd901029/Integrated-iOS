@@ -13,6 +13,7 @@ class SurveyVC: UIViewController {
 	
 	@IBOutlet weak var viewPager: ViewPager!
 	@IBOutlet var pageButtons: [CustomButton]!
+	@IBOutlet var dummyViews: [UIView]!
 	
 	let genderView = SurveyGenderView.create()
 	let ageView = SurveyAgeView.create()
@@ -91,6 +92,10 @@ extension SurveyVC: ViewPagerDataSource, ViewPagerDelegate {
 	func viewPager(_ viewPager: ViewPager, didSelectedItem itemIndex: Int) {
 		for pageButton in self.pageButtons {
 			pageButton.isSelected = itemIndex == self.pageButtons.index(of: pageButton)
+		}
+		
+		for dummyView in self.dummyViews {
+			dummyView.isHidden = (itemIndex == self.pageViews.count-1)
 		}
 	}
 }

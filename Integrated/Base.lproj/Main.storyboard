@@ -194,6 +194,9 @@ anytime via Your profile</string>
                         <outletCollection property="pageButtons" destination="8oX-TJ-fuB" collectionClass="NSMutableArray" id="3Tw-Ye-Z9d"/>
                         <outletCollection property="pageButtons" destination="0B0-aJ-5Qh" collectionClass="NSMutableArray" id="jAP-9w-Onp"/>
                         <outletCollection property="pageButtons" destination="ZSe-fh-keN" collectionClass="NSMutableArray" id="Fva-h5-bNm"/>
+                        <outletCollection property="dummyViews" destination="oHx-n0-qUx" collectionClass="NSMutableArray" id="5zF-mc-rAL"/>
+                        <outletCollection property="dummyViews" destination="8G5-dq-hFm" collectionClass="NSMutableArray" id="zis-YD-LK5"/>
+                        <outletCollection property="dummyViews" destination="WI7-Ue-5w0" collectionClass="NSMutableArray" id="jPL-QJ-5Ra"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6NN-na-T2L" userLabel="First Responder" sceneMemberID="firstResponder"/>

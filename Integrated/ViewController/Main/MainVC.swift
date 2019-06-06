@@ -89,7 +89,7 @@ class MainVC: UIViewController {
 	
 	@IBAction func onBottomBtnClicked(_ sender: UIButton) {
 		let selectedIndex = self.bottomButtons.index(of: sender)!
-		self.viewPager.scrollToPage(index: selectedIndex+1)
+		self.viewPager.scrollToPage(index: selectedIndex)
 	}
 	
 	@IBAction func onMenuBtnClicked(_ sender: UIButton) {

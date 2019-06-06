@@ -120,10 +120,14 @@ extension UINavigationController {
 		
 		if animated, let coordinator = transitionCoordinator {
 			coordinator.animate(alongsideTransition: nil) { _ in
-				completion()
+				DispatchQueue.main.async {
+					completion()
+				}
 			}
 		} else {
-			completion()
+			DispatchQueue.main.async {
+				completion()
+			}
 		}
 	}
 }

@@ -23,13 +23,13 @@ class SurveyGoalView: SurveyBaseView {
 		if (sender == btnLose || sender == btnGain) {
 			User.sharedInstance.setPaceType(sender == btnLose ? User.PACE_LOSE : User.PACE_GAIN)
 			
-			(self.parentViewController as? SurveyVC)?.viewPager.scrollToPage(index: 7)
+			(self.parentViewController as? SurveyVC)?.viewPager.scrollToPage(index: 6)
 		}
 		
 		if (sender == btnMaintain) {
 			User.sharedInstance.setPaceType(User.PACE_MAINTAIN)
 			
-			(self.parentViewController as? SurveyVC)?.viewPager.scrollToPage(index: 8)
+			(self.parentViewController as? SurveyVC)?.viewPager.scrollToPage(index: 7)
 			
 			let optimizeView = (self.parentViewController as? SurveyVC)?.optimizeView
 			optimizeView?.saveAndGotoHome()

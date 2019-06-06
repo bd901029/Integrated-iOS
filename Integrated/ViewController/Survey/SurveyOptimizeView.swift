@@ -18,10 +18,8 @@ class SurveyOptimizeView: SurveyBaseView {
 	func saveAndGotoHome() {
 		User.sharedInstance.optimize()
 		User.sharedInstance.save { (error) in
-			DispatchQueue.main.async {
-				let loginVC = (UIApplication.shared.delegate as! AppDelegate).loginVC!
-				loginVC.gotoMainVC()
-			}
+            let loginVC = (UIApplication.shared.delegate as! AppDelegate).loginVC!
+            loginVC.gotoMainVC()
 		}
 	}
 }

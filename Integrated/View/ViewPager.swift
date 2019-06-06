@@ -21,19 +21,19 @@ protocol ViewPagerDelegate {
 
 public class ViewPager: UIView {
     
-    var pageControl:UIPageControl = UIPageControl()
-    var scrollView:UIScrollView = UIScrollView()
-    var currentPosition:Int = 0
+    var pageControl: UIPageControl = UIPageControl()
+    var scrollView: UIScrollView = UIScrollView()
+    var currentPosition: Int = 0
     
-    var dataSource:ViewPagerDataSource? = nil {
+    var dataSource: ViewPagerDataSource? = nil {
         didSet {
             reloadData()
         }
     }
 	var delegate: ViewPagerDelegate? = nil
     
-    var numberOfItems:Int = 0
-    var itemViews:Dictionary<Int, UIView> = [:]
+    var numberOfItems: Int = 0
+    var itemViews: Dictionary<Int, UIView> = [:]
     
     required  public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -187,8 +187,8 @@ extension ViewPager: UIScrollViewDelegate {
         var pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
         pageNumber = pageNumber + 1
         pageControl.currentPage = Int(pageNumber)
-        currentPosition = pageControl.currentPage
-        scrollToPage(index: Int(pageNumber))
+//        currentPosition = pageControl.currentPage
+//        scrollToPage(index: Int(pageNumber))
 		
 		let index = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
 		self.delegate?.viewPager(self, didSelectedItem: index)
@@ -214,22 +214,18 @@ extension ViewPager {
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewPager.moveToNextPage), userInfo: nil, repeats: true)
     }
 	
-	@objc func moveToNextPage (){
-        if(currentPosition <= numberOfItems && currentPosition > 0) {
-            scrollToPage(index: currentPosition)
-            currentPosition = currentPosition + 1
-            if currentPosition > numberOfItems {
-                currentPosition = 1
-            }
-        }
+	@objc func moveToNextPage () {
+		currentPosition = min(currentPosition+1, numberOfItems-1)
+		self.scrollToPage(index: currentPosition)
     }
     
-    func scrollToPage(index:Int) {
-        if(index <= numberOfItems && index > 0) {
-            let zIndex = index - 1
-            let iframe = CGRect(x: self.scrollView.frame.width*CGFloat(zIndex), y: 0, width: self.scrollView.frame.width, height: self.scrollView.frame.height);
+    func scrollToPage(index: Int) {
+        if(index < numberOfItems && index >= 0) {
+            let iframe = CGRect(x: self.scrollView.frame.width*CGFloat(index), y: 0,
+								width: self.scrollView.frame.width,
+								height: self.scrollView.frame.height);
             scrollView.setContentOffset(iframe.origin, animated: true)
-            pageControl.currentPage = zIndex
+            pageControl.currentPage = index
             reloadViews()
             currentPosition = index
         }
