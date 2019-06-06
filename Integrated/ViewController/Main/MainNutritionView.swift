@@ -40,6 +40,7 @@ class MainNutritionView: UIView {
 		self.tableView.register(UINib(nibName: "BlogCell", bundle: nil), forCellReuseIdentifier: "BlogCell")
 		self.tableView.dataSource = self
 		self.tableView.delegate = self
+		self.tableView.tableFooterView = UIView()
 		
 		self.updateUI()
 	}

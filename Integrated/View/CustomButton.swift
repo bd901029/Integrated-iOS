@@ -11,9 +11,17 @@ import UIKit
 @IBDesignable
 class CustomButton: UIButton {
 	
-	@IBInspectable var cornerRadius: CGFloat = 0 {
+	@IBInspectable
+	var cornerRadius: CGFloat = 0 {
 		didSet {
 			self.layer.cornerRadius = self.cornerRadius
+		}
+	}
+	
+	@IBInspectable
+	var textAlignment:NSTextAlignment = NSTextAlignment.center {
+		didSet {
+			self.titleLabel?.textAlignment = self.textAlignment
 		}
 	}
 }

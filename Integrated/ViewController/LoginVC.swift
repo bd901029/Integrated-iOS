@@ -17,6 +17,8 @@ class LoginVC: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		(UIApplication.shared.delegate as! AppDelegate).loginVC = self
+		
 		initUI()
 		
 		autoLogin()
@@ -72,9 +74,13 @@ class LoginVC: UIViewController {
 	}
 	
 	func gotoMainVC() {
-		let storyboard = UIStoryboard(name: "Main", bundle: nil)
-		let mainRootVC = storyboard.instantiateViewController(withIdentifier: "MainRootVC") as! MainRootVC
-		self.navigationController?.pushViewController(mainRootVC, animated: true)
+		self.navigationController?.popToViewController(viewController: self, animated: false, completion: {
+			DispatchQueue.main.async {
+				let storyboard = UIStoryboard(name: "Main", bundle: nil)
+				let mainRootVC = storyboard.instantiateViewController(withIdentifier: "MainRootVC") as! MainRootVC
+				self.navigationController?.pushViewController(mainRootVC, animated: true)
+			}
+		})
 	}
 	
 	func gotoRegisterVC() {
@@ -84,3 +90,40 @@ class LoginVC: UIViewController {
 	}
 }
 
+extension UINavigationController {
+	func pushViewController(viewController: UIViewController, animated: Bool, completion: @escaping () -> ()) {
+		pushViewController(viewController, animated: animated)
+		
+		if animated, let coordinator = transitionCoordinator {
+			coordinator.animate(alongsideTransition: nil) { _ in
+				completion()
+			}
+		} else {
+			completion()
+		}
+	}
+	
+	func popViewController(animated: Bool, completion: @escaping () -> ()) {
+		popViewController(animated: animated)
+		
+		if animated, let coordinator = transitionCoordinator {
+			coordinator.animate(alongsideTransition: nil) { _ in
+				completion()
+			}
+		} else {
+			completion()
+		}
+	}
+	
+	func popToViewController(viewController: UIViewController!, animated: Bool, completion: @escaping () -> ()) {
+		popToViewController(viewController, animated: animated)
+		
+		if animated, let coordinator = transitionCoordinator {
+			coordinator.animate(alongsideTransition: nil) { _ in
+				completion()
+			}
+		} else {
+			completion()
+		}
+	}
+}

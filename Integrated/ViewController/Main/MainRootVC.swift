@@ -31,6 +31,9 @@ class MainRootVC: LMSideBarController {
 		self.setMenuView(rightMenuViewController, for: LMSideBarControllerDirection.right)
 		self.setSideBarStyle(sideBarDepthStyle, for: LMSideBarControllerDirection.right)
 		self.contentViewController = navigationController
+		
+		let mainVC = navigationController.viewControllers[0] as! MainVC
+		rightMenuViewController.delegate = mainVC
 	}
 }
 

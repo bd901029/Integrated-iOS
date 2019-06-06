@@ -62,7 +62,7 @@ class ProgressTrackerVC: UIViewController {
 	}
 	
 	private func initUI() {
-		
+		self.navigationController?.isNavigationBarHidden = true
 	}
 	
 	private func updateUI() {

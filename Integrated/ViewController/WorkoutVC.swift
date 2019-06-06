@@ -47,7 +47,7 @@ class WorkoutVC: UIViewController {
 	}
 	
 	func initUI() {
-		
+		self.navigationController?.isNavigationBarHidden = true
 	}
 	
 	func updateUI() {

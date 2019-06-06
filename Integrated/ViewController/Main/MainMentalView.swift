@@ -39,7 +39,10 @@ class MainMentalView: UIView {
 	}
 	
 	@IBAction func onYogaBtnTapped(_ sender: UIButton) {
-		
+		let vc = YogaSectionVC.instance()
+		let nav = UINavigationController(rootViewController: vc)
+		nav.navigationBar.isHidden = true
+		self.parentViewController?.present(nav, animated: true, completion: nil)
 	}
 	
 	@IBAction func onDailyReflectionBtnTapped(_ sender: UIButton) {
@@ -50,6 +53,7 @@ class MainMentalView: UIView {
 		self.tableView.register(UINib(nibName: "BlogCell", bundle: nil), forCellReuseIdentifier: "BlogCell")
 		self.tableView.dataSource = self
 		self.tableView.delegate = self
+		self.tableView.tableFooterView = UIView()
 		
 		self.updateUI()
 	}

@@ -23,7 +23,8 @@ class NutritionStatisticsVC: UIViewController {
 	@IBOutlet weak var calorieGoalView: UILabel!
 	
 	@IBOutlet weak var viewPager: ViewPager!
-	@IBOutlet var btnPageLabels: [UIButton]!
+	@IBOutlet var nutrientsButtons: [UIButton]!
+	@IBOutlet var pageButtons: [CustomButton]!
 	
 	let vitaminView			= AnalysisVitaminView.create()
 	let mineralsView		= AnalysisMineralsView.create()
@@ -48,17 +49,36 @@ class NutritionStatisticsVC: UIViewController {
 	}
 	
 	@IBAction func onPageLabelBtnTapped(_ sender: UIButton) {
-		let index = self.btnPageLabels.index(of: sender)!
+		let index = self.nutrientsButtons.index(of: sender)!
 		self.viewPager.scrollToPage(index: index+1)
+		
+		for button in self.nutrientsButtons {
+			button.isSelected = button == sender
+		}
+		
+		for i in 0 ..< self.pageButtons.count {
+			self.pageButtons[i].isSelected = i == index
+		}
 	}
 	
 	private func initUI() {
 		self.initChart()
 		
-		viewPager.dataSource = self
-		viewPager.delegate = self
-		viewPager.pageControl.isHidden = true
-		viewPager.scrollToPage(index: 1)
+		let pageColors = [UIColor.vitamin(), UIColor.mineral(), UIColor.carbohydrate(), UIColor.protein(), UIColor.fat()]
+		for i in 0 ..< self.nutrientsButtons.count {
+			let button = self.nutrientsButtons[i]
+			button.setTitleColor(pageColors[i], for: UIControlState.selected)
+		}
+		
+		for i in 0 ..< self.pageButtons.count {
+			let button = self.pageButtons[i]
+			button.setTitleColor(pageColors[i], for: UIControlState.selected)
+		}
+		
+		self.viewPager.dataSource = self
+		self.viewPager.delegate = self
+		self.viewPager.pageControl.isHidden = true
+		self.viewPager.scrollToPage(index: 0)
 	}
 	
 	private func initChart() {
@@ -157,5 +177,12 @@ extension NutritionStatisticsVC: ViewPagerDataSource, ViewPagerDelegate {
 	}
 	
 	func viewPager(_ viewPager: ViewPager, didSelectedItem itemIndex: Int) {
+		for index in 0 ..< self.nutrientsButtons.count {
+			self.nutrientsButtons[index].isSelected = itemIndex == index
+		}
+		
+		for index in 0 ..< self.pageButtons.count {
+			self.pageButtons[index].isSelected = itemIndex == index
+		}
 	}
 }

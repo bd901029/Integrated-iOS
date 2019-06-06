@@ -11,7 +11,7 @@ import UIKit
 class MainHomeView: UIView {
 	
 	@IBOutlet weak var calorieChartContainer: UIView!
-	var calorieChart: CircleProgress!
+	var calorieChart: KNCirclePercentView!
 	@IBOutlet weak var calorieConsumedView: UILabel!
 	@IBOutlet weak var calorieGoalView: UILabel!
 	
@@ -36,17 +36,16 @@ class MainHomeView: UIView {
 	}
 	
 	func initUI() {
-		self.calorieChart = CircleProgress(rectframe: calorieChartContainer.bounds, type: CircleProgressType.Closed)
-		self.calorieChart.backgroundColor = UIColor.clear
-		self.calorieChart.fillColor = UIColor(red: 16/255, green: 119/255, blue: 234/255, alpha: 1.0)
+		self.calorieChart = KNCirclePercentView(frame: self.calorieChartContainer.bounds)
+		self.calorieChart.percentLabel.isHidden = true
+		self.calorieChart.fillColor = UIColor.clear
 		self.calorieChart.strokeColor = UIColor(red:16/255, green: 119/255, blue: 234/255, alpha: 1.0)
-		self.calorieChart.radiusPercent = 0.45
 		self.calorieChartContainer.addSubview(self.calorieChart)
-		self.calorieChart.loadIndicator()
 		
 		self.tableView.register(UINib(nibName: "BlogCell", bundle: nil), forCellReuseIdentifier: "BlogCell") 
 		self.tableView.dataSource = self
 		self.tableView.delegate = self
+		self.tableView.tableFooterView = UIView()
 		
 		updateUI()
 	}
@@ -65,10 +64,10 @@ class MainHomeView: UIView {
 		let calorieProgress: Float = calorieConsumed / calorieGoal * 100.0 + 0.5;
 		if (calorieProgress < NutrientCalculator.MAX_PERCENT) {
 			self.calorieChart.strokeColor = UIColor.notFull()
-			self.calorieChart.updateWithTotalBytes(bytes: 100.0, downloadedBytes: CGFloat(calorieProgress))
+			self.calorieChart.updatePercent(CGFloat(calorieProgress))
 		} else {
 			self.calorieChart.strokeColor = UIColor.full()
-			self.calorieChart.updateWithTotalBytes(bytes: CGFloat(calorieProgress), downloadedBytes: CGFloat(calorieProgress))
+			self.calorieChart.updatePercent(CGFloat(calorieProgress))
 		}		
 		
 		self.blogs = BlogManager.sharedInstance.blogs

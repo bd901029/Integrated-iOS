@@ -11,7 +11,7 @@ import UIKit
 class AnalysisMineralsView: UIView {
 	
 	@IBOutlet var chartContainers: [UIView]!
-	var charts = [CircleProgress]()
+	var charts: [KNCirclePercentView] = [KNCirclePercentView]()
 	@IBOutlet var percentViews: [UILabel]!
 
 	static func create() -> AnalysisMineralsView! {
@@ -26,13 +26,12 @@ class AnalysisMineralsView: UIView {
 	}
 	
 	func initUI() {
+		let strokeColor = UIColor(red:16/255, green: 119/255, blue: 234/255, alpha: 1.0)
 		for container in self.chartContainers {
-			let chart = CircleProgress(rectframe: container.bounds, type: CircleProgressType.Closed)
-			chart.backgroundColor = UIColor.clear
-			chart.fillColor = UIColor(red: 16/255, green: 119/255, blue: 234/255, alpha: 1.0)
-			chart.strokeColor = UIColor(red:16/255, green: 119/255, blue: 234/255, alpha: 1.0)
-			chart.radiusPercent = 0.45
-			chart.loadIndicator()
+			let chart = KNCirclePercentView(frame: container.bounds)
+			chart.fillColor = UIColor.clear
+			chart.strokeColor = strokeColor
+			chart.percentLabel.isHidden = true
 			container.addSubview(chart)
 			self.charts.append(chart)
 		}
@@ -70,10 +69,10 @@ class AnalysisMineralsView: UIView {
 			
 			if (percent < Int(NutrientCalculator.MAX_PERCENT)) {
 				chart.strokeColor = UIColor.notFull()
-				chart.updateWithTotalBytes(bytes: 100.0, downloadedBytes: CGFloat(percent))
+				chart.updatePercent(CGFloat(percent))
 			} else {
 				chart.strokeColor = UIColor.full()
-				chart.updateWithTotalBytes(bytes: CGFloat(percent), downloadedBytes: CGFloat(percent))
+				chart.updatePercent(CGFloat(percent))
 			}
 			
 			let percentView = self.percentViews[i]

@@ -46,7 +46,7 @@ class NutrientCalculator: NSObject {
 	
 	public static func percentVB9(_ value: Float) -> Float {
 	//		return (value / 2333) * 100.))
-		return Float(100)
+		return Float(0)
 	}
 	
 	public static func percentVB12(_ value: Float) -> Float {
@@ -126,7 +126,7 @@ class NutrientCalculator: NSObject {
 	/// Protein
 	public static func percentProtein(_ value: Float) -> Float {
 	//		return (value / 8) * 100.))
-	return Float(100)
+	return Float(0)
 	}
 	
 	public static func percentCystine(_ value: Float) -> Float {

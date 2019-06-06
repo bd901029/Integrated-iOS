@@ -138,7 +138,7 @@ Consumed</string>
             <nil key="simulatedTopBarMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="calorieChartContainer" destination="bM7-f3-C3l" id="zHS-PC-8cv"/>
+                <outlet property="calorieChartContainer" destination="bM7-f3-C3l" id="H1X-Uc-gQs"/>
                 <outlet property="calorieConsumedView" destination="mMI-19-lJn" id="Yla-n1-FmC"/>
                 <outlet property="calorieGoalView" destination="VVq-kf-LAh" id="HuO-qR-Yll"/>
                 <outlet property="tableView" destination="MMz-GM-0o8" id="rDE-Q9-XVf"/>

@@ -120,7 +120,7 @@ public class ViewPager: UIView {
     
     
     func reloadData() {
-        if(dataSource != nil){
+        if dataSource != nil {
             numberOfItems = (dataSource?.numberOfItems(viewPager: self))!
         }
         self.pageControl.numberOfPages = numberOfItems
@@ -129,15 +129,16 @@ public class ViewPager: UIView {
         for view in self.scrollView.subviews {
             view.removeFromSuperview()
         }
-        
+		
         DispatchQueue.main.async {
-            self.scrollView.contentSize = CGSize(width: self.scrollView.frame.width *  CGFloat(self.numberOfItems) , height: self.scrollView.frame.height)
-            self.reloadViews(index: 0)
+			self.scrollView.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
+            self.scrollView.contentSize = CGSize(width: self.frame.width *  CGFloat(self.numberOfItems) , height: self.frame.height)
+            self.reloadViews()
         }
     }
     
-    func loadViewAtIndex(index:Int){
-        let view:UIView?
+    func loadViewAtIndex(_ index: Int) {
+        let view: UIView?
         if(dataSource != nil){
             view =  (dataSource?.viewAtIndex(viewPager: self, index: index, view: itemViews[index]))!
         }else{
@@ -154,10 +155,9 @@ public class ViewPager: UIView {
             itemViews[index]!.addGestureRecognizer(tap)
             
             scrollView.addSubview(itemViews[index]!)
-        }else{
+        } else {
             itemViews[index] = view
         }
-        
     }
     
 	@objc func handleTapSubView() {
@@ -167,22 +167,17 @@ public class ViewPager: UIView {
     }
     
     
-    func reloadViews(index:Int){
-        
-        for i in (index-1)...(index+1) {
-            if(i>=0 && i<numberOfItems){
-                loadViewAtIndex(index: i);
-            }
+    func reloadViews() {
+        for i in 0 ..< numberOfItems {
+            loadViewAtIndex(i)
         }
-        
-        // print(scrollView.subviews.count)
     }
     
-    func setFrameForView(view:UIView,index:Int){
-        view.frame = CGRect(x: self.scrollView.frame.width*CGFloat(index), y: 0, width: self.scrollView.frame.width, height: self.scrollView.frame.height);
+    func setFrameForView(view: UIView, index: Int) {
+        view.frame = CGRect(x: self.frame.width * CGFloat(index), y: 0,
+							width: self.frame.width,
+							height: self.frame.height)
     }
-    
-    
 }
 
 extension ViewPager: UIScrollViewDelegate {
@@ -214,12 +209,11 @@ extension ViewPager: UIScrollViewDelegate {
 	}
 }
 
-extension ViewPager{
-    
-    
+extension ViewPager {
     func animationNext(){
-        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(ViewPager.moveToNextPage), userInfo: nil, repeats: true)
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewPager.moveToNextPage), userInfo: nil, repeats: true)
     }
+	
 	@objc func moveToNextPage (){
         if(currentPosition <= numberOfItems && currentPosition > 0) {
             scrollToPage(index: currentPosition)
@@ -236,7 +230,7 @@ extension ViewPager{
             let iframe = CGRect(x: self.scrollView.frame.width*CGFloat(zIndex), y: 0, width: self.scrollView.frame.width, height: self.scrollView.frame.height);
             scrollView.setContentOffset(iframe.origin, animated: true)
             pageControl.currentPage = zIndex
-            reloadViews(index: zIndex)
+            reloadViews()
             currentPosition = index
         }
     }    

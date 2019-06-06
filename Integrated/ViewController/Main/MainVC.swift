@@ -25,6 +25,8 @@ class MainVC: UIViewController {
 	var physicalView: MainPhysicalView? = nil
 	var mentalView: MainMentalView? = nil
 	
+	@IBOutlet weak var logoMenuView: UIView!
+	
 	override func viewDidLoad() {
         super.viewDidLoad()
 		
@@ -35,6 +37,54 @@ class MainVC: UIViewController {
 		super.viewWillAppear(animated)
 		
 		updateUI()
+	}
+	
+	@IBAction func onLogoMenuBtnTapped(_ sender: UIButton) {
+		self.toggleLogoMenu()
+	}
+	
+	@IBAction func onLogoMenuTapped(_ sender: UITapGestureRecognizer) {
+		self.toggleLogoMenu()
+	}
+	
+	@IBAction func onLogoMenuAddFoodBtnTapped(_ sender: Any) {
+		self.toggleLogoMenu()
+		
+		let vc = DietaryJournalVC.instance()
+		self.present(vc, animated: true, completion: nil)
+	}
+	
+	@IBAction func onLogoMenuWorkoutBtnTapped(_ sender: Any) {
+		self.toggleLogoMenu()
+		
+		let vc = WorkoutVC.instance()
+		let navVC = UINavigationController(rootViewController: vc)
+		self.present(navVC, animated: true, completion: nil)
+	}
+	
+	@IBAction func onLogoMenuProfileBtnTapped(_ sender: UIButton) {
+		self.toggleLogoMenu()
+		
+//		let vc = ProfileVC.instance()
+//		self.present(vc, animated: true, completion: nil)
+		
+		let vc = SurveyVC.instance()
+		self.present(vc, animated: true, completion: nil)
+	}
+	
+	@IBAction func onLogoMenuMeditateBtnTapped(_ sender: UIButton) {
+		self.toggleLogoMenu()
+		
+		let vc = MeditationVC.instance()
+		self.present(vc, animated: true, completion: nil)
+	}
+	
+	@IBAction func onLogoMenuYogaBtnTapped(_ sender: UIButton) {
+		self.toggleLogoMenu()
+		
+		let vc = YogaSectionVC.instance()
+		let navVC = UINavigationController(rootViewController: vc)
+		self.present(navVC, animated: true, completion: nil)
 	}
 	
 	@IBAction func onBottomBtnClicked(_ sender: UIButton) {
@@ -102,6 +152,21 @@ class MainVC: UIViewController {
 				let vc = AddDietaryVC.instance(results!.first as? Dietary)
 				vc.delegate = self
 				self.present(vc, animated: true, completion: nil)
+			}
+		}
+	}
+	
+	func toggleLogoMenu() {
+		if self.logoMenuView.isHidden == false {
+			UIView.animate(withDuration: 0.3, animations: {
+				self.logoMenuView.alpha = 0
+			}) { (success) in
+				self.logoMenuView.isHidden = true
+			}
+		} else {
+			self.logoMenuView.isHidden = false
+			UIView.animate(withDuration: 0.3) {
+				self.logoMenuView.alpha = 1
 			}
 		}
 	}
@@ -178,5 +243,101 @@ extension MainVC: BarcodeScannerCodeDelegate, BarcodeScannerErrorDelegate, Barco
 extension MainVC: AddDietaryVCDelegate {
 	func addDietaryCompleted(_ vc: AddDietaryVC) {
 		self.updateUI()
+	}
+}
+
+extension MainVC: MainMenuDelegate {
+	func mainMenuOnProfileTapped() {
+		self.sideBarController.hideMenuViewController(true)
+		
+		let vc = ProfileVC.instance()
+		self.present(vc, animated: true, completion: nil)
+	}
+	
+	func mainMenuOnHomeIntegratedTapped() {
+		self.sideBarController.hideMenuViewController(true)
+		
+		self.viewPager.scrollToPage(index: 0)
+	}
+	
+	func mainMenuOnHomeNutritionTapped() {
+		self.sideBarController.hideMenuViewController(true)
+		
+		self.viewPager.scrollToPage(index: 1)
+	}
+	
+	func mainMenuOnAddFoodTapped() {
+		self.sideBarController.hideMenuViewController(true)
+		
+		let vc = DietaryJournalVC.instance()
+		self.present(vc, animated: true, completion: nil)
+	}
+	
+	func mainMenuOnNutritionStatisticsTapped() {
+		self.sideBarController.hideMenuViewController(true)
+		
+		let vc = NutritionStatisticsVC.instance()
+		self.present(vc, animated: true, completion: nil)
+	}
+	
+	func mainMenuOnDietaryJournalTapped() {
+		self.sideBarController.hideMenuViewController(true)
+		
+		let vc = DietaryJournalVC.instance()
+		self.present(vc, animated: true, completion: nil)
+	}
+	
+	func mainMenuOnHomePhysicalTapped() {
+		self.sideBarController.hideMenuViewController(true)
+		
+		self.viewPager.scrollToPage(index: 2)
+	}
+	
+	func mainMenuOnYourWorkoutTapped() {
+		self.sideBarController.hideMenuViewController(true)
+		
+		let vc = WorkoutVC.instance()
+		let nav = UINavigationController(rootViewController: vc)
+		self.present(nav, animated: true, completion: nil)
+	}
+	
+	func mainMenuOnProgressTrackerTapped() {
+		self.sideBarController.hideMenuViewController(true)
+		
+		let vc = ProgressTrackerVC.instance()
+		let nav = UINavigationController(rootViewController: vc)
+		self.present(nav, animated: true, completion: nil)
+	}
+	
+	func mainMenuOnHomeMentalTapped() {
+		self.sideBarController.hideMenuViewController(true)
+		
+		self.viewPager.scrollToPage(index: 3)
+	}
+	
+	func mainMenuOnYourMeditationTapped() {
+		self.sideBarController.hideMenuViewController(true)
+		
+		let vc = MeditationVC.instance()
+		self.present(vc, animated: true, completion: nil)
+	}
+	
+	func mainMenuOnYogaTapped() {
+		self.sideBarController.hideMenuViewController(true)
+		
+		let vc = YogaSectionVC.instance()
+		let nav = UINavigationController(rootViewController: vc)
+		self.present(nav, animated: true, completion: nil)
+	}
+	
+	func mainMenuOnDailyReflectionTapped() {
+		self.sideBarController.hideMenuViewController(true)
+	}
+	
+	func mainMenuOnSignOutTapped() {
+		self.sideBarController.hideMenuViewController(true)
+		
+		User.sharedInstance.logout()
+		(UIApplication.shared.delegate as! AppDelegate).gotoLoginVC()
 	}
 }

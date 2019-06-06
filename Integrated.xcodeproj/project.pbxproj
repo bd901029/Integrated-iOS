@@ -30,20 +30,48 @@
 		8B16714122A1A61E00D90D3B /* MeditationSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B16714022A1A61E00D90D3B /* MeditationSectionHeader.xib */; };
 		8B37FC09228FF32200E8504F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B37FC08228FF32200E8504F /* LoginVC.swift */; };
 		8B3D7CD2229BF2E800819D26 /* ic_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B3D7CD1229BF2E800819D26 /* ic_close.png */; };
-		8B42FB132294DC840016147A /* SurveyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B42FB122294DC840016147A /* SurveyVC.swift */; };
 		8B42FB152294E7970016147A /* ViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B42FB142294E7970016147A /* ViewPager.swift */; };
+		8B496E8022A68FDF00234EEC /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B496E7F22A68FDF00234EEC /* ProfileVC.swift */; };
+		8B496E8222A6B3A700234EEC /* LBZSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B496E8122A6B3A700234EEC /* LBZSpinner.swift */; };
+		8B4D537222A7732300B95C0C /* SurveyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D537122A7732300B95C0C /* SurveyVC.swift */; };
+		8B4E7A8022A7E0C500B3C3FC /* SurveyAgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E7A7F22A7E0C500B3C3FC /* SurveyAgeView.swift */; };
+		8B4E7A8222A7E0D800B3C3FC /* SurveyGenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E7A8122A7E0D800B3C3FC /* SurveyGenderView.swift */; };
+		8B4E7A8422A7E0E400B3C3FC /* SurveyGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E7A8322A7E0E400B3C3FC /* SurveyGoalView.swift */; };
+		8B4E7A8622A7E0F000B3C3FC /* SurveyHeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E7A8522A7E0F000B3C3FC /* SurveyHeightView.swift */; };
+		8B4E7A8822A7E10600B3C3FC /* SurveyLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E7A8722A7E10600B3C3FC /* SurveyLevelView.swift */; };
+		8B4E7A8A22A7E10F00B3C3FC /* SurveyPaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E7A8922A7E10F00B3C3FC /* SurveyPaceView.swift */; };
+		8B4E7A8C22A7E11700B3C3FC /* SurveyWeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E7A8B22A7E11700B3C3FC /* SurveyWeightView.swift */; };
+		8B5006AB22A530CB00C7991C /* KNCirclePercentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5006A822A530CB00C7991C /* KNCirclePercentView.m */; };
+		8B5006AC22A530CB00C7991C /* KNPercentLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5006AA22A530CB00C7991C /* KNPercentLabel.m */; };
 		8B50449D2292B968004F5DE5 /* DietaryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B50449C2292B968004F5DE5 /* DietaryManager.swift */; };
+		8B51734122A58AB400755179 /* YogaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B51734022A58AB400755179 /* YogaItem.swift */; };
+		8B51734322A58B9100755179 /* YogaSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B51734222A58B9100755179 /* YogaSection.swift */; };
+		8B51734522A58C1300755179 /* YogaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B51734422A58C1300755179 /* YogaManager.swift */; };
+		8B51734822A58FC000755179 /* YogaSectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B51734722A58FC000755179 /* YogaSectionVC.swift */; };
+		8B54134122A82E0C00063466 /* SurveyOptimizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B54134022A82E0C00063466 /* SurveyOptimizeView.swift */; };
+		8B54134322A8319400063466 /* SurveyOptimizeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B54134222A8319400063466 /* SurveyOptimizeView.xib */; };
 		8B578DEC229D9B6900FB8593 /* DietaryJournalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B578DEB229D9B6900FB8593 /* DietaryJournalVC.swift */; };
+		8B5EEAB522A60E68007BEAF4 /* CustomLineTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5EEAB422A60E68007BEAF4 /* CustomLineTextView.swift */; };
+		8B5EEAB722A60EB2007BEAF4 /* DailyReflectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5EEAB622A60EB2007BEAF4 /* DailyReflectionVC.swift */; };
+		8B5EEABB22A61560007BEAF4 /* DALinedTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5EEABA22A61560007BEAF4 /* DALinedTextView.m */; };
 		8B616AD82292509100A20E1E /* NutrientCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B616AD72292509100A20E1E /* NutrientCalculator.swift */; };
 		8B616ADA2292676400A20E1E /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B616AD92292676400A20E1E /* Helper.swift */; };
 		8B6251E0229945F100CE948F /* ProgressTrackerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6251DF229945F100CE948F /* ProgressTrackerVC.swift */; };
 		8B67FDB02298292100A79FB2 /* AddDietaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B67FDAF2298292100A79FB2 /* AddDietaryVC.swift */; };
 		8B6C72742291CEE200ED668B /* Dietary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6C72732291CEE200ED668B /* Dietary.swift */; };
+		8B6D143222A80C22007D3D8F /* SurveyPaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B6D142B22A80C21007D3D8F /* SurveyPaceView.xib */; };
+		8B6D143322A80C22007D3D8F /* SurveyGoalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B6D142C22A80C21007D3D8F /* SurveyGoalView.xib */; };
+		8B6D143422A80C22007D3D8F /* SurveyGenderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B6D142D22A80C21007D3D8F /* SurveyGenderView.xib */; };
+		8B6D143522A80C22007D3D8F /* SurveyWeightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B6D142E22A80C21007D3D8F /* SurveyWeightView.xib */; };
+		8B6D143622A80C22007D3D8F /* SurveyLevelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B6D142F22A80C21007D3D8F /* SurveyLevelView.xib */; };
+		8B6D143722A80C22007D3D8F /* SurveyHeightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B6D143022A80C21007D3D8F /* SurveyHeightView.xib */; };
+		8B6D143822A80C22007D3D8F /* SurveyAgeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B6D143122A80C22007D3D8F /* SurveyAgeView.xib */; };
 		8B6DDDA822984B8E0005288E /* WorkoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6DDDA722984B8E0005288E /* WorkoutVC.swift */; };
 		8B6DDDAA22984E5D0005288E /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6DDDA922984E5D0005288E /* Workout.swift */; };
 		8B6DDDAC229851770005288E /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6DDDAB229851770005288E /* WorkoutManager.swift */; };
 		8B6DDDAE229851C30005288E /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6DDDAD229851C30005288E /* Exercise.swift */; };
 		8B6DDDB4229870F10005288E /* ExerciseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6DDDB3229870F10005288E /* ExerciseVC.swift */; };
+		8B6E71E722A5E42D00DEE39D /* YogaItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E71E622A5E42D00DEE39D /* YogaItemVC.swift */; };
 		8B78A2BA229B76BF00C5A97C /* AddPhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B78A2B9229B76BF00C5A97C /* AddPhotoVC.swift */; };
 		8B7B4000229643E900DA5657 /* BlogDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7B3FFF229643E900DA5657 /* BlogDetailVC.swift */; };
 		8B7B4004229645F900DA5657 /* ic_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7B4003229645F900DA5657 /* ic_back.png */; };
@@ -91,7 +119,8 @@
 		8BAC75AF2295F89B003F57FF /* MainNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC75AE2295F89B003F57FF /* MainNavVC.swift */; };
 		8BAC75B92295FABE003F57FF /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC75B32295FABD003F57FF /* MainVC.swift */; };
 		8BAC75BA2295FABE003F57FF /* MainMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC75B42295FABD003F57FF /* MainMenuVC.swift */; };
-		8BAC75BF229611D0003F57FF /* CircleProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC75BE229611D0003F57FF /* CircleProgress.swift */; };
+		8BAC9C8A22A812C20007AECF /* SurveyBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC9C8922A812C20007AECF /* SurveyBaseView.swift */; };
+		8BAC9C8C22A8173C0007AECF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC9C8B22A8173C0007AECF /* Constants.swift */; };
 		8BB43BE1229ADB3000CA6DCC /* ProgressTrackerStateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB43BE0229ADB3000CA6DCC /* ProgressTrackerStateCell.xib */; };
 		8BB43BE4229AF4A800CA6DCC /* GalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB43BE3229AF4A800CA6DCC /* GalleryVC.swift */; };
 		8BC8F41D22A037BC00CB6984 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC8F41C22A037BC00CB6984 /* CalendarVC.swift */; };
@@ -147,20 +176,52 @@
 		8B37FC05228FF2D200E8504F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		8B37FC08228FF32200E8504F /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		8B3D7CD1229BF2E800819D26 /* ic_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_close.png; sourceTree = "<group>"; };
-		8B42FB122294DC840016147A /* SurveyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyVC.swift; sourceTree = "<group>"; };
 		8B42FB142294E7970016147A /* ViewPager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPager.swift; sourceTree = "<group>"; };
+		8B496E7F22A68FDF00234EEC /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		8B496E8122A6B3A700234EEC /* LBZSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBZSpinner.swift; sourceTree = "<group>"; };
+		8B4D537122A7732300B95C0C /* SurveyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyVC.swift; sourceTree = "<group>"; };
+		8B4E7A7F22A7E0C500B3C3FC /* SurveyAgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAgeView.swift; sourceTree = "<group>"; };
+		8B4E7A8122A7E0D800B3C3FC /* SurveyGenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyGenderView.swift; sourceTree = "<group>"; };
+		8B4E7A8322A7E0E400B3C3FC /* SurveyGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyGoalView.swift; sourceTree = "<group>"; };
+		8B4E7A8522A7E0F000B3C3FC /* SurveyHeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyHeightView.swift; sourceTree = "<group>"; };
+		8B4E7A8722A7E10600B3C3FC /* SurveyLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyLevelView.swift; sourceTree = "<group>"; };
+		8B4E7A8922A7E10F00B3C3FC /* SurveyPaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPaceView.swift; sourceTree = "<group>"; };
+		8B4E7A8B22A7E11700B3C3FC /* SurveyWeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyWeightView.swift; sourceTree = "<group>"; };
+		8B5006A722A530CB00C7991C /* KNCirclePercentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNCirclePercentView.h; sourceTree = "<group>"; };
+		8B5006A822A530CB00C7991C /* KNCirclePercentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNCirclePercentView.m; sourceTree = "<group>"; };
+		8B5006A922A530CB00C7991C /* KNPercentLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNPercentLabel.h; sourceTree = "<group>"; };
+		8B5006AA22A530CB00C7991C /* KNPercentLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNPercentLabel.m; sourceTree = "<group>"; };
 		8B50449C2292B968004F5DE5 /* DietaryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietaryManager.swift; sourceTree = "<group>"; };
+		8B51733F22A57C2D00755179 /* Integrated-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Integrated-Bridging-Header.h"; sourceTree = "<group>"; };
+		8B51734022A58AB400755179 /* YogaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaItem.swift; sourceTree = "<group>"; };
+		8B51734222A58B9100755179 /* YogaSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaSection.swift; sourceTree = "<group>"; };
+		8B51734422A58C1300755179 /* YogaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaManager.swift; sourceTree = "<group>"; };
+		8B51734722A58FC000755179 /* YogaSectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaSectionVC.swift; sourceTree = "<group>"; };
+		8B54134022A82E0C00063466 /* SurveyOptimizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyOptimizeView.swift; sourceTree = "<group>"; };
+		8B54134222A8319400063466 /* SurveyOptimizeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SurveyOptimizeView.xib; sourceTree = "<group>"; };
 		8B578DEB229D9B6900FB8593 /* DietaryJournalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietaryJournalVC.swift; sourceTree = "<group>"; };
+		8B5EEAB422A60E68007BEAF4 /* CustomLineTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLineTextView.swift; sourceTree = "<group>"; };
+		8B5EEAB622A60EB2007BEAF4 /* DailyReflectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyReflectionVC.swift; sourceTree = "<group>"; };
+		8B5EEAB922A61560007BEAF4 /* DALinedTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DALinedTextView.h; sourceTree = "<group>"; };
+		8B5EEABA22A61560007BEAF4 /* DALinedTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DALinedTextView.m; sourceTree = "<group>"; };
 		8B616AD72292509100A20E1E /* NutrientCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientCalculator.swift; sourceTree = "<group>"; };
 		8B616AD92292676400A20E1E /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		8B6251DF229945F100CE948F /* ProgressTrackerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTrackerVC.swift; sourceTree = "<group>"; };
 		8B67FDAF2298292100A79FB2 /* AddDietaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDietaryVC.swift; sourceTree = "<group>"; };
 		8B6C72732291CEE200ED668B /* Dietary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dietary.swift; sourceTree = "<group>"; };
+		8B6D142B22A80C21007D3D8F /* SurveyPaceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SurveyPaceView.xib; sourceTree = "<group>"; };
+		8B6D142C22A80C21007D3D8F /* SurveyGoalView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SurveyGoalView.xib; sourceTree = "<group>"; };
+		8B6D142D22A80C21007D3D8F /* SurveyGenderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SurveyGenderView.xib; sourceTree = "<group>"; };
+		8B6D142E22A80C21007D3D8F /* SurveyWeightView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SurveyWeightView.xib; sourceTree = "<group>"; };
+		8B6D142F22A80C21007D3D8F /* SurveyLevelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SurveyLevelView.xib; sourceTree = "<group>"; };
+		8B6D143022A80C21007D3D8F /* SurveyHeightView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SurveyHeightView.xib; sourceTree = "<group>"; };
+		8B6D143122A80C22007D3D8F /* SurveyAgeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SurveyAgeView.xib; sourceTree = "<group>"; };
 		8B6DDDA722984B8E0005288E /* WorkoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutVC.swift; sourceTree = "<group>"; };
 		8B6DDDA922984E5D0005288E /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		8B6DDDAB229851770005288E /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
 		8B6DDDAD229851C30005288E /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		8B6DDDB3229870F10005288E /* ExerciseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseVC.swift; sourceTree = "<group>"; };
+		8B6E71E622A5E42D00DEE39D /* YogaItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaItemVC.swift; sourceTree = "<group>"; };
 		8B78A2B9229B76BF00C5A97C /* AddPhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoVC.swift; sourceTree = "<group>"; };
 		8B7B3FFF229643E900DA5657 /* BlogDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogDetailVC.swift; sourceTree = "<group>"; };
 		8B7B4003229645F900DA5657 /* ic_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_back.png; sourceTree = "<group>"; };
@@ -210,7 +271,8 @@
 		8BAC75AE2295F89B003F57FF /* MainNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavVC.swift; sourceTree = "<group>"; };
 		8BAC75B32295FABD003F57FF /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		8BAC75B42295FABD003F57FF /* MainMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuVC.swift; sourceTree = "<group>"; };
-		8BAC75BE229611D0003F57FF /* CircleProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgress.swift; sourceTree = "<group>"; };
+		8BAC9C8922A812C20007AECF /* SurveyBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyBaseView.swift; sourceTree = "<group>"; };
+		8BAC9C8B22A8173C0007AECF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8BB43BE0229ADB3000CA6DCC /* ProgressTrackerStateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressTrackerStateCell.xib; sourceTree = "<group>"; };
 		8BB43BE2229AE34B00CA6DCC /* ProgressTrackerGoalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressTrackerGoalCell.xib; sourceTree = "<group>"; };
 		8BB43BE3229AF4A800CA6DCC /* GalleryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryVC.swift; sourceTree = "<group>"; };
@@ -287,6 +349,7 @@
 				8B0C994822916AF500D913F9 /* User */,
 				8B0C994922916AF500D913F9 /* Workout */,
 				8B0C994A22916AF500D913F9 /* Yoga */,
+				8BAC9C8B22A8173C0007AECF /* Constants.swift */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -377,6 +440,9 @@
 		8B0C994A22916AF500D913F9 /* Yoga */ = {
 			isa = PBXGroup;
 			children = (
+				8B51734022A58AB400755179 /* YogaItem.swift */,
+				8B51734222A58B9100755179 /* YogaSection.swift */,
+				8B51734422A58C1300755179 /* YogaManager.swift */,
 			);
 			path = Yoga;
 			sourceTree = "<group>";
@@ -384,6 +450,8 @@
 		8B37FC07228FF32200E8504F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8B4D537022A7730E00B95C0C /* Survey */,
+				8B51734622A58FA200755179 /* Yoga */,
 				8B67FDAF2298292100A79FB2 /* AddDietaryVC.swift */,
 				8B78A2B9229B76BF00C5A97C /* AddPhotoVC.swift */,
 				8B7B3FFF229643E900DA5657 /* BlogDetailVC.swift */,
@@ -395,12 +463,67 @@
 				8BF19B0822A134AE00B09EEA /* MeditationVC.swift */,
 				8B6251DF229945F100CE948F /* ProgressTrackerVC.swift */,
 				8BFA80F62293124A00F424A6 /* RegisterVC.swift */,
-				8B42FB122294DC840016147A /* SurveyVC.swift */,
 				8B6DDDA722984B8E0005288E /* WorkoutVC.swift */,
 				8BAC75AB2295F832003F57FF /* Main */,
 				8BFB56ED22A2E26200A07A8C /* Nutrition Statistics */,
+				8B5EEAB622A60EB2007BEAF4 /* DailyReflectionVC.swift */,
+				8B496E7F22A68FDF00234EEC /* ProfileVC.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8B4D537022A7730E00B95C0C /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+				8B4E7A7F22A7E0C500B3C3FC /* SurveyAgeView.swift */,
+				8BAC9C8922A812C20007AECF /* SurveyBaseView.swift */,
+				8B4E7A8122A7E0D800B3C3FC /* SurveyGenderView.swift */,
+				8B4E7A8322A7E0E400B3C3FC /* SurveyGoalView.swift */,
+				8B4E7A8522A7E0F000B3C3FC /* SurveyHeightView.swift */,
+				8B4E7A8722A7E10600B3C3FC /* SurveyLevelView.swift */,
+				8B54134022A82E0C00063466 /* SurveyOptimizeView.swift */,
+				8B4E7A8922A7E10F00B3C3FC /* SurveyPaceView.swift */,
+				8B4D537122A7732300B95C0C /* SurveyVC.swift */,
+				8B4E7A8B22A7E11700B3C3FC /* SurveyWeightView.swift */,
+				8B6D143122A80C22007D3D8F /* SurveyAgeView.xib */,
+				8B6D142D22A80C21007D3D8F /* SurveyGenderView.xib */,
+				8B6D142C22A80C21007D3D8F /* SurveyGoalView.xib */,
+				8B6D143022A80C21007D3D8F /* SurveyHeightView.xib */,
+				8B6D142F22A80C21007D3D8F /* SurveyLevelView.xib */,
+				8B54134222A8319400063466 /* SurveyOptimizeView.xib */,
+				8B6D142B22A80C21007D3D8F /* SurveyPaceView.xib */,
+				8B6D142E22A80C21007D3D8F /* SurveyWeightView.xib */,
+			);
+			path = Survey;
+			sourceTree = "<group>";
+		};
+		8B5006A622A530CB00C7991C /* KNCirclePercentView */ = {
+			isa = PBXGroup;
+			children = (
+				8B5006A722A530CB00C7991C /* KNCirclePercentView.h */,
+				8B5006A822A530CB00C7991C /* KNCirclePercentView.m */,
+				8B5006A922A530CB00C7991C /* KNPercentLabel.h */,
+				8B5006AA22A530CB00C7991C /* KNPercentLabel.m */,
+			);
+			path = KNCirclePercentView;
+			sourceTree = "<group>";
+		};
+		8B51734622A58FA200755179 /* Yoga */ = {
+			isa = PBXGroup;
+			children = (
+				8B51734722A58FC000755179 /* YogaSectionVC.swift */,
+				8B6E71E622A5E42D00DEE39D /* YogaItemVC.swift */,
+			);
+			path = Yoga;
+			sourceTree = "<group>";
+		};
+		8B5EEAB822A61560007BEAF4 /* DALinedTextView */ = {
+			isa = PBXGroup;
+			children = (
+				8B5EEAB922A61560007BEAF4 /* DALinedTextView.h */,
+				8B5EEABA22A61560007BEAF4 /* DALinedTextView.m */,
+			);
+			path = DALinedTextView;
 			sourceTree = "<group>";
 		};
 		8B874CB8228EEDD800C856D0 = {
@@ -433,6 +556,7 @@
 				8B874CCB228EEDDA00C856D0 /* Assets.xcassets */,
 				8B874CCD228EEDDA00C856D0 /* LaunchScreen.storyboard */,
 				8B874CC8228EEDD800C856D0 /* Main.storyboard */,
+				8B51733F22A57C2D00755179 /* Integrated-Bridging-Header.h */,
 			);
 			path = Integrated;
 			sourceTree = "<group>";
@@ -518,16 +642,19 @@
 		8BFA80F82293146700F424A6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8B496E8122A6B3A700234EEC /* LBZSpinner.swift */,
+				8B5EEAB822A61560007BEAF4 /* DALinedTextView */,
 				8BA5E44E229632FB00E69F16 /* BlogCell.swift */,
-				8BA5E44F229632FB00E69F16 /* BlogCell.xib */,
-				8BAC75BE229611D0003F57FF /* CircleProgress.swift */,
 				8BFA80F92293147D00F424A6 /* CustomButton.swift */,
-				8BB43BE2229AE34B00CA6DCC /* ProgressTrackerGoalCell.xib */,
-				8BB43BE0229ADB3000CA6DCC /* ProgressTrackerStateCell.xib */,
+				8B16713E22A1A60100D90D3B /* MeditationSectionHeader.swift */,
 				8BFA80FB229317B000F424A6 /* RoundTextField.swift */,
 				8B42FB142294E7970016147A /* ViewPager.swift */,
-				8B16713E22A1A60100D90D3B /* MeditationSectionHeader.swift */,
+				8BA5E44F229632FB00E69F16 /* BlogCell.xib */,
 				8B16714022A1A61E00D90D3B /* MeditationSectionHeader.xib */,
+				8BB43BE2229AE34B00CA6DCC /* ProgressTrackerGoalCell.xib */,
+				8BB43BE0229ADB3000CA6DCC /* ProgressTrackerStateCell.xib */,
+				8B5006A622A530CB00C7991C /* KNCirclePercentView */,
+				8B5EEAB422A60E68007BEAF4 /* CustomLineTextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -612,6 +739,7 @@
 			files = (
 				8BA2BBC4229022A000AFBB7D /* ic_target.png in Resources */,
 				8BA2BBC9229022A000AFBB7D /* play.png in Resources */,
+				8B54134322A8319400063466 /* SurveyOptimizeView.xib in Resources */,
 				8BA2BBC0229022A000AFBB7D /* home_menu_background.png in Resources */,
 				8BB43BE1229ADB3000CA6DCC /* ProgressTrackerStateCell.xib in Resources */,
 				8B874CCF228EEDDA00C856D0 /* LaunchScreen.storyboard in Resources */,
@@ -623,6 +751,7 @@
 				8BA2BBAD229022A000AFBB7D /* background.png in Resources */,
 				8BA2BBC3229022A000AFBB7D /* home_yoga.png in Resources */,
 				8BEFCCC522A3A76B00138DF4 /* AnalysisProteinsView.xib in Resources */,
+				8B6D143422A80C22007D3D8F /* SurveyGenderView.xib in Resources */,
 				8B7B4004229645F900DA5657 /* ic_back.png in Resources */,
 				8BA2BBAB229022A000AFBB7D /* futura_condensed_bold.otf in Resources */,
 				8BA2BBB5229022A000AFBB7D /* btn_prev.png in Resources */,
@@ -645,22 +774,28 @@
 				8B16714122A1A61E00D90D3B /* MeditationSectionHeader.xib in Resources */,
 				8BA2BBB9229022A000AFBB7D /* delete.png in Resources */,
 				8BA2BBBC229022A000AFBB7D /* empty_food.png in Resources */,
+				8B6D143522A80C22007D3D8F /* SurveyWeightView.xib in Resources */,
 				8BEFCCC622A3A76B00138DF4 /* AnalysisFatsView.xib in Resources */,
 				8BEFCCAE22A3980400138DF4 /* AnalysisVitaminView.xib in Resources */,
 				8BA2BBBD229022A000AFBB7D /* fire.png in Resources */,
+				8B6D143322A80C22007D3D8F /* SurveyGoalView.xib in Resources */,
 				8BEFCCC722A3A76B00138DF4 /* AnalysisMineralsView.xib in Resources */,
 				8B874CCA228EEDD800C856D0 /* Main.storyboard in Resources */,
 				8BA2BBB0229022A000AFBB7D /* btn_add.png in Resources */,
 				8BA2BBC5229022A000AFBB7D /* ico_barcode.png in Resources */,
+				8B6D143622A80C22007D3D8F /* SurveyLevelView.xib in Resources */,
 				8BA2BBB3229022A000AFBB7D /* btn_pause.png in Resources */,
 				8BA2BBC1229022A000AFBB7D /* home_profile.png in Resources */,
 				8BA2BBAF229022A000AFBB7D /* bottom_home_btn.png in Resources */,
+				8B6D143222A80C22007D3D8F /* SurveyPaceView.xib in Resources */,
 				8BA2BBCC229022A000AFBB7D /* weight.png in Resources */,
 				8BA2BBCB229022A000AFBB7D /* warrior.png in Resources */,
 				8BA2BBBB229022A000AFBB7D /* empty_btn.png in Resources */,
 				8BA2BBC6229022A000AFBB7D /* meditation.png in Resources */,
+				8B6D143822A80C22007D3D8F /* SurveyAgeView.xib in Resources */,
 				8B02086222A124EE00592E98 /* MainPhysicalView.xib in Resources */,
 				8BA2BBAE229022A000AFBB7D /* blank_avatar.png in Resources */,
+				8B6D143722A80C22007D3D8F /* SurveyHeightView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -758,53 +893,74 @@
 				8B6DDDAE229851C30005288E /* Exercise.swift in Sources */,
 				8BAC75B92295FABE003F57FF /* MainVC.swift in Sources */,
 				8BEFCCBA22A39ED000138DF4 /* AnalysisProteinsView.swift in Sources */,
+				8B496E8222A6B3A700234EEC /* LBZSpinner.swift in Sources */,
 				8B02086122A124EE00592E98 /* MainHomeView.swift in Sources */,
 				8B0C9954229198D100D913F9 /* BlogManager.swift in Sources */,
 				8B0D77BB2292C3C60027773E /* GalleryManager.swift in Sources */,
+				8B51734322A58B9100755179 /* YogaSection.swift in Sources */,
 				8B37FC09228FF32200E8504F /* LoginVC.swift in Sources */,
 				8BEFCCAC22A397DF00138DF4 /* AnalysisVitaminView.swift in Sources */,
 				8B02085F22A124EE00592E98 /* MainNutritionView.swift in Sources */,
 				8BEFCCC022A39F0500138DF4 /* AnalysisCarbohydratesView.swift in Sources */,
+				8B4E7A8C22A7E11700B3C3FC /* SurveyWeightView.swift in Sources */,
+				8B4E7A8A22A7E10F00B3C3FC /* SurveyPaceView.swift in Sources */,
 				8BA5E450229632FB00E69F16 /* BlogCell.swift in Sources */,
+				8B5006AB22A530CB00C7991C /* KNCirclePercentView.m in Sources */,
 				8B6C72742291CEE200ED668B /* Dietary.swift in Sources */,
 				8BC8F41D22A037BC00CB6984 /* CalendarVC.swift in Sources */,
+				8B496E8022A68FDF00234EEC /* ProfileVC.swift in Sources */,
 				8B0D77BD2292C6430027773E /* State.swift in Sources */,
 				8BF474D122A14F69005E00E7 /* MeditationManager.swift in Sources */,
 				8B67FDB02298292100A79FB2 /* AddDietaryVC.swift in Sources */,
 				8BB43BE4229AF4A800CA6DCC /* GalleryVC.swift in Sources */,
+				8B4E7A8422A7E0E400B3C3FC /* SurveyGoalView.swift in Sources */,
+				8B5EEAB522A60E68007BEAF4 /* CustomLineTextView.swift in Sources */,
+				8B4E7A8822A7E10600B3C3FC /* SurveyLevelView.swift in Sources */,
 				8BFA80E52292FC9400F424A6 /* Reflection.swift in Sources */,
 				8B02086022A124EE00592E98 /* MainPhysicalView.swift in Sources */,
 				8B0D77B92292C1210027773E /* Gallery.swift in Sources */,
+				8B4E7A8022A7E0C500B3C3FC /* SurveyAgeView.swift in Sources */,
 				8B578DEC229D9B6900FB8593 /* DietaryJournalVC.swift in Sources */,
-				8BAC75BF229611D0003F57FF /* CircleProgress.swift in Sources */,
+				8B6E71E722A5E42D00DEE39D /* YogaItemVC.swift in Sources */,
 				8B874CC5228EEDD800C856D0 /* AppDelegate.swift in Sources */,
 				8B0C995022917E1C00D913F9 /* ApiManager.swift in Sources */,
+				8BAC9C8C22A8173C0007AECF /* Constants.swift in Sources */,
 				8B0D77C12292D1AF0027773E /* StateManager.swift in Sources */,
+				8B54134122A82E0C00063466 /* SurveyOptimizeView.swift in Sources */,
 				8BAC75BA2295FABE003F57FF /* MainMenuVC.swift in Sources */,
 				8BFA80F72293124A00F424A6 /* RegisterVC.swift in Sources */,
 				8B78A2BA229B76BF00C5A97C /* AddPhotoVC.swift in Sources */,
 				8BFA80FA2293147D00F424A6 /* CustomButton.swift in Sources */,
 				8B02086322A124EE00592E98 /* MainMentalView.swift in Sources */,
 				8BEFCCBC22A39EE000138DF4 /* AnalysisMineralsView.swift in Sources */,
+				8B5006AC22A530CB00C7991C /* KNPercentLabel.m in Sources */,
+				8B51734522A58C1300755179 /* YogaManager.swift in Sources */,
 				8B6DDDAC229851770005288E /* WorkoutManager.swift in Sources */,
+				8B51734822A58FC000755179 /* YogaSectionVC.swift in Sources */,
 				8B7B4000229643E900DA5657 /* BlogDetailVC.swift in Sources */,
 				8BF474CD22A14ACC005E00E7 /* MeditationTrack.swift in Sources */,
+				8B5EEABB22A61560007BEAF4 /* DALinedTextView.m in Sources */,
 				8BFA80FC229317B000F424A6 /* RoundTextField.swift in Sources */,
 				8BFA80E92292FE9400F424A6 /* DateHelper.swift in Sources */,
-				8B42FB132294DC840016147A /* SurveyVC.swift in Sources */,
+				8B51734122A58AB400755179 /* YogaItem.swift in Sources */,
 				8BFA80E12292EE4700F424A6 /* Goal.swift in Sources */,
 				8B0D77BF2292CD870027773E /* UIColor+Extension.swift in Sources */,
+				8B4D537222A7732300B95C0C /* SurveyVC.swift in Sources */,
 				8B6DDDA822984B8E0005288E /* WorkoutVC.swift in Sources */,
+				8B4E7A8622A7E0F000B3C3FC /* SurveyHeightView.swift in Sources */,
 				8B0C99522291963A00D913F9 /* Blog.swift in Sources */,
 				8B616ADA2292676400A20E1E /* Helper.swift in Sources */,
 				8B0C994C22916B0800D913F9 /* User.swift in Sources */,
+				8B4E7A8222A7E0D800B3C3FC /* SurveyGenderView.swift in Sources */,
 				8BEFCCBE22A39EF400138DF4 /* AnalysisFatsView.swift in Sources */,
 				8B0C994E2291748900D913F9 /* UnitHelper.swift in Sources */,
+				8B5EEAB722A60EB2007BEAF4 /* DailyReflectionVC.swift in Sources */,
 				8B16713F22A1A60100D90D3B /* MeditationSectionHeader.swift in Sources */,
 				8BFA80E32292F1F500F424A6 /* GoalManager.swift in Sources */,
 				8B50449D2292B968004F5DE5 /* DietaryManager.swift in Sources */,
 				8B42FB152294E7970016147A /* ViewPager.swift in Sources */,
 				8BF19B0922A134AE00B09EEA /* MeditationVC.swift in Sources */,
+				8BAC9C8A22A812C20007AECF /* SurveyBaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -962,6 +1118,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.matt.ming.Integrated;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Integrated/Integrated-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -982,6 +1139,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.matt.ming.Integrated;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Integrated/Integrated-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

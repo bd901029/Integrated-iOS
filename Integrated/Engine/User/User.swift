@@ -86,19 +86,31 @@ class User: ApiManager {
 	}
 	
 	public func weightInKg() -> Float {
-		return (self.object[Key.Weight] as! Float)
+		if let number = self.object[Key.Weight] as? NSNumber {
+			return number.floatValue
+		}
+		return 0
 	}
 	
 	public func heightInCM() -> Float {
-		return (self.object[Key.Height] as! Float)
+		if let number = self.object[Key.Height] as? NSNumber {
+			return number.floatValue
+		}
+		return 0
 	}
 	
 	public func age() -> Int {
-		return (self.object[Key.Age] as! Int)
+		if let number = self.object[Key.Age] as? NSNumber {
+			return number.intValue
+		}
+		return 0
 	}
 	
 	public func level() -> Int {
-		return (self.object[Key.Level] as! Int)
+		if let number = self.object[Key.Level] as? NSNumber {
+			return number.intValue
+		}
+		return 0
 	}
 	
 	public func goal() -> Int {
@@ -113,8 +125,8 @@ class User: ApiManager {
 		return (self.object[Key.CustomGoal] as! Float)
 	}
 	
-	public func avatarFile() -> PFFileObject {
-		return (self.object[Key.Avatar] as! PFFileObject)
+	public func avatarFile() -> PFFileObject? {
+		return (self.object[Key.Avatar] as? PFFileObject)
 	}
 	
 	public func setEmail(_ email: String) {
@@ -156,7 +168,7 @@ class User: ApiManager {
 	}
 	
 	public func setLevel(_ level: Int) {
-		self.object[Key.Level] = age
+		self.object[Key.Level] = level
 	}
 	
 	public func setGoal(_ goal: Int) {
