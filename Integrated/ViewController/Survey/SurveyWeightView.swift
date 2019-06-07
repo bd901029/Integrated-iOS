@@ -20,18 +20,21 @@ class SurveyWeightView: SurveyBaseView {
 	}
 	
 	override func initUI() {
-		unitSpinner.updateList(Constants.WeightUnits)
-		unitSpinner.delegate = self
-		unitSpinner.changeSelectedIndex(0)
-	}
-	
-	override func updateUI() {
+		weightView.addTarget(self, action: #selector(onWeightTextChanged(_:)), for: UIControlEvents.editingChanged)
 		if unitSpinner.selectedIndex == 0 {
 			weightView.text = String(UnitHelper.lbsFromKG(User.sharedInstance.weightInKg()))
 		} else {
 			weightView.text = String(User.sharedInstance.weightInKg())
 		}
 		
+		unitSpinner.updateList(User.WeightUnits)
+		unitSpinner.delegate = self
+		unitSpinner.changeSelectedIndex(0)
+		
+		updateUI()
+	}
+	
+	override func updateUI() {
 		btnNext.isHidden = self.weightInKG() <= 0
 	}
 
@@ -58,13 +61,9 @@ class SurveyWeightView: SurveyBaseView {
 		
 		return weight;
 	}
-}
-
-extension SurveyWeightView: UITextFieldDelegate {
-	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+	
+	@objc func onWeightTextChanged(_ sender: UITextField) {
 		btnNext.isHidden = self.weightInKG() <= 0
-		
-		return true
 	}
 }
 

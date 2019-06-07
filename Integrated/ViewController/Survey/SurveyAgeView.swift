@@ -19,7 +19,7 @@ class SurveyAgeView: SurveyBaseView {
 	}
 	
 	override func initUI() {
-		ageView.delegate = self
+		ageView.addTarget(self, action: #selector(onAgeTextChanged(_:)), for: UIControlEvents.editingChanged)
 		ageView.text = String(User.sharedInstance.age())
 	}
 	
@@ -45,12 +45,8 @@ class SurveyAgeView: SurveyBaseView {
 		
 		return Int(strAge)!
 	}
-}
-
-extension SurveyAgeView: UITextFieldDelegate {
-	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-		self.updateUI()
-		
-		return true
+	
+	@objc func onAgeTextChanged(_ textField: UITextField) {
+		updateUI()
 	}
 }

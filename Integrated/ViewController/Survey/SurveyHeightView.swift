@@ -21,9 +21,9 @@ class SurveyHeightView: SurveyBaseView {
 	}
 
 	override func initUI() {
-		self.feetView.delegate = self
-		self.inchView.delegate = self
-		self.cmView.delegate = self
+		self.feetView.addTarget(self, action: #selector(onTextChanged(_:)), for: UIControlEvents.editingChanged)
+		self.inchView.addTarget(self, action: #selector(onTextChanged(_:)), for: UIControlEvents.editingChanged)
+		self.cmView.addTarget(self, action: #selector(onTextChanged(_:)), for: UIControlEvents.editingChanged)
 		
 		feetView.text = String(UnitHelper.feetFromCM(User.sharedInstance.heightInCM()))
 		inchView.text = String(UnitHelper.inchFromCM(User.sharedInstance.heightInCM()))
@@ -49,22 +49,15 @@ class SurveyHeightView: SurveyBaseView {
 		let strInch = inchView.text!
 		let strCM = cmView.text!
 		
-		if !strFeet.isNumeric() && !strInch.isNumeric() && !strCM.isNumeric() {
-			return 0
-		}
-		
-		let feet = Float(strFeet)!
-		let inch = Float(strInch)!
-		let cm = Float(strCM)!
+		let feet = !strFeet.isNumeric() ? 0 : Float(strFeet)!
+		let inch = !strInch.isNumeric() ? 0 : Float(strInch)!
+		let cm = !strCM.isNumeric() ? 0 : Float(strCM)!
 		
 		let heightInCM = max(UnitHelper.cmFromFeetAndInch(feet, inch), cm);
 		return heightInCM;
 	}
-}
-
-extension SurveyHeightView: UITextFieldDelegate {
-	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+	
+	@objc func onTextChanged(_ sender: UITextField) {
 		self.updateUI()
-		return true
 	}
 }

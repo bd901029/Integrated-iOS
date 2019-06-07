@@ -149,27 +149,16 @@ extension String {
 	}
 	
 	func isNumeric() -> Bool {
+		if self == "" {
+			return false
+		}
+		
 		if let floatValue = Float(self) {
 			if floatValue >= 0 {
 				return true
 			}
 		}
 		return false
-	}
-}
-
-
-extension UIButton {
-	func setBackgroundColor(color: UIColor, forState: UIControl.State) {
-		self.clipsToBounds = true  // add this to maintain corner radius
-		UIGraphicsBeginImageContext(CGSize(width: self.bounds.width, height: self.bounds.height))
-		if let context = UIGraphicsGetCurrentContext() {
-			context.setFillColor(color.cgColor)
-			context.fill(CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height))
-			let colorImage = UIGraphicsGetImageFromCurrentImageContext()
-			UIGraphicsEndImageContext()
-			self.setBackgroundImage(colorImage, for: forState)
-		}
 	}
 }
 

@@ -24,6 +24,8 @@ class Reflection: PFObject, PFSubclassing {
 		static let Text = "text"
 	}
 	
+	static var template = "\nToday I learned.....\n\n\nI could do better with....\n\nI will work on....\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+	
 	static func create() -> Reflection {
 		let reflection = Reflection()
 		reflection.setUserId(User.sharedInstance.userId())

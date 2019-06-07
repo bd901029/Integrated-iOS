@@ -35,10 +35,10 @@ class RegisterVC: UIViewController {
 		imagePicker.modalPresentationStyle = UIModalPresentationStyle.currentContext
 		imagePicker.delegate = self
 		self.present(imagePicker, animated: true, completion: nil)
-
 	}
 	
 	@IBAction func onRegisterBtnClicked(_ sender: Any) {
+		self.register()
 	}
 	
 	private func initUI() {
@@ -74,16 +74,13 @@ class RegisterVC: UIViewController {
 				return
 			}
 			
-			self.gotoMainVC()
+			self.gotoSurveyVC()
 		}
 	}
 	
-	private func gotoMainVC() {
-		self.navigationController?.popViewController(animated: true)
-		
-		let storyboard = UIStoryboard(name: "Main", bundle: nil)
-		let mainVC = storyboard.instantiateViewController(withIdentifier: "MainVC") as! MainVC
-		self.navigationController?.pushViewController(mainVC, animated: true)
+	private func gotoSurveyVC() {
+		let surveyVC = SurveyVC.instance()
+		self.navigationController?.pushViewController(surveyVC, animated: true)
 	}
 }
 

@@ -24,4 +24,25 @@ class CustomButton: UIButton {
 			self.titleLabel?.textAlignment = self.textAlignment
 		}
 	}
+	
+	@IBInspectable
+	var selectedBackgroundColor: UIColor = UIColor.clear {
+		didSet {
+			setBackgroundColor(color: self.selectedBackgroundColor, forState: UIControl.State.focused)
+		}
+	}
+}
+
+extension UIButton {
+	func setBackgroundColor(color: UIColor, forState: UIControl.State) {
+		self.clipsToBounds = true  // add this to maintain corner radius
+		UIGraphicsBeginImageContext(CGSize(width: self.bounds.width, height: self.bounds.height))
+		if let context = UIGraphicsGetCurrentContext() {
+			context.setFillColor(color.cgColor)
+			context.fill(CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height))
+			let colorImage = UIGraphicsGetImageFromCurrentImageContext()
+			UIGraphicsEndImageContext()
+			self.setBackgroundImage(colorImage, for: forState)
+		}
+	}
 }

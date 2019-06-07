@@ -87,8 +87,7 @@ class LBZSpinner : UIView, UITableViewDelegate, UITableViewDataSource {
         //Open spinner click
         let gesture = UITapGestureRecognizer(target: self, action: #selector(LBZSpinner.openSpinner(_:)))
         addGestureRecognizer(gesture)
-        heightTableview = heightTableviewCell*CGFloat(list.count)
-        
+        heightTableview = heightTableviewCell * CGFloat(list.count)
     }
 
     override func draw(_ rect: CGRect) {
@@ -153,16 +152,21 @@ class LBZSpinner : UIView, UITableViewDelegate, UITableViewDataSource {
     //Update drop down list
     func updateList(_ list:[String]) {
         self.list = list;
-        heightTableview = heightTableviewCell*CGFloat(list.count)
+		heightTableview = heightTableviewCell * CGFloat(list.count)
         if(tableviewChoose != nil) {
             tableviewChoose.reloadData()
         }
+		
+		if selectedIndex < self.list.count {
+			self.text = self.list[selectedIndex]
+		} else {
+			self.text = self.list[0]
+		}
     }
 
     
     //Open spinner animation
-    @objc func openSpinner(_ sender: UITapGestureRecognizer){
-
+    @objc func openSpinner(_ sender: UITapGestureRecognizer) {
         heightTableview = heightTableviewCell * CGFloat(list.count)
         let parentView = findLastUsableSuperview()
         let globalPoint = convert(bounds.origin, to:parentView) // position spinner in superview
@@ -192,10 +196,10 @@ class LBZSpinner : UIView, UITableViewDelegate, UITableViewDataSource {
 
             if( margeBot > margeTop ) {
                 expandBottomDirection = true
-                heightTableview = margeBot - 5
+                heightTableview = margeBot
             } else {
                 expandBottomDirection = false
-                heightTableview = margeTop - 5
+                heightTableview = margeTop
             }
 
         }
@@ -206,7 +210,8 @@ class LBZSpinner : UIView, UITableViewDelegate, UITableViewDataSource {
 
         // expand bottom animation
         if (expandBottomDirection) {
-            tableviewChoose = UITableView(frame:  CGRect(x: globalPoint.x , y: globalPoint.y, width: frame.size.width, height: 0))
+            tableviewChoose = UITableView(frame:  CGRect(x: globalPoint.x, y: globalPoint.y,
+														 width: frame.size.width, height: 0))
             tableviewChooseShadow = UIView(frame: tableviewChoose.frame)
 
             UIView.animate(withDuration: 0.3,
@@ -421,11 +426,12 @@ class LBZSpinner : UIView, UITableViewDelegate, UITableViewDataSource {
      **/
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         labelValue.text = list[indexPath.row]
+		selectedIndex = indexPath.row
+		closeSpinner()
+		
         if (delegate != nil) {
             delegate.spinnerChoose(self,index: indexPath.row, value: list[indexPath.row])
         }
-        selectedIndex = indexPath.row
-        closeSpinner()
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {

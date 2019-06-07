@@ -19,7 +19,7 @@ class SurveyLevelView: SurveyBaseView {
 	}
 	
 	override func initUI() {
-		self.levelSpinner.updateList(Constants.Levels)
+		self.levelSpinner.updateList(User.Levels)
 		self.levelSpinner.delegate = self
 	}
 

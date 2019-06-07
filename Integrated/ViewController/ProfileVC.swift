@@ -72,20 +72,20 @@ class ProfileVC: UIViewController {
 	func initUI() {
 		self.avatarView.layer.cornerRadius = self.avatarView.frame.width / 2
 		
-		let weightUnits = ["Lbs.", "Kg."]
+		let weightUnits = User.WeightUnits
 		self.weightUnitSpinner.updateList(weightUnits)
 		self.weightUnitSpinner.delegate = self
 		self.weightUnitSpinner.changeSelectedIndex(0)
 		
-		let heightUnits = ["Feet/Inch", "CM"]
+		let heightUnits = User.HeightUnits
 		self.heightUnitSpinner.updateList(heightUnits)
 		self.heightUnitSpinner.delegate = self
 		self.heightUnitSpinner.changeSelectedIndex(0)
 		
-		let levels = ["Sedentary/Little Exercise", "3 Times Per Week", "4 Times Per Week", "5 Times Per Week"]
+		let levels = User.Levels
 		self.levelSpinner.updateList(levels)
 		
-		let goals = ["Lose weight and retain Muscle", "Gain weight and build muscle", "Maintain my current weight and optimize my health"]
+		let goals = User.Goals
 		self.goalSpinner.updateList(goals)
 		self.goalSpinner.delegate = self
 	}
@@ -134,7 +134,7 @@ class ProfileVC: UIViewController {
 		} else {
 			paceOptionContainer.isHidden = false
 			
-			let paceOptions = paceType == User.PACE_LOSE ? ["Lose .50 lbs Per Week", "Lose 1 lbs Per Week"] : ["Gain .50 lbs Per Week", "Gain 1 lbs Per Week"]
+			let paceOptions = paceType == User.PACE_LOSE ? User.paceOptionsLose : User.paceOptionsGain
 			paceOptionSpinner.updateList(paceOptions)
 			
 			if paceType == User.sharedInstance.paceType() {

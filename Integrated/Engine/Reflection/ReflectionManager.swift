@@ -10,8 +10,8 @@ import UIKit
 import Parse
 
 class ReflectionManager: ApiManager {
-	static let sharedInstance : StateManager = {
-		let instance = StateManager()
+	static let sharedInstance : ReflectionManager = {
+		let instance = ReflectionManager()
 		return instance
 	}()
 	

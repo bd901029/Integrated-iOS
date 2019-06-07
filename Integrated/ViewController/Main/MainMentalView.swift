@@ -46,7 +46,8 @@ class MainMentalView: UIView {
 	}
 	
 	@IBAction func onDailyReflectionBtnTapped(_ sender: UIButton) {
-		
+		let vc = DailyReflectionVC.instance()
+		self.parentViewController?.present(vc, animated: true, completion: nil)
 	}
 
 	func initUI() {

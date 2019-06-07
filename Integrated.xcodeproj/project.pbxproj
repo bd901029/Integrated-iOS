@@ -33,6 +33,7 @@
 		8B42FB152294E7970016147A /* ViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B42FB142294E7970016147A /* ViewPager.swift */; };
 		8B496E8022A68FDF00234EEC /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B496E7F22A68FDF00234EEC /* ProfileVC.swift */; };
 		8B496E8222A6B3A700234EEC /* LBZSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B496E8122A6B3A700234EEC /* LBZSpinner.swift */; };
+		8B4B001C22AAC359008C2D67 /* LinedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4B001B22AAC359008C2D67 /* LinedTextView.swift */; };
 		8B4D537222A7732300B95C0C /* SurveyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D537122A7732300B95C0C /* SurveyVC.swift */; };
 		8B4E7A8022A7E0C500B3C3FC /* SurveyAgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E7A7F22A7E0C500B3C3FC /* SurveyAgeView.swift */; };
 		8B4E7A8222A7E0D800B3C3FC /* SurveyGenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4E7A8122A7E0D800B3C3FC /* SurveyGenderView.swift */; };
@@ -51,7 +52,6 @@
 		8B54134122A82E0C00063466 /* SurveyOptimizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B54134022A82E0C00063466 /* SurveyOptimizeView.swift */; };
 		8B54134322A8319400063466 /* SurveyOptimizeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B54134222A8319400063466 /* SurveyOptimizeView.xib */; };
 		8B578DEC229D9B6900FB8593 /* DietaryJournalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B578DEB229D9B6900FB8593 /* DietaryJournalVC.swift */; };
-		8B5EEAB522A60E68007BEAF4 /* CustomLineTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5EEAB422A60E68007BEAF4 /* CustomLineTextView.swift */; };
 		8B5EEAB722A60EB2007BEAF4 /* DailyReflectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5EEAB622A60EB2007BEAF4 /* DailyReflectionVC.swift */; };
 		8B5EEABB22A61560007BEAF4 /* DALinedTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5EEABA22A61560007BEAF4 /* DALinedTextView.m */; };
 		8B616AD82292509100A20E1E /* NutrientCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B616AD72292509100A20E1E /* NutrientCalculator.swift */; };
@@ -120,7 +120,6 @@
 		8BAC75B92295FABE003F57FF /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC75B32295FABD003F57FF /* MainVC.swift */; };
 		8BAC75BA2295FABE003F57FF /* MainMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC75B42295FABD003F57FF /* MainMenuVC.swift */; };
 		8BAC9C8A22A812C20007AECF /* SurveyBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC9C8922A812C20007AECF /* SurveyBaseView.swift */; };
-		8BAC9C8C22A8173C0007AECF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAC9C8B22A8173C0007AECF /* Constants.swift */; };
 		8BB43BE1229ADB3000CA6DCC /* ProgressTrackerStateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB43BE0229ADB3000CA6DCC /* ProgressTrackerStateCell.xib */; };
 		8BB43BE4229AF4A800CA6DCC /* GalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB43BE3229AF4A800CA6DCC /* GalleryVC.swift */; };
 		8BC8F41D22A037BC00CB6984 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC8F41C22A037BC00CB6984 /* CalendarVC.swift */; };
@@ -179,6 +178,7 @@
 		8B42FB142294E7970016147A /* ViewPager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPager.swift; sourceTree = "<group>"; };
 		8B496E7F22A68FDF00234EEC /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		8B496E8122A6B3A700234EEC /* LBZSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBZSpinner.swift; sourceTree = "<group>"; };
+		8B4B001B22AAC359008C2D67 /* LinedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinedTextView.swift; sourceTree = "<group>"; };
 		8B4D537122A7732300B95C0C /* SurveyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyVC.swift; sourceTree = "<group>"; };
 		8B4E7A7F22A7E0C500B3C3FC /* SurveyAgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAgeView.swift; sourceTree = "<group>"; };
 		8B4E7A8122A7E0D800B3C3FC /* SurveyGenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyGenderView.swift; sourceTree = "<group>"; };
@@ -200,7 +200,6 @@
 		8B54134022A82E0C00063466 /* SurveyOptimizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyOptimizeView.swift; sourceTree = "<group>"; };
 		8B54134222A8319400063466 /* SurveyOptimizeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SurveyOptimizeView.xib; sourceTree = "<group>"; };
 		8B578DEB229D9B6900FB8593 /* DietaryJournalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietaryJournalVC.swift; sourceTree = "<group>"; };
-		8B5EEAB422A60E68007BEAF4 /* CustomLineTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLineTextView.swift; sourceTree = "<group>"; };
 		8B5EEAB622A60EB2007BEAF4 /* DailyReflectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyReflectionVC.swift; sourceTree = "<group>"; };
 		8B5EEAB922A61560007BEAF4 /* DALinedTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DALinedTextView.h; sourceTree = "<group>"; };
 		8B5EEABA22A61560007BEAF4 /* DALinedTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DALinedTextView.m; sourceTree = "<group>"; };
@@ -272,7 +271,6 @@
 		8BAC75B32295FABD003F57FF /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		8BAC75B42295FABD003F57FF /* MainMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuVC.swift; sourceTree = "<group>"; };
 		8BAC9C8922A812C20007AECF /* SurveyBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyBaseView.swift; sourceTree = "<group>"; };
-		8BAC9C8B22A8173C0007AECF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8BB43BE0229ADB3000CA6DCC /* ProgressTrackerStateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressTrackerStateCell.xib; sourceTree = "<group>"; };
 		8BB43BE2229AE34B00CA6DCC /* ProgressTrackerGoalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressTrackerGoalCell.xib; sourceTree = "<group>"; };
 		8BB43BE3229AF4A800CA6DCC /* GalleryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryVC.swift; sourceTree = "<group>"; };
@@ -349,7 +347,6 @@
 				8B0C994822916AF500D913F9 /* User */,
 				8B0C994922916AF500D913F9 /* Workout */,
 				8B0C994A22916AF500D913F9 /* Yoga */,
-				8BAC9C8B22A8173C0007AECF /* Constants.swift */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -654,7 +651,7 @@
 				8BB43BE2229AE34B00CA6DCC /* ProgressTrackerGoalCell.xib */,
 				8BB43BE0229ADB3000CA6DCC /* ProgressTrackerStateCell.xib */,
 				8B5006A622A530CB00C7991C /* KNCirclePercentView */,
-				8B5EEAB422A60E68007BEAF4 /* CustomLineTextView.swift */,
+				8B4B001B22AAC359008C2D67 /* LinedTextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -892,6 +889,7 @@
 				8B616AD82292509100A20E1E /* NutrientCalculator.swift in Sources */,
 				8B6DDDAE229851C30005288E /* Exercise.swift in Sources */,
 				8BAC75B92295FABE003F57FF /* MainVC.swift in Sources */,
+				8B4B001C22AAC359008C2D67 /* LinedTextView.swift in Sources */,
 				8BEFCCBA22A39ED000138DF4 /* AnalysisProteinsView.swift in Sources */,
 				8B496E8222A6B3A700234EEC /* LBZSpinner.swift in Sources */,
 				8B02086122A124EE00592E98 /* MainHomeView.swift in Sources */,
@@ -914,7 +912,6 @@
 				8B67FDB02298292100A79FB2 /* AddDietaryVC.swift in Sources */,
 				8BB43BE4229AF4A800CA6DCC /* GalleryVC.swift in Sources */,
 				8B4E7A8422A7E0E400B3C3FC /* SurveyGoalView.swift in Sources */,
-				8B5EEAB522A60E68007BEAF4 /* CustomLineTextView.swift in Sources */,
 				8B4E7A8822A7E10600B3C3FC /* SurveyLevelView.swift in Sources */,
 				8BFA80E52292FC9400F424A6 /* Reflection.swift in Sources */,
 				8B02086022A124EE00592E98 /* MainPhysicalView.swift in Sources */,
@@ -924,7 +921,6 @@
 				8B6E71E722A5E42D00DEE39D /* YogaItemVC.swift in Sources */,
 				8B874CC5228EEDD800C856D0 /* AppDelegate.swift in Sources */,
 				8B0C995022917E1C00D913F9 /* ApiManager.swift in Sources */,
-				8BAC9C8C22A8173C0007AECF /* Constants.swift in Sources */,
 				8B0D77C12292D1AF0027773E /* StateManager.swift in Sources */,
 				8B54134122A82E0C00063466 /* SurveyOptimizeView.swift in Sources */,
 				8BAC75BA2295FABE003F57FF /* MainMenuVC.swift in Sources */,
@@ -1038,7 +1034,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1093,7 +1089,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1109,7 +1105,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4URJ54RTED;
+				DEVELOPMENT_TEAM = J8V5LJDV5C;
 				INFOPLIST_FILE = Integrated/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1130,7 +1126,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4URJ54RTED;
+				DEVELOPMENT_TEAM = J8V5LJDV5C;
 				INFOPLIST_FILE = Integrated/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

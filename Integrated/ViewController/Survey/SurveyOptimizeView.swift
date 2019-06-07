@@ -18,8 +18,7 @@ class SurveyOptimizeView: SurveyBaseView {
 	func saveAndGotoHome() {
 		User.sharedInstance.optimize()
 		User.sharedInstance.save { (error) in
-            let loginVC = (UIApplication.shared.delegate as! AppDelegate).loginVC!
-            loginVC.gotoMainVC()
+            (self.parentViewController as? SurveyVC)?.gotoMainVC()
 		}
 	}
 }

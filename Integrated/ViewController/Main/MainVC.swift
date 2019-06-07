@@ -65,10 +65,7 @@ class MainVC: UIViewController {
 	@IBAction func onLogoMenuProfileBtnTapped(_ sender: UIButton) {
 		self.toggleLogoMenu()
 		
-//		let vc = ProfileVC.instance()
-//		self.present(vc, animated: true, completion: nil)
-		
-		let vc = SurveyVC.instance()
+		let vc = ProfileVC.instance()
 		self.present(vc, animated: true, completion: nil)
 	}
 	

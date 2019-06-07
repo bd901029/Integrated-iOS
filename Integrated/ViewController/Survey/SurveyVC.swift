@@ -76,6 +76,14 @@ class SurveyVC: UIViewController {
 		let index = min(self.viewPager.currentPosition+1, self.pageViews.count-1)
 		self.viewPager.scrollToPage(index: index)
 	}
+	
+	func gotoMainVC() {
+		DispatchQueue.main.async {
+			let storyboard = UIStoryboard(name: "Main", bundle: nil)
+			let mainRootVC = storyboard.instantiateViewController(withIdentifier: "MainRootVC") as! MainRootVC
+			self.navigationController?.pushViewController(mainRootVC, animated: true)
+		}
+	}
 }
 
 extension SurveyVC: ViewPagerDataSource, ViewPagerDelegate {

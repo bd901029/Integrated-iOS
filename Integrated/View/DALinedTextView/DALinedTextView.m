@@ -8,14 +8,14 @@
 
 #import "DALinedTextView.h"
 
-#define DEFAULT_HORIZONTAL_COLOR    [UIColor colorWithRed:0.722f green:0.910f blue:0.980f alpha:0.7f]
-#define DEFAULT_VERTICAL_COLOR      [UIColor colorWithRed:0.957f green:0.416f blue:0.365f alpha:0.7f]
+#define DEFAULT_HORIZONTAL_COLOR    [UIColor grayColor]
+#define DEFAULT_VERTICAL_COLOR      [UIColor grayColor]
 
 @implementation DALinedTextView
 
 + (void)initialize
 {
-    if (self == [DALinedTextView class]) {
+	if (self == [DALinedTextView class]) {
         id appearance = [self appearance];
         [appearance setContentMode:UIViewContentModeRedraw];
         [appearance setHorizontalLineColor:DEFAULT_HORIZONTAL_COLOR];

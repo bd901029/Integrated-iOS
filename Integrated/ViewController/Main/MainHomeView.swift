@@ -61,7 +61,7 @@ class MainHomeView: UIView {
 		let calorieGoal = User.sharedInstance.isOverride() ? User.sharedInstance.customGoal() : User.sharedInstance.calorieGoal()
 		self.calorieGoalView.text = "\(Int(calorieGoal))"
 		
-		let calorieProgress: Float = calorieConsumed / calorieGoal * 100.0 + 0.5;
+		let calorieProgress: Float = calorieGoal == 0 ? 0 : calorieConsumed / calorieGoal * 100.0 + 0.5;
 		if (calorieProgress < NutrientCalculator.MAX_PERCENT) {
 			self.calorieChart.strokeColor = UIColor.notFull()
 			self.calorieChart.updatePercent(CGFloat(calorieProgress))

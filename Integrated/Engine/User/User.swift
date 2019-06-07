@@ -40,6 +40,22 @@ class User: ApiManager {
 		static let PaceOption = "paceOption"
 	}
 	
+	static let WeightUnits = ["Lbs.", "Kg."]
+	
+	static let HeightUnits = ["Feet/Inch", "CM"]
+	
+	static let Levels = ["Sedentary/Little Exercise",
+						 "3 Times Per Week",
+						 "4 Times Per Week",
+						 "5 Times Per Week"]
+	
+	static let Goals = ["Lose weight and retain Muscle",
+						"Gain weight and build muscle",
+						"Maintain my current weight and optimize my health"]
+	
+	static let paceOptionsLose = ["Lose .50 lbs Per Week", "Lose 1 lbs Per Week"]
+	static let paceOptionsGain = ["Gain .50 lbs Per Week", "Gain 1 lbs Per Week"]
+	
 	var object: PFObject!
 	
 	public func getObject() -> PFUser? {
@@ -118,7 +134,10 @@ class User: ApiManager {
 	}
 	
 	public func isOverride() -> Bool {
-		return (self.object[Key.Override] as! Bool)
+		if let override = self.object[Key.Override] as? Bool {
+			return override
+		}
+		return false
 	}
 	
 	public func customGoal() -> Float {
@@ -176,7 +195,10 @@ class User: ApiManager {
 	}
 	
 	public func calorieGoal() -> Float {
-		return (self.object[Key.CalorieGoal] as! Float)
+		if let calorieGoal = self.object[Key.CalorieGoal] as? NSNumber {
+			return calorieGoal.floatValue
+		}
+		return 0
 	}
 	
 	public func calorieBurned() -> Float {
@@ -204,7 +226,10 @@ class User: ApiManager {
 	}
 	
 	public func paceType() -> Int {
-		return (self.object[Key.PaceType] as! Int)
+		if let paceType = self.object[Key.PaceType] as? NSNumber {
+			return paceType.intValue
+		}
+		return User.PACE_LOSE
 	}
 	
 	public func setPaceType(_ paceType: Int) {
@@ -212,7 +237,10 @@ class User: ApiManager {
 	}
 	
 	public func paceOption() -> Int {
-		return (self.object[Key.PaceOption] as! Int)
+		if let paceOption = self.object[Key.PaceOption] as? NSNumber {
+			return paceOption.intValue
+		}
+		return User.PACE_50
 	}
 	
 	public func setPaceOption(_ paceOption: Int) {

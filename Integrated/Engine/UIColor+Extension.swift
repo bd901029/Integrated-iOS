@@ -39,6 +39,18 @@ extension UIColor {
 		return UIColor.rgb(0x333333)
 	}
 	
+	static func nutrition() -> UIColor {
+		return UIColor.rgb(0x1f4d2b)
+	}
+	
+	static func physical() -> UIColor {
+		return UIColor.rgb(0x991919)
+	}
+	
+	static func mental() -> UIColor {
+		return UIColor.rgb(0x55266f)
+	}
+	
 	static func survey() -> UIColor {
 		return UIColor.rgb(0x9900ff)
 	}
@@ -61,18 +73,6 @@ extension UIColor {
 	
 	static func fat() -> UIColor {
 		return UIColor.rgb(0xa120e6)
-	}
-	
-	static func nutrition() -> UIColor {
-		return UIColor.rgb(0x1f4d2b)
-	}
-	
-	static func physical() -> UIColor {
-		return UIColor.rgb(0x991919)
-	}
-	
-	static func mental() -> UIColor {
-		return UIColor.rgb(0x55266f)
 	}
 	
 	static func notFull() -> UIColor {
