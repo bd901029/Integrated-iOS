@@ -32,6 +32,11 @@ class DailyReflectionVC: UIViewController {
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
+		updateUI()
+	}
+	
+	@IBAction func onBackBtnTapped(_ sender: Any) {
+		dismiss(animated: true, completion: nil)
 	}
 	
 	@IBAction func onPrevBtnTapped(_ sender: UIButton) {
@@ -39,7 +44,7 @@ class DailyReflectionVC: UIViewController {
 		updateUI()
 	}
 	
-	@IBAction func onBackBtnTapped(_ sender: UIButton) {
+	@IBAction func onNextBtnTapped(_ sender: UIButton) {
 		currentDate = DateHelper.nextDay(currentDate)
 		updateUI()
 	}

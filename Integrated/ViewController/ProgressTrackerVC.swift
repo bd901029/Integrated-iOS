@@ -10,7 +10,8 @@ import UIKit
 import Parse
 
 class ProgressTrackerVC: UIViewController {
-
+	@IBOutlet weak var tableContentView: UIView!
+	
 	@IBOutlet weak var day1PhotoView: PFImageView!
 	@IBOutlet weak var day1WeightView: UILabel!
 	
@@ -24,6 +25,7 @@ class ProgressTrackerVC: UIViewController {
 	
 	@IBOutlet weak var goalContainer: UIView!
 	@IBOutlet weak var goalValueContainer: UIView!
+	@IBOutlet weak var goalButtonContainer: UIView!
 	
 	let statesTypes = State.types()
 	let goalNames = [String]()
@@ -61,6 +63,23 @@ class ProgressTrackerVC: UIViewController {
 		self.present(vc, animated: true, completion: nil)
 	}
 	
+	@IBAction func onAddStateBtnTapped(_ sender: UIButton) {
+		let vc = AddStateVC.instance()
+		vc.delegate = self
+		present(vc, animated: true, completion: nil)
+	}
+	
+	@IBAction func onAddGoalBtnTapped(_ sender: UIButton) {
+		let vc = AddGoalVC.instance()
+		vc.delegate = self
+		present(vc, animated: true, completion: nil)
+	}
+	
+	@IBAction func onGraphBtnTapped(_ sender: UIButton) {
+		let vc = ProgressTrackerGraphVC.instance()
+		present(vc, animated: true, completion: nil)
+	}
+	
 	private func initUI() {
 		self.navigationController?.isNavigationBarHidden = true
 	}
@@ -69,6 +88,8 @@ class ProgressTrackerVC: UIViewController {
 		self.updateGallery()
 		self.updateState()
 		self.updateGoal()
+		
+		updateLayout()
 	}
 	
 	private func updateGallery() {
@@ -119,63 +140,80 @@ class ProgressTrackerVC: UIViewController {
 		
 		customStateContainer.subviews.forEach({ $0.removeFromSuperview() })
 		let customNames = StateManager.sharedInstance.customNames()
-		var cellHeight: CGFloat = 0
+		let cellHeight: CGFloat = 30
+		
+		var customStateContainerFrame = customStateContainer.frame
+		customStateContainerFrame.size.height = cellHeight * CGFloat(customNames.count)
+		customStateContainer.frame = customStateContainerFrame
+		
 		for index in 0 ..< customNames.count {
 			let name = customNames[index]
-			let cell = ProgressTrackerStateCell.create()
-			cell?.name = name
-			customStateContainer.addSubview(cell!)
-			cellHeight = cell!.bounds.height
+			let cell = ProgressTrackerStateCell.create()!
+			cell.frame = CGRect(x: 0, y: CGFloat(index)*cellHeight, width: customStateContainer.frame.width, height: cellHeight)
+			cell.name = name
+			
+			customStateContainer.addSubview(cell)
 		}
-		
-		customStateContainer.frame = CGRect(x: customStateContainer.frame.origin.x,
-											y: customStateContainer.frame.origin.y,
-											width: customStateContainer.frame.width,
-											height: cellHeight * CGFloat(customNames.count))
-		
-		stateButtonContainer.frame = CGRect(x: stateButtonContainer.frame.origin.x,
-											y: customStateContainer.frame.origin.y + customStateContainer.frame.height + 10,
-											width: stateButtonContainer.frame.width,
-											height: stateButtonContainer.frame.height)
-		
-		goalContainer.frame = CGRect(x: goalContainer.frame.origin.x,
-									 y: stateButtonContainer.frame.origin.y + stateButtonContainer.frame.height,
-									 width: goalContainer.frame.width,
-									 height: goalContainer.frame.height)
 	}
 	
 	private func updateGoal() {
 		goalValueContainer.subviews.forEach({ $0.removeFromSuperview() })
 		
 		let goalNames = GoalManager.sharedInstance.allNames()
-		var cellHeight: CGFloat = 0
-		for name in goalNames {
-			let cell = ProgressTrackerGoalCell.create()
-			cell?.goalName = name
-			goalValueContainer.addSubview(cell!)
+		let cellHeight: CGFloat = 30
+		
+		var frame = goalValueContainer.frame
+		frame.size.height = cellHeight * CGFloat(goalNames.count)
+		goalValueContainer.frame = frame
+		
+		for index in 0 ..< goalNames.count {
+			let name = goalNames[index]
+			let cell = ProgressTrackerGoalCell.create()!
+			cell.goalName = name
+			cell.frame = CGRect(x: 0, y: cellHeight * CGFloat(index),
+								 width: goalValueContainer.frame.width, height: cellHeight)
 			
-			cellHeight = cell!.bounds.height
+			goalValueContainer.addSubview(cell)
 		}
+	}
+	
+	private func updateLayout() {
+		var frame = stateButtonContainer.frame
+		frame.origin.y = customStateContainer.frame.origin.y + customStateContainer.frame.height + 10
+		stateButtonContainer.frame = frame
 		
-		goalValueContainer.frame = CGRect(x: goalValueContainer.frame.origin.x,
-										  y: goalValueContainer.frame.origin.y,
-										  width: goalValueContainer.frame.width,
-										  height: cellHeight * CGFloat(goalNames.count))
+		frame = goalContainer.frame
+		frame.origin.y = stateButtonContainer.frame.origin.y + stateButtonContainer.frame.height + 40
+		goalContainer.frame = frame
 		
-		goalContainer.frame = CGRect(x: goalContainer.frame.origin.x,
-									 y: goalContainer.frame.origin.y,
-									 width: goalContainer.frame.width,
-									 height: goalValueContainer.frame.origin.y + goalValueContainer.frame.height + 80)
+		frame = goalButtonContainer.frame
+		frame.origin.y = goalValueContainer.frame.origin.y + goalValueContainer.frame.height + 10
+		goalButtonContainer.frame = frame
 		
-		goalContainer.superview?.frame = CGRect(x: goalContainer.superview!.frame.origin.x,
-												y: goalContainer.superview!.frame.origin.y,
-												width: goalContainer.superview!.frame.width,
-												height: goalContainer.frame.origin.y + goalContainer.frame.height)
+		frame = goalContainer.frame
+		frame.size.height = goalButtonContainer.frame.origin.y + goalButtonContainer.frame.height
+		goalContainer.frame = frame
+		
+		frame = tableContentView.frame
+		frame.size.height = goalContainer.frame.origin.y + goalContainer.frame.height + 20
+		tableContentView.frame = frame
 	}
 }
 
 extension ProgressTrackerVC: AddPhotoVCDelegate {
 	func addPhotoVCDidAdded() {
+		self.updateUI()
+	}
+}
+
+extension ProgressTrackerVC: AddStateDelegate {
+	func addStateDidChange() {
+		self.updateUI()
+	}
+}
+
+extension ProgressTrackerVC: AddGoalDelegate {
+	func addGoalDidChange() {
 		self.updateUI()
 	}
 }

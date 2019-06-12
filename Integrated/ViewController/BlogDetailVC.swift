@@ -16,6 +16,12 @@ class BlogDetailVC: UIViewController {
 	@IBOutlet weak var imageView: PFImageView!
 	@IBOutlet weak var commentView: UILabel!
 	
+	static func instance() -> BlogDetailVC {
+		let storyboard = UIStoryboard(name: "Main", bundle: nil)
+		let vc = storyboard.instantiateViewController(withIdentifier: "BlogDetailVC") as! BlogDetailVC
+		return vc
+	}
+	
 	override func viewDidLoad() {
         super.viewDidLoad()
 		

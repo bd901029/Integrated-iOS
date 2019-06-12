@@ -21,6 +21,7 @@ class SurveyLevelView: SurveyBaseView {
 	override func initUI() {
 		self.levelSpinner.updateList(User.Levels)
 		self.levelSpinner.delegate = self
+		self.levelSpinner.changeSelectedIndex(0)
 	}
 
 	@IBAction func onBackBtnTapped(_ sender: UIButton) {

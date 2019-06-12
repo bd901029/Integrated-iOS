@@ -177,6 +177,7 @@ public class ViewPager: UIView {
         view.frame = CGRect(x: self.frame.width * CGFloat(index), y: 0,
 							width: self.frame.width,
 							height: self.frame.height)
+		print(view.frame)
     }
 }
 
@@ -199,8 +200,8 @@ extension ViewPager: UIScrollViewDelegate {
 //        NSObject.cancelPreviousPerformRequests(withTarget: scrollView)
 //        self.perform(#selector(self.scrollViewDidEndScrollingAnimation(_:)), with: scrollView, afterDelay: 0.1)
 		
-//		let index = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
-//		self.delegate?.viewPager(self, didSelectedItem: index)
+		let index = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
+		self.delegate?.viewPager(self, didSelectedItem: index)
     }
 	
 	public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {

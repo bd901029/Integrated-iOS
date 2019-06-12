@@ -38,6 +38,7 @@ class MainMenuVC: UIViewController {
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
+		initUI()
     }
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -46,12 +47,20 @@ class MainMenuVC: UIViewController {
 	}
 	
 	func initUI() {
-		
+		avatarView.layer.cornerRadius = avatarView.frame.width / 2
 	}
 	
 	func updateUI() {
-		self.avatarView.file = User.sharedInstance.avatarFile()
-		self.avatarView.loadInBackground()
+		updateAvatar()
+	}
+	
+	func updateAvatar() {
+		let galleries = GalleryManager.sharedInstance.items
+		if galleries.count > 0 {
+			let item = galleries.last
+			self.avatarView.file = item?.image
+			self.avatarView.loadInBackground()
+		}
 	}
 	
 	@IBAction func onMyProfileBtnTapped(_ sender: UIButton) {

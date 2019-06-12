@@ -8,6 +8,7 @@
 
 import UIKit
 import Charts
+import QuartzCore
 
 class NutritionStatisticsVC: UIViewController {
 
@@ -68,26 +69,41 @@ class NutritionStatisticsVC: UIViewController {
 		for i in 0 ..< self.nutrientsButtons.count {
 			let button = self.nutrientsButtons[i]
 			button.setTitleColor(pageColors[i], for: UIControlState.selected)
+			button.isSelected = i == 0
 		}
 		
 		for i in 0 ..< self.pageButtons.count {
 			let button = self.pageButtons[i]
-			button.setTitleColor(pageColors[i], for: UIControlState.selected)
+			button.setBackgroundColor(color: pageColors[i], forState: UIControl.State.selected)
+			button.isSelected = i == 0
 		}
 		
 		self.viewPager.dataSource = self
 		self.viewPager.delegate = self
 		self.viewPager.pageControl.isHidden = true
 		self.viewPager.scrollToPage(index: 0)
+		
+		calorieBar.layer.cornerRadius = 5
+		
+		carbohydratesValueView.layer.masksToBounds = true
+		carbohydratesValueView.layer.cornerRadius = 5
+		
+		proteinValueView.layer.masksToBounds = true
+		proteinValueView.layer.cornerRadius = 5
+		
+		fatValueView.layer.masksToBounds = true
+		fatValueView.layer.cornerRadius = 5
 	}
 	
 	private func initChart() {
 		self.mainChart.usePercentValuesEnabled = true
-		self.mainChart.chartDescription?.enabled = false
+		self.mainChart.chartDescription?.enabled = true
+		self.mainChart.drawEntryLabelsEnabled = true
 		self.mainChart.drawHoleEnabled = true
 		self.mainChart.isUserInteractionEnabled = false
 		self.mainChart.holeColor = UIColor.clear
 		self.mainChart.legend.enabled = false
+		self.mainChart.entryLabelColor = UIColor.white
 	}
 	
 	private func updateUI() {
@@ -122,6 +138,7 @@ class NutritionStatisticsVC: UIViewController {
 		let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: "")
 		pieChartDataSet.selectionShift = 0
 		pieChartDataSet.colors = caloriesChartColors
+		pieChartDataSet.valueFormatter = self
 		
 		let pieChartData = PieChartData(dataSet: pieChartDataSet)
 		pieChartData.setValueTextColor(UIColor.clear)
@@ -177,6 +194,7 @@ extension NutritionStatisticsVC: ViewPagerDataSource, ViewPagerDelegate {
 	}
 	
 	func viewPager(_ viewPager: ViewPager, didSelectedItem itemIndex: Int) {
+		print(itemIndex)
 		for index in 0 ..< self.nutrientsButtons.count {
 			self.nutrientsButtons[index].isSelected = itemIndex == index
 		}
@@ -184,5 +202,14 @@ extension NutritionStatisticsVC: ViewPagerDataSource, ViewPagerDelegate {
 		for index in 0 ..< self.pageButtons.count {
 			self.pageButtons[index].isSelected = itemIndex == index
 		}
+	}
+}
+
+extension NutritionStatisticsVC: IValueFormatter {
+	func stringForValue(_ value: Double, entry: ChartDataEntry, dataSetIndex: Int, viewPortHandler: ViewPortHandler?) -> String {
+		if value.isNaN {
+			return "0%"
+		}
+		return String(format: "%d", Int(value + 0.5)) + "%"
 	}
 }

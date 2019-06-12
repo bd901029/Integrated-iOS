@@ -33,6 +33,7 @@ class State: PFObject, PFSubclassing {
 		static let Weight = "Weight"
 		static let RestingHeartRate = "Resting Heart Rate"
 		static let BloodPressure = "Blood Pressure"
+		static let ChestMeasurement = "Chest Measurement"
 		static let BicepsMeasurement = "Biceps Measurement"
 		static let QuadMeasurement = "Quad Measurement"
 		static let AbdomenMeasurement = "Abdomen Measurement"
@@ -67,6 +68,7 @@ class State: PFObject, PFSubclassing {
 		stateTypes.append(State.Kind.Weight)
 		stateTypes.append(State.Kind.RestingHeartRate)
 		stateTypes.append(State.Kind.BloodPressure)
+		stateTypes.append(State.Kind.ChestMeasurement)
 		stateTypes.append(State.Kind.BicepsMeasurement)
 		stateTypes.append(State.Kind.QuadMeasurement)
 		stateTypes.append(State.Kind.AbdomenMeasurement)

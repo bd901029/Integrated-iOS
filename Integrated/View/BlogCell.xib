@@ -31,6 +31,15 @@
                         <rect key="frame" x="142" y="60" width="37" height="37"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     </activityIndicatorView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bys-tb-jvV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="199.5"/>
+                        <state key="normal">
+                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="onBtnTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="nTd-KK-Z1Q"/>
+                        </connections>
+                    </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6zK-uc-fgm" customClass="PFImageView">
                         <rect key="frame" x="10" y="10" width="300" height="150"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -50,6 +59,12 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="Bys-tb-jvV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5yS-Vg-0yz"/>
+                    <constraint firstAttribute="bottom" secondItem="Bys-tb-jvV" secondAttribute="bottom" id="6F0-Is-1ZK"/>
+                    <constraint firstItem="Bys-tb-jvV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hFA-Sj-te9"/>
+                    <constraint firstAttribute="trailing" secondItem="Bys-tb-jvV" secondAttribute="trailing" id="hSo-Vr-XhY"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>

@@ -54,15 +54,16 @@
         // Reduces memory access.
         CGFloat baseOffset = self.textContainerInset.top + self.font.descender;
         CGFloat screenScale = [UIScreen mainScreen].scale;
-        CGFloat boundsX = self.bounds.origin.x;
-        CGFloat boundsWidth = self.bounds.size.width;
+        CGFloat boundsX = self.bounds.origin.x + 10;
+        CGFloat boundsWidth = self.bounds.size.width - 10;
         
         // Only draw lines that are visible on the screen.
         // (As opposed to throughout the entire view's contents)
         NSInteger firstVisibleLine = MAX(1, (self.contentOffset.y / self.font.lineHeight));
         NSInteger lastVisibleLine = ceilf((self.contentOffset.y + self.bounds.size.height) / self.font.lineHeight);
         for (NSInteger line = firstVisibleLine; line <= lastVisibleLine; line++) {
-            CGFloat linePointY = (baseOffset + ((self.font.lineHeight + 40) * line));
+//            CGFloat linePointY = (baseOffset + ((self.font.lineHeight + 40) * line));
+			CGFloat linePointY = (baseOffset + ((self.font.lineHeight) * line));
             // Rounding the point to the nearest pixel.
             // Greatly reduces drawing time.
             CGFloat roundedLinePointY = roundf(linePointY * screenScale) / screenScale;

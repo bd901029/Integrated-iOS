@@ -86,11 +86,17 @@ class User: ApiManager {
 	}
 	
 	public func firstName() -> String {
-		return (self.object[Key.FirstName] as! String)
+		if let firstName = self.object[Key.FirstName] as? String {
+			return firstName
+		}
+		return ""
 	}
 	
 	public func lastName() -> String {
-		return (self.object[Key.LastName] as! String)
+		if let lastName = self.object[Key.LastName] as? String {
+			return lastName
+		}
+		return ""
 	}
 	
 	public func fullName() -> String {
@@ -141,7 +147,10 @@ class User: ApiManager {
 	}
 	
 	public func customGoal() -> Float {
-		return (self.object[Key.CustomGoal] as! Float)
+		if let customGoal = self.object[Key.CustomGoal] as? NSNumber {
+			return customGoal.floatValue
+		}
+		return 0
 	}
 	
 	public func avatarFile() -> PFFileObject? {

@@ -62,7 +62,7 @@ class GoalManager: ApiManager {
 	
 	public func allNames() -> [String] {
 		let defaultNames = Goal.defaults()
-		var results = [String]()
+		var results = defaultNames
 		for name in self.goalMap.keys {
 			if defaultNames.contains(name) {
 				continue
@@ -116,7 +116,7 @@ class GoalManager: ApiManager {
 	}
 	
 	public func delete(_ goal: Goal) {
-		self.deleteGoal(goal);
-		goal.deleteInBackground();
+		self.deleteGoal(goal)
+		goal.deleteInBackground()
 	}
 }

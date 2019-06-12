@@ -160,7 +160,7 @@ class LBZSpinner : UIView, UITableViewDelegate, UITableViewDataSource {
 		if selectedIndex < self.list.count {
 			self.text = self.list[selectedIndex]
 		} else {
-			self.text = self.list[0]
+			self.text = self.list.count > 0 ? self.list[0] : ""
 		}
     }
 

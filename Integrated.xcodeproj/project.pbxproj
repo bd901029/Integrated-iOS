@@ -28,6 +28,8 @@
 		8B0D77C12292D1AF0027773E /* StateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0D77C02292D1AF0027773E /* StateManager.swift */; };
 		8B16713F22A1A60100D90D3B /* MeditationSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B16713E22A1A60100D90D3B /* MeditationSectionHeader.swift */; };
 		8B16714122A1A61E00D90D3B /* MeditationSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B16714022A1A61E00D90D3B /* MeditationSectionHeader.xib */; };
+		8B1DBB2F22AEC7AB00A01C5D /* AddStateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1DBB2E22AEC7AB00A01C5D /* AddStateVC.swift */; };
+		8B1DBB3122AF596300A01C5D /* AddGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1DBB3022AF596300A01C5D /* AddGoalVC.swift */; };
 		8B37FC09228FF32200E8504F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B37FC08228FF32200E8504F /* LoginVC.swift */; };
 		8B3D7CD2229BF2E800819D26 /* ic_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B3D7CD1229BF2E800819D26 /* ic_close.png */; };
 		8B42FB152294E7970016147A /* ViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B42FB142294E7970016147A /* ViewPager.swift */; };
@@ -72,13 +74,16 @@
 		8B6DDDAE229851C30005288E /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6DDDAD229851C30005288E /* Exercise.swift */; };
 		8B6DDDB4229870F10005288E /* ExerciseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6DDDB3229870F10005288E /* ExerciseVC.swift */; };
 		8B6E71E722A5E42D00DEE39D /* YogaItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E71E622A5E42D00DEE39D /* YogaItemVC.swift */; };
+		8B77FCF022B12FC1008FF54A /* ProgressTrackerGraphVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B77FCEF22B12FC1008FF54A /* ProgressTrackerGraphVC.swift */; };
 		8B78A2BA229B76BF00C5A97C /* AddPhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B78A2B9229B76BF00C5A97C /* AddPhotoVC.swift */; };
+		8B7AEA4B22B02B9D0051D182 /* ProgressTrackerGoalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B7AEA4A22B02B9D0051D182 /* ProgressTrackerGoalCell.xib */; };
 		8B7B4000229643E900DA5657 /* BlogDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7B3FFF229643E900DA5657 /* BlogDetailVC.swift */; };
 		8B7B4004229645F900DA5657 /* ic_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7B4003229645F900DA5657 /* ic_back.png */; };
 		8B874CC5228EEDD800C856D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B874CC4228EEDD800C856D0 /* AppDelegate.swift */; };
 		8B874CCA228EEDD800C856D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B874CC8228EEDD800C856D0 /* Main.storyboard */; };
 		8B874CCC228EEDDA00C856D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B874CCB228EEDDA00C856D0 /* Assets.xcassets */; };
 		8B874CCF228EEDDA00C856D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B874CCD228EEDDA00C856D0 /* LaunchScreen.storyboard */; };
+		8BA279B922AD7D7E00D8F029 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA279B822AD7D7E00D8F029 /* HeaderView.swift */; };
 		8BA2BBAB229022A000AFBB7D /* futura_condensed_bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8BA2BB88229022A000AFBB7D /* futura_condensed_bold.otf */; };
 		8BA2BBAC229022A000AFBB7D /* futura_condensed_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BA2BB89229022A000AFBB7D /* futura_condensed_regular.ttf */; };
 		8BA2BBAD229022A000AFBB7D /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BA2BB8B229022A000AFBB7D /* background.png */; };
@@ -172,6 +177,8 @@
 		8B0D77C02292D1AF0027773E /* StateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateManager.swift; sourceTree = "<group>"; };
 		8B16713E22A1A60100D90D3B /* MeditationSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationSectionHeader.swift; sourceTree = "<group>"; };
 		8B16714022A1A61E00D90D3B /* MeditationSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationSectionHeader.xib; sourceTree = "<group>"; };
+		8B1DBB2E22AEC7AB00A01C5D /* AddStateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStateVC.swift; sourceTree = "<group>"; };
+		8B1DBB3022AF596300A01C5D /* AddGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalVC.swift; sourceTree = "<group>"; };
 		8B37FC05228FF2D200E8504F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		8B37FC08228FF32200E8504F /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		8B3D7CD1229BF2E800819D26 /* ic_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_close.png; sourceTree = "<group>"; };
@@ -221,7 +228,9 @@
 		8B6DDDAD229851C30005288E /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		8B6DDDB3229870F10005288E /* ExerciseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseVC.swift; sourceTree = "<group>"; };
 		8B6E71E622A5E42D00DEE39D /* YogaItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YogaItemVC.swift; sourceTree = "<group>"; };
+		8B77FCEF22B12FC1008FF54A /* ProgressTrackerGraphVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTrackerGraphVC.swift; sourceTree = "<group>"; };
 		8B78A2B9229B76BF00C5A97C /* AddPhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoVC.swift; sourceTree = "<group>"; };
+		8B7AEA4A22B02B9D0051D182 /* ProgressTrackerGoalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressTrackerGoalCell.xib; sourceTree = "<group>"; };
 		8B7B3FFF229643E900DA5657 /* BlogDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogDetailVC.swift; sourceTree = "<group>"; };
 		8B7B4003229645F900DA5657 /* ic_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_back.png; sourceTree = "<group>"; };
 		8B874CC1228EEDD800C856D0 /* Integrated.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Integrated.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -230,6 +239,7 @@
 		8B874CCB228EEDDA00C856D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B874CCE228EEDDA00C856D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B874CD0228EEDDA00C856D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BA279B822AD7D7E00D8F029 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		8BA2BB88229022A000AFBB7D /* futura_condensed_bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = futura_condensed_bold.otf; sourceTree = "<group>"; };
 		8BA2BB89229022A000AFBB7D /* futura_condensed_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = futura_condensed_regular.ttf; sourceTree = "<group>"; };
 		8BA2BB8B229022A000AFBB7D /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
@@ -272,7 +282,6 @@
 		8BAC75B42295FABD003F57FF /* MainMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuVC.swift; sourceTree = "<group>"; };
 		8BAC9C8922A812C20007AECF /* SurveyBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyBaseView.swift; sourceTree = "<group>"; };
 		8BB43BE0229ADB3000CA6DCC /* ProgressTrackerStateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressTrackerStateCell.xib; sourceTree = "<group>"; };
-		8BB43BE2229AE34B00CA6DCC /* ProgressTrackerGoalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressTrackerGoalCell.xib; sourceTree = "<group>"; };
 		8BB43BE3229AF4A800CA6DCC /* GalleryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryVC.swift; sourceTree = "<group>"; };
 		8BC8F41C22A037BC00CB6984 /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
 		8BEFCCAB22A397DF00138DF4 /* AnalysisVitaminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisVitaminView.swift; sourceTree = "<group>"; };
@@ -447,24 +456,27 @@
 		8B37FC07228FF32200E8504F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8B4D537022A7730E00B95C0C /* Survey */,
-				8B51734622A58FA200755179 /* Yoga */,
 				8B67FDAF2298292100A79FB2 /* AddDietaryVC.swift */,
+				8B1DBB3022AF596300A01C5D /* AddGoalVC.swift */,
 				8B78A2B9229B76BF00C5A97C /* AddPhotoVC.swift */,
+				8B1DBB2E22AEC7AB00A01C5D /* AddStateVC.swift */,
 				8B7B3FFF229643E900DA5657 /* BlogDetailVC.swift */,
 				8BC8F41C22A037BC00CB6984 /* CalendarVC.swift */,
+				8B5EEAB622A60EB2007BEAF4 /* DailyReflectionVC.swift */,
 				8B578DEB229D9B6900FB8593 /* DietaryJournalVC.swift */,
 				8B6DDDB3229870F10005288E /* ExerciseVC.swift */,
 				8BB43BE3229AF4A800CA6DCC /* GalleryVC.swift */,
 				8B37FC08228FF32200E8504F /* LoginVC.swift */,
 				8BF19B0822A134AE00B09EEA /* MeditationVC.swift */,
+				8B496E7F22A68FDF00234EEC /* ProfileVC.swift */,
+				8B77FCEF22B12FC1008FF54A /* ProgressTrackerGraphVC.swift */,
 				8B6251DF229945F100CE948F /* ProgressTrackerVC.swift */,
 				8BFA80F62293124A00F424A6 /* RegisterVC.swift */,
 				8B6DDDA722984B8E0005288E /* WorkoutVC.swift */,
 				8BAC75AB2295F832003F57FF /* Main */,
 				8BFB56ED22A2E26200A07A8C /* Nutrition Statistics */,
-				8B5EEAB622A60EB2007BEAF4 /* DailyReflectionVC.swift */,
-				8B496E7F22A68FDF00234EEC /* ProfileVC.swift */,
+				8B4D537022A7730E00B95C0C /* Survey */,
+				8B51734622A58FA200755179 /* Yoga */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -648,10 +660,11 @@
 				8B42FB142294E7970016147A /* ViewPager.swift */,
 				8BA5E44F229632FB00E69F16 /* BlogCell.xib */,
 				8B16714022A1A61E00D90D3B /* MeditationSectionHeader.xib */,
-				8BB43BE2229AE34B00CA6DCC /* ProgressTrackerGoalCell.xib */,
+				8B7AEA4A22B02B9D0051D182 /* ProgressTrackerGoalCell.xib */,
 				8BB43BE0229ADB3000CA6DCC /* ProgressTrackerStateCell.xib */,
 				8B5006A622A530CB00C7991C /* KNCirclePercentView */,
 				8B4B001B22AAC359008C2D67 /* LinedTextView.swift */,
+				8BA279B822AD7D7E00D8F029 /* HeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -734,6 +747,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B7AEA4B22B02B9D0051D182 /* ProgressTrackerGoalCell.xib in Resources */,
 				8BA2BBC4229022A000AFBB7D /* ic_target.png in Resources */,
 				8BA2BBC9229022A000AFBB7D /* play.png in Resources */,
 				8B54134322A8319400063466 /* SurveyOptimizeView.xib in Resources */,
@@ -893,6 +907,7 @@
 				8BEFCCBA22A39ED000138DF4 /* AnalysisProteinsView.swift in Sources */,
 				8B496E8222A6B3A700234EEC /* LBZSpinner.swift in Sources */,
 				8B02086122A124EE00592E98 /* MainHomeView.swift in Sources */,
+				8BA279B922AD7D7E00D8F029 /* HeaderView.swift in Sources */,
 				8B0C9954229198D100D913F9 /* BlogManager.swift in Sources */,
 				8B0D77BB2292C3C60027773E /* GalleryManager.swift in Sources */,
 				8B51734322A58B9100755179 /* YogaSection.swift in Sources */,
@@ -929,6 +944,7 @@
 				8BFA80FA2293147D00F424A6 /* CustomButton.swift in Sources */,
 				8B02086322A124EE00592E98 /* MainMentalView.swift in Sources */,
 				8BEFCCBC22A39EE000138DF4 /* AnalysisMineralsView.swift in Sources */,
+				8B1DBB2F22AEC7AB00A01C5D /* AddStateVC.swift in Sources */,
 				8B5006AC22A530CB00C7991C /* KNPercentLabel.m in Sources */,
 				8B51734522A58C1300755179 /* YogaManager.swift in Sources */,
 				8B6DDDAC229851770005288E /* WorkoutManager.swift in Sources */,
@@ -938,6 +954,7 @@
 				8B5EEABB22A61560007BEAF4 /* DALinedTextView.m in Sources */,
 				8BFA80FC229317B000F424A6 /* RoundTextField.swift in Sources */,
 				8BFA80E92292FE9400F424A6 /* DateHelper.swift in Sources */,
+				8B77FCF022B12FC1008FF54A /* ProgressTrackerGraphVC.swift in Sources */,
 				8B51734122A58AB400755179 /* YogaItem.swift in Sources */,
 				8BFA80E12292EE4700F424A6 /* Goal.swift in Sources */,
 				8B0D77BF2292CD870027773E /* UIColor+Extension.swift in Sources */,
@@ -957,6 +974,7 @@
 				8B42FB152294E7970016147A /* ViewPager.swift in Sources */,
 				8BF19B0922A134AE00B09EEA /* MeditationVC.swift in Sources */,
 				8BAC9C8A22A812C20007AECF /* SurveyBaseView.swift in Sources */,
+				8B1DBB3122AF596300A01C5D /* AddGoalVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

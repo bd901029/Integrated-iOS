@@ -36,4 +36,10 @@ class BlogCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+	
+	@IBAction func onBtnTapped(_ sender: UIButton) {
+		let blogDetailVC = BlogDetailVC.instance()
+		blogDetailVC.blog = self.blog
+		self.parentViewController?.present(blogDetailVC, animated: true, completion: nil)
+	}
 }
