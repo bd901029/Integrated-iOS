@@ -77,7 +77,7 @@ class NutritionStatisticsVC: UIViewController {
 			button.setBackgroundColor(color: pageColors[i], forState: UIControl.State.selected)
 			button.isSelected = i == 0
 		}
-		
+
 		self.viewPager.dataSource = self
 		self.viewPager.delegate = self
 		self.viewPager.pageControl.isHidden = true
@@ -194,7 +194,6 @@ extension NutritionStatisticsVC: ViewPagerDataSource, ViewPagerDelegate {
 	}
 	
 	func viewPager(_ viewPager: ViewPager, didSelectedItem itemIndex: Int) {
-		print(itemIndex)
 		for index in 0 ..< self.nutrientsButtons.count {
 			self.nutrientsButtons[index].isSelected = itemIndex == index
 		}

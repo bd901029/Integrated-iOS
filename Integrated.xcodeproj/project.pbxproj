@@ -179,6 +179,7 @@
 		8B16714022A1A61E00D90D3B /* MeditationSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationSectionHeader.xib; sourceTree = "<group>"; };
 		8B1DBB2E22AEC7AB00A01C5D /* AddStateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStateVC.swift; sourceTree = "<group>"; };
 		8B1DBB3022AF596300A01C5D /* AddGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalVC.swift; sourceTree = "<group>"; };
+		8B2583B822B464C700AEFF33 /* Integrated.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Integrated.entitlements; sourceTree = "<group>"; };
 		8B37FC05228FF2D200E8504F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		8B37FC08228FF32200E8504F /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		8B3D7CD1229BF2E800819D26 /* ic_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_close.png; sourceTree = "<group>"; };
@@ -556,6 +557,7 @@
 		8B874CC3228EEDD800C856D0 /* Integrated */ = {
 			isa = PBXGroup;
 			children = (
+				8B2583B822B464C700AEFF33 /* Integrated.entitlements */,
 				8B0C994022916AF500D913F9 /* Engine */,
 				8BFA80F82293146700F424A6 /* View */,
 				8B37FC07228FF32200E8504F /* ViewController */,
@@ -721,6 +723,11 @@
 				TargetAttributes = {
 					8B874CC0228EEDD800C856D0 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -1122,10 +1129,11 @@
 			baseConfigurationReference = 69F4D375044529081DD05892 /* Pods-Integrated.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Integrated/Integrated.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J8V5LJDV5C;
 				INFOPLIST_FILE = Integrated/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1143,10 +1151,11 @@
 			baseConfigurationReference = 55ADAFBB74D147837D293079 /* Pods-Integrated.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Integrated/Integrated.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J8V5LJDV5C;
 				INFOPLIST_FILE = Integrated/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

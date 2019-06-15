@@ -1362,7 +1362,7 @@ anytime via Your profile</string>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fat (99%) - " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txD-bj-hZr">
-                                                <rect key="frame" x="170" y="60" width="92.666666666666686" height="30"/>
+                                                <rect key="frame" x="170" y="60" width="105.66666666666669" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="uJj-Vu-AaN"/>
                                                 </constraints>
@@ -1371,7 +1371,7 @@ anytime via Your profile</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="99.9g" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0M-KA-hsl">
-                                                <rect key="frame" x="262.66666666666669" y="60" width="54" height="30"/>
+                                                <rect key="frame" x="275.66666666666669" y="60" width="63" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="fQM-cE-aMZ"/>
                                                 </constraints>
@@ -1380,7 +1380,7 @@ anytime via Your profile</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carbs (99%) - " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dC-Ql-Eup">
-                                                <rect key="frame" x="170" y="100" width="110.33333333333331" height="30"/>
+                                                <rect key="frame" x="170" y="100" width="131" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="pLi-Gs-wJ4"/>
                                                 </constraints>
@@ -1389,7 +1389,7 @@ anytime via Your profile</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="99.9g" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDk-tk-X9r">
-                                                <rect key="frame" x="280.33333333333331" y="100" width="54" height="30"/>
+                                                <rect key="frame" x="301" y="100" width="63" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="8DO-30-keb"/>
                                                 </constraints>
@@ -1398,7 +1398,7 @@ anytime via Your profile</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protein (99%) - " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Wf-nr-b2M">
-                                                <rect key="frame" x="170" y="140" width="122" height="30"/>
+                                                <rect key="frame" x="170" y="140" width="140.66666666666663" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="ct6-Ho-dBx"/>
                                                 </constraints>
@@ -1407,7 +1407,7 @@ anytime via Your profile</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="99.9g" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQM-aJ-S5e">
-                                                <rect key="frame" x="292" y="140" width="54" height="30"/>
+                                                <rect key="frame" x="310.66666666666669" y="140" width="63" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="g1B-Kf-ckJ"/>
                                                 </constraints>
@@ -2288,7 +2288,7 @@ anytime via Your profile</string>
                                                         </button>
                                                         <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tuc-0d-EoZ" customClass="CustomButton" customModule="Integrated" customModuleProvider="target">
                                                             <rect key="frame" x="207" y="0.0" width="187" height="50"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                             <color key="backgroundColor" red="0.59999999999999998" green="0.098039215690000001" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <fontDescription key="fontDescription" name="FuturaCondMedium" family="Futura Condensed" pointSize="25"/>
                                                             <state key="normal" title="Progress Graph &gt;">
@@ -3382,10 +3382,12 @@ anytime via Your profile</string>
                                                 <constraint firstItem="uW9-OV-qOL" firstAttribute="width" secondItem="WoM-ph-uWr" secondAttribute="width" id="oqz-y2-UoE"/>
                                             </constraints>
                                         </stackView>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NA8-29-feJ" customClass="ViewPager" customModule="Integrated" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NA8-29-feJ" customClass="ViewPager" customModule="Integrated" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="740" width="414" height="560"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="560" id="eoe-gq-E7j"/>
+                                            </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hwi-pD-MWX">
                                             <rect key="frame" x="132" y="1300" width="150" height="25"/>
@@ -3487,9 +3489,12 @@ anytime via Your profile</string>
                                         <constraint firstItem="3tI-DJ-CKN" firstAttribute="leading" secondItem="rv7-bC-OT4" secondAttribute="leading" constant="10" id="2tS-dj-U6j"/>
                                         <constraint firstItem="iKi-00-mhQ" firstAttribute="top" secondItem="j7Y-Gc-JiO" secondAttribute="bottom" constant="10" id="8yH-Dl-eWk"/>
                                         <constraint firstItem="iKi-00-mhQ" firstAttribute="leading" secondItem="rv7-bC-OT4" secondAttribute="leading" constant="10" id="BrW-mZ-riY"/>
+                                        <constraint firstAttribute="trailing" secondItem="NA8-29-feJ" secondAttribute="trailing" id="Exb-Jg-9Qh"/>
                                         <constraint firstItem="hwi-pD-MWX" firstAttribute="centerX" secondItem="rv7-bC-OT4" secondAttribute="centerX" id="FUM-mF-4PC"/>
+                                        <constraint firstItem="NA8-29-feJ" firstAttribute="leading" secondItem="rv7-bC-OT4" secondAttribute="leading" id="LR7-lS-85g"/>
                                         <constraint firstAttribute="trailing" secondItem="y6Z-x1-Ze4" secondAttribute="trailing" id="MaW-bo-9rj"/>
                                         <constraint firstItem="gEO-pl-x1i" firstAttribute="leading" secondItem="rv7-bC-OT4" secondAttribute="leading" id="NA7-a6-nZB"/>
+                                        <constraint firstItem="NA8-29-feJ" firstAttribute="top" secondItem="9q4-oA-h8F" secondAttribute="bottom" constant="10" id="PBc-bA-SCH"/>
                                         <constraint firstItem="hwi-pD-MWX" firstAttribute="top" secondItem="rv7-bC-OT4" secondAttribute="top" constant="1300" id="WZn-IT-isE"/>
                                         <constraint firstItem="y6Z-x1-Ze4" firstAttribute="leading" secondItem="rv7-bC-OT4" secondAttribute="leading" id="Znn-p6-NvV"/>
                                         <constraint firstAttribute="trailing" secondItem="3tI-DJ-CKN" secondAttribute="trailing" constant="10" id="cZd-kw-KIj"/>
@@ -3516,9 +3521,9 @@ anytime via Your profile</string>
                             <constraint firstItem="eyU-9d-g7s" firstAttribute="top" secondItem="woW-ra-0Kl" secondAttribute="top" id="W9j-St-oM4"/>
                             <constraint firstItem="vD0-6m-0Zn" firstAttribute="bottom" secondItem="yr9-Ss-UNC" secondAttribute="bottom" id="WsS-rk-B1h"/>
                             <constraint firstItem="eyU-9d-g7s" firstAttribute="trailing" secondItem="yr9-Ss-UNC" secondAttribute="trailing" id="ccd-1z-c3P"/>
-                            <constraint firstItem="vD0-6m-0Zn" firstAttribute="trailing" secondItem="yr9-Ss-UNC" secondAttribute="trailing" id="gpg-7x-MWZ"/>
+                            <constraint firstItem="vD0-6m-0Zn" firstAttribute="trailing" secondItem="woW-ra-0Kl" secondAttribute="trailing" id="gpg-7x-MWZ"/>
                             <constraint firstItem="vD0-6m-0Zn" firstAttribute="top" secondItem="eyU-9d-g7s" secondAttribute="bottom" id="i3G-JG-nqo"/>
-                            <constraint firstItem="vD0-6m-0Zn" firstAttribute="leading" secondItem="yr9-Ss-UNC" secondAttribute="leading" id="w4H-NW-qkl"/>
+                            <constraint firstItem="vD0-6m-0Zn" firstAttribute="leading" secondItem="woW-ra-0Kl" secondAttribute="leading" id="w4H-NW-qkl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yr9-Ss-UNC"/>
                     </view>
@@ -4180,10 +4185,10 @@ I will work on....
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Be-rj-KdF">
-                                <rect key="frame" x="40" y="108" width="334" height="520"/>
+                                <rect key="frame" x="20" y="108" width="374" height="520"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add or Edit Your Stats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ew4-EC-u9T">
-                                        <rect key="frame" x="10" y="10" width="314" height="40"/>
+                                        <rect key="frame" x="10" y="10" width="354" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="tbG-BJ-tYq"/>
                                         </constraints>
@@ -4192,37 +4197,37 @@ I will work on....
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ktf-lt-2jB" customClass="LBZSpinner" customModule="Integrated" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="60" width="314" height="30"/>
+                                        <rect key="frame" x="10" y="60" width="354" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="ieu-xx-Njh"/>
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B4S-fe-3Oa">
-                                        <rect key="frame" x="10" y="100" width="314" height="250"/>
+                                        <rect key="frame" x="10" y="100" width="354" height="250"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="250" id="gck-vW-ADo"/>
                                         </constraints>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddStateCell" rowHeight="40" id="nzH-fK-3hc" customClass="AddStateCell" customModule="Integrated" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="314" height="40"/>
+                                                <rect key="frame" x="0.0" y="28" width="354" height="40"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nzH-fK-3hc" id="9LS-UV-Xjs">
-                                                    <rect key="frame" x="0.0" y="0.0" width="314" height="39.666666666666664"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="354" height="39.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uge-Ur-26T">
-                                                            <rect key="frame" x="0.0" y="0.0" width="314" height="39.666666666666664"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="354" height="39.666666666666664"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njv-nb-wHZ">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="194" height="39.666666666666664"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="234" height="39.666666666666664"/>
                                                                     <fontDescription key="fontDescription" name="FuturaCondMedium" family="Futura Condensed" pointSize="20"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="230" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzp-hG-h0r">
-                                                                    <rect key="frame" x="194" y="0.0" width="60" height="39.666666666666664"/>
+                                                                    <rect key="frame" x="234" y="0.0" width="60" height="39.666666666666664"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="60" id="gdJ-UW-0lE"/>
                                                                     </constraints>
@@ -4231,7 +4236,7 @@ I will work on....
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="198" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHB-SA-65O">
-                                                                    <rect key="frame" x="254" y="0.0" width="60" height="39.666666666666664"/>
+                                                                    <rect key="frame" x="294" y="0.0" width="60" height="39.666666666666664"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="60" id="UCI-tp-Apx"/>
                                                                     </constraints>
@@ -4275,10 +4280,10 @@ I will work on....
                                         </connections>
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QjM-J7-ptm" userLabel="View - Name Container">
-                                        <rect key="frame" x="10" y="360" width="314" height="40"/>
+                                        <rect key="frame" x="10" y="360" width="354" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkS-OH-U5N">
-                                                <rect key="frame" x="0.0" y="0.0" width="40.333333333333336" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="58.666666666666664" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Ca9-J9-MNz"/>
                                                 </constraints>
@@ -4287,7 +4292,7 @@ I will work on....
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="20" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="YKE-kK-ACM" customClass="RoundTextField" customModule="Integrated" customModuleProvider="target">
-                                                <rect key="frame" x="40.333333333333343" y="0.0" width="273.66666666666663" height="40"/>
+                                                <rect key="frame" x="58.666666666666657" y="0.0" width="295.33333333333337" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="cj1-CD-f0q"/>
@@ -4315,16 +4320,16 @@ I will work on....
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qec-h4-EJR" userLabel="View - Value Container">
-                                        <rect key="frame" x="10" y="410" width="314" height="40"/>
+                                        <rect key="frame" x="10" y="410" width="354" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaO-eh-Jpp">
-                                                <rect key="frame" x="0.0" y="0.0" width="40.666666666666664" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="54" height="40"/>
                                                 <fontDescription key="fontDescription" name="FuturaCondMedium" family="Futura Condensed" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="20" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="c4O-tO-Bss" customClass="RoundTextField" customModule="Integrated" customModuleProvider="target">
-                                                <rect key="frame" x="40.666666666666657" y="0.0" width="273.33333333333337" height="40"/>
+                                                <rect key="frame" x="54" y="0.0" width="300" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="FuturaCondMedium" family="Futura Condensed" pointSize="20"/>
@@ -4349,19 +4354,19 @@ I will work on....
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jGm-IH-snr">
-                                        <rect key="frame" x="10" y="410" width="314" height="40"/>
+                                        <rect key="frame" x="10" y="410" width="354" height="40"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEJ-Hq-QRa">
-                                                <rect key="frame" x="0.0" y="0.0" width="157" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="177" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kr7-yX-C0Y">
-                                                        <rect key="frame" x="0.0" y="0.0" width="31.333333333333332" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="44.333333333333336" height="40"/>
                                                         <fontDescription key="fontDescription" name="FuturaCondMedium" family="Futura Condensed" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="20" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="lpy-ab-OxA" customClass="RoundTextField" customModule="Integrated" customModuleProvider="target">
-                                                        <rect key="frame" x="31.333333333333321" y="0.0" width="125.66666666666669" height="40"/>
+                                                        <rect key="frame" x="44.333333333333329" y="0.0" width="132.66666666666669" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="FuturaCondMedium" family="Futura Condensed" pointSize="20"/>
@@ -4385,16 +4390,16 @@ I will work on....
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUZ-Gz-1Bq">
-                                                <rect key="frame" x="157" y="0.0" width="157" height="40"/>
+                                                <rect key="frame" x="177" y="0.0" width="177" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPw-lx-Hvj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="28.666666666666668" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="38.666666666666664" height="40"/>
                                                         <fontDescription key="fontDescription" name="FuturaCondMedium" family="Futura Condensed" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="20" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="GtT-QD-qX6" customClass="RoundTextField" customModule="Integrated" customModuleProvider="target">
-                                                        <rect key="frame" x="28.666666666666657" y="0.0" width="128.33333333333334" height="40"/>
+                                                        <rect key="frame" x="38.666666666666657" y="0.0" width="138.33333333333334" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="FuturaCondMedium" family="Futura Condensed" pointSize="20"/>
@@ -4424,10 +4429,10 @@ I will work on....
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Cah-ze-iS1">
-                                        <rect key="frame" x="10" y="460" width="314" height="50"/>
+                                        <rect key="frame" x="10" y="460" width="354" height="50"/>
                                         <subviews>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCK-aK-8Mw" customClass="CustomButton" customModule="Integrated" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="152" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="50"/>
                                                 <color key="backgroundColor" red="0.12941176469999999" green="0.58823529409999997" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="FuturaCondMedium" family="Futura Condensed" pointSize="25"/>
                                                 <state key="normal" title="Add">
@@ -4443,7 +4448,7 @@ I will work on....
                                                 </connections>
                                             </button>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLW-a6-YFD" customClass="CustomButton" customModule="Integrated" customModuleProvider="target">
-                                                <rect key="frame" x="162" y="0.0" width="152" height="50"/>
+                                                <rect key="frame" x="182" y="0.0" width="172" height="50"/>
                                                 <color key="backgroundColor" red="0.12941176469999999" green="0.58823529409999997" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="FuturaCondMedium" family="Futura Condensed" pointSize="25"/>
                                                 <state key="normal" title="Save">
@@ -4465,7 +4470,7 @@ I will work on....
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3Q-4P-usr">
-                                        <rect key="frame" x="294" y="0.0" width="40" height="40"/>
+                                        <rect key="frame" x="334" y="0.0" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="ENa-ph-aGS"/>
                                             <constraint firstAttribute="height" constant="40" id="Zkq-lP-TPv"/>
@@ -4508,8 +4513,8 @@ I will work on....
                         <color key="backgroundColor" white="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="2Be-rj-KdF" firstAttribute="leading" secondItem="kva-Ti-KBZ" secondAttribute="leading" constant="40" id="9dL-Bi-ICP"/>
-                            <constraint firstItem="kva-Ti-KBZ" firstAttribute="trailing" secondItem="2Be-rj-KdF" secondAttribute="trailing" constant="40" id="HUb-2f-GRf"/>
+                            <constraint firstItem="2Be-rj-KdF" firstAttribute="leading" secondItem="kva-Ti-KBZ" secondAttribute="leading" constant="20" id="9dL-Bi-ICP"/>
+                            <constraint firstItem="kva-Ti-KBZ" firstAttribute="trailing" secondItem="2Be-rj-KdF" secondAttribute="trailing" constant="20" id="HUb-2f-GRf"/>
                             <constraint firstItem="2Be-rj-KdF" firstAttribute="centerX" secondItem="zJV-hZ-j4U" secondAttribute="centerX" id="mhu-N2-jhk"/>
                             <constraint firstItem="2Be-rj-KdF" firstAttribute="centerY" secondItem="zJV-hZ-j4U" secondAttribute="centerY" id="mtx-9d-dG2"/>
                         </constraints>
@@ -4620,10 +4625,10 @@ I will work on....
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xjd-zs-JoK">
-                                <rect key="frame" x="40" y="83" width="334" height="570"/>
+                                <rect key="frame" x="20" y="83" width="374" height="570"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add or Edit Your Goal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NG6-dC-kxd">
-                                        <rect key="frame" x="10" y="10" width="314" height="40"/>
+                                        <rect key="frame" x="10" y="10" width="354" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="x6C-dw-azH"/>
                                         </constraints>
@@ -4632,28 +4637,28 @@ I will work on....
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0HZ-Ms-T4n" customClass="LBZSpinner" customModule="Integrated" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="60" width="314" height="30"/>
+                                        <rect key="frame" x="10" y="60" width="354" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="2TK-zt-t0J"/>
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jLb-cr-Oao">
-                                        <rect key="frame" x="10" y="100" width="314" height="250"/>
+                                        <rect key="frame" x="10" y="100" width="354" height="250"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="250" id="9dW-q4-y6x"/>
                                         </constraints>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddGoalCell" rowHeight="40" id="lga-sd-xH0" customClass="AddGoalCell" customModule="Integrated" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="314" height="40"/>
+                                                <rect key="frame" x="0.0" y="28" width="354" height="40"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lga-sd-xH0" id="4bU-jF-GXW">
-                                                    <rect key="frame" x="0.0" y="0.0" width="314" height="39.666666666666664"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="354" height="39.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynf-Zm-hw0">
-                                                            <rect key="frame" x="274" y="0.0" width="40" height="40.333333333333336"/>
+                                                            <rect key="frame" x="314" y="0.0" width="40" height="40.333333333333336"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="FAo-4j-Hr9"/>
                                                                 <constraint firstAttribute="width" constant="40" id="opf-sD-jMN"/>
@@ -4665,7 +4670,7 @@ I will work on....
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="198" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQi-zm-lcV">
-                                                            <rect key="frame" x="214" y="0.0" width="60" height="40.333333333333336"/>
+                                                            <rect key="frame" x="254" y="0.0" width="60" height="40.333333333333336"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="60" id="wov-Da-qdI"/>
                                                                 <constraint firstAttribute="height" constant="40" id="xtn-sV-GHK"/>
@@ -4675,7 +4680,7 @@ I will work on....
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="230" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbp-m6-JWj">
-                                                            <rect key="frame" x="154" y="0.0" width="60" height="40.333333333333336"/>
+                                                            <rect key="frame" x="194" y="0.0" width="60" height="40.333333333333336"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="AeY-1z-0R0"/>
                                                                 <constraint firstAttribute="width" constant="60" id="JRu-Oa-4VC"/>
@@ -4685,7 +4690,7 @@ I will work on....
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vML-tG-7OY">
-                                                            <rect key="frame" x="0.0" y="0.0" width="154" height="40.333333333333336"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="194" height="40.333333333333336"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="f3l-JC-ugc"/>
                                                             </constraints>
@@ -4724,16 +4729,16 @@ I will work on....
                                         </connections>
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xIc-Le-cpS" userLabel="View - Name Container">
-                                        <rect key="frame" x="10" y="360" width="314" height="40"/>
+                                        <rect key="frame" x="10" y="360" width="354" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYS-vn-PbS">
-                                                <rect key="frame" x="0.0" y="0.0" width="40.333333333333336" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="58.666666666666664" height="40"/>
                                                 <fontDescription key="fontDescription" name="FuturaCondMedium" family="Futura Condensed" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="20" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="X6i-aN-qhb" customClass="RoundTextField" customModule="Integrated" customModuleProvider="target">
-                                                <rect key="frame" x="40.333333333333343" y="0.0" width="273.66666666666663" height="40"/>
+                                                <rect key="frame" x="58.666666666666657" y="0.0" width="295.33333333333337" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="FuturaCondMedium" family="Futura Condensed" pointSize="20"/>
@@ -4758,10 +4763,10 @@ I will work on....
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3mU-nh-Bki" userLabel="View - Value Container">
-                                        <rect key="frame" x="10" y="410" width="314" height="40"/>
+                                        <rect key="frame" x="10" y="410" width="354" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppD-j2-bBW">
-                                                <rect key="frame" x="0.0" y="0.0" width="40.666666666666664" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="54" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="nfv-QO-QLH"/>
                                                 </constraints>
@@ -4770,7 +4775,7 @@ I will work on....
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="20" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="ee6-CE-bUD" customClass="RoundTextField" customModule="Integrated" customModuleProvider="target">
-                                                <rect key="frame" x="40.666666666666657" y="0.0" width="273.33333333333337" height="40"/>
+                                                <rect key="frame" x="54" y="0.0" width="300" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="FuturaCondMedium" family="Futura Condensed" pointSize="20"/>
@@ -4795,16 +4800,16 @@ I will work on....
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yrA-Y5-eTh" userLabel="View - Goal Container">
-                                        <rect key="frame" x="10" y="460" width="314" height="40"/>
+                                        <rect key="frame" x="10" y="460" width="354" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3L-fc-99b">
-                                                <rect key="frame" x="0.0" y="0.0" width="33.333333333333336" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="47.666666666666664" height="40"/>
                                                 <fontDescription key="fontDescription" name="FuturaCondMedium" family="Futura Condensed" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="20" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="U8a-jF-QOU" customClass="RoundTextField" customModule="Integrated" customModuleProvider="target">
-                                                <rect key="frame" x="33.333333333333343" y="0.0" width="280.66666666666663" height="40"/>
+                                                <rect key="frame" x="47.666666666666657" y="0.0" width="306.33333333333337" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="GFZ-Hv-9qJ"/>
@@ -4832,10 +4837,10 @@ I will work on....
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qTN-UN-fYK">
-                                        <rect key="frame" x="10" y="510" width="314" height="50"/>
+                                        <rect key="frame" x="10" y="510" width="354" height="50"/>
                                         <subviews>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEi-qK-w3m" customClass="CustomButton" customModule="Integrated" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="147" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="167" height="50"/>
                                                 <color key="backgroundColor" red="0.12941176469999999" green="0.58823529409999997" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="FuturaCondMedium" family="Futura Condensed" pointSize="25"/>
                                                 <state key="normal" title="Add">
@@ -4851,7 +4856,7 @@ I will work on....
                                                 </connections>
                                             </button>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCB-PL-81D" customClass="CustomButton" customModule="Integrated" customModuleProvider="target">
-                                                <rect key="frame" x="167" y="0.0" width="147" height="50"/>
+                                                <rect key="frame" x="187" y="0.0" width="167" height="50"/>
                                                 <color key="backgroundColor" red="0.12941176469999999" green="0.58823529409999997" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="FuturaCondMedium" family="Futura Condensed" pointSize="25"/>
                                                 <state key="normal" title="Save">
@@ -4873,7 +4878,7 @@ I will work on....
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ju-O3-jme">
-                                        <rect key="frame" x="294" y="0.0" width="40" height="40"/>
+                                        <rect key="frame" x="334" y="0.0" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="OhE-lj-xI7"/>
                                             <constraint firstAttribute="width" constant="40" id="sCN-wX-aoJ"/>
@@ -4916,8 +4921,8 @@ I will work on....
                         <color key="backgroundColor" white="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Xjd-zs-JoK" firstAttribute="centerY" secondItem="lvJ-Cg-c6D" secondAttribute="centerY" id="FBb-JA-qBD"/>
-                            <constraint firstItem="Xjd-zs-JoK" firstAttribute="leading" secondItem="gGR-Lg-K3G" secondAttribute="leading" constant="40" id="PUu-OP-fvF"/>
-                            <constraint firstItem="gGR-Lg-K3G" firstAttribute="trailing" secondItem="Xjd-zs-JoK" secondAttribute="trailing" constant="40" id="kfy-zr-PwO"/>
+                            <constraint firstItem="Xjd-zs-JoK" firstAttribute="leading" secondItem="gGR-Lg-K3G" secondAttribute="leading" constant="20" id="PUu-OP-fvF"/>
+                            <constraint firstItem="gGR-Lg-K3G" firstAttribute="trailing" secondItem="Xjd-zs-JoK" secondAttribute="trailing" constant="20" id="kfy-zr-PwO"/>
                             <constraint firstItem="Xjd-zs-JoK" firstAttribute="centerX" secondItem="lvJ-Cg-c6D" secondAttribute="centerX" id="lje-RW-uns"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gGR-Lg-K3G"/>
@@ -4942,32 +4947,37 @@ I will work on....
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xTC-Rx-JeT">
-                                <rect key="frame" x="57" y="78" width="300" height="580"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xTC-Rx-JeT">
+                                <rect key="frame" x="20" y="78" width="374" height="580"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfU-IE-1fn">
-                                        <rect key="frame" x="0.0" y="20" width="300" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfU-IE-1fn">
+                                        <rect key="frame" x="0.0" y="20" width="374" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="9Zx-oM-yqj"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Futura-CondensedBold" family="Futura" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap here to select photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Whn-1O-zg9">
-                                        <rect key="frame" x="50" y="235" width="200" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap here to select photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Whn-1O-zg9">
+                                        <rect key="frame" x="0.0" y="60" width="374" height="370"/>
                                         <fontDescription key="fontDescription" name="FuturaCondMedium" family="Futura Condensed" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AtV-Jy-zyK">
-                                        <rect key="frame" x="10" y="70" width="280" height="350"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AtV-Jy-zyK">
+                                        <rect key="frame" x="10" y="70" width="354" height="350"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="350" id="SOW-rL-N63"/>
+                                        </constraints>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Lbs" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fFK-Oo-Sxc">
-                                        <rect key="frame" x="245" y="480" width="44" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Lbs" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fFK-Oo-Sxc">
+                                        <rect key="frame" x="284" y="470" width="80" height="40"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="T6a-VY-uZM"/>
+                                            <constraint firstAttribute="height" constant="40" id="aM3-v2-qUH"/>
+                                        </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="FuturaCondMedium" family="Futura Condensed" pointSize="25"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -4975,65 +4985,110 @@ I will work on....
                                             <outlet property="delegate" destination="Ssv-uh-eym" id="wp4-qX-uLr"/>
                                         </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Your Current Weight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Dq-jK-kaM">
-                                        <rect key="frame" x="8" y="430" width="281" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your Current Weight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Dq-jK-kaM">
+                                        <rect key="frame" x="0.0" y="430" width="374" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="9dx-cH-3Or"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="FuturaCondMedium" family="Futura Condensed" pointSize="20"/>
                                         <color key="textColor" red="0.59999999999999998" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="20" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="3XE-l4-tFd" customClass="RoundTextField" customModule="Integrated" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="470" width="229" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="20" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="3XE-l4-tFd" customClass="RoundTextField" customModule="Integrated" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="470" width="264" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="acR-NG-a1Z"/>
+                                        </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="FuturaCondMedium" family="Futura Condensed" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="20"/>
+                                                <real key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qle-EA-teO" customClass="CustomButton" customModule="Integrated" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="520" width="281" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qle-EA-teO" customClass="CustomButton" customModule="Integrated" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="520" width="354" height="50"/>
                                         <color key="backgroundColor" red="0.12941176469999999" green="0.58823529409999997" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="AxA-eK-znt"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="FuturaCondMedium" family="Futura Condensed" pointSize="25"/>
                                         <state key="normal" title="Add">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="20"/>
+                                                <real key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="onAddBtnTapped:" destination="Ssv-uh-eym" eventType="touchUpInside" id="GM9-ko-ueh"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8k-ij-3oB">
-                                        <rect key="frame" x="251" y="8" width="41" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8k-ij-3oB">
+                                        <rect key="frame" x="334" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="UMz-zv-ZwX"/>
+                                            <constraint firstAttribute="width" constant="40" id="oQU-wF-khE"/>
+                                        </constraints>
                                         <state key="normal" image="ic_close.png"/>
                                         <connections>
                                             <action selector="onCloseBtnTapped:" destination="Ssv-uh-eym" eventType="touchUpInside" id="fCX-Ch-U5f"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVm-SZ-g37">
-                                        <rect key="frame" x="10" y="70" width="280" height="350"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVm-SZ-g37">
+                                        <rect key="frame" x="10" y="70" width="354" height="350"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="350" id="aQL-qW-Ojc"/>
+                                        </constraints>
                                         <connections>
                                             <action selector="onPhotoBtnTapped:" destination="Ssv-uh-eym" eventType="touchUpInside" id="65G-bS-75e"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="AtV-Jy-zyK" secondAttribute="trailing" constant="10" id="15N-vX-DaP"/>
+                                    <constraint firstItem="Qle-EA-teO" firstAttribute="top" secondItem="fFK-Oo-Sxc" secondAttribute="bottom" constant="10" id="7Do-3h-Kzt"/>
+                                    <constraint firstItem="o8k-ij-3oB" firstAttribute="top" secondItem="xTC-Rx-JeT" secondAttribute="top" id="Adf-2D-lor"/>
+                                    <constraint firstAttribute="trailing" secondItem="Whn-1O-zg9" secondAttribute="trailing" id="GIE-GY-TZb"/>
+                                    <constraint firstAttribute="trailing" secondItem="fFK-Oo-Sxc" secondAttribute="trailing" constant="10" id="KT7-X3-5BK"/>
+                                    <constraint firstItem="2Dq-jK-kaM" firstAttribute="top" secondItem="Whn-1O-zg9" secondAttribute="bottom" id="TAS-2W-BJL"/>
+                                    <constraint firstItem="3XE-l4-tFd" firstAttribute="leading" secondItem="xTC-Rx-JeT" secondAttribute="leading" constant="10" id="XfG-F5-AxO"/>
+                                    <constraint firstItem="fFK-Oo-Sxc" firstAttribute="top" secondItem="2Dq-jK-kaM" secondAttribute="bottom" constant="10" id="Yws-f0-kwf"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qle-EA-teO" secondAttribute="trailing" constant="10" id="Z1e-pl-lhd"/>
+                                    <constraint firstItem="Qle-EA-teO" firstAttribute="leading" secondItem="xTC-Rx-JeT" secondAttribute="leading" constant="10" id="Zuz-3e-smE"/>
+                                    <constraint firstItem="tfU-IE-1fn" firstAttribute="top" secondItem="xTC-Rx-JeT" secondAttribute="top" constant="20" id="aVs-QJ-MG7"/>
+                                    <constraint firstItem="Whn-1O-zg9" firstAttribute="top" secondItem="tfU-IE-1fn" secondAttribute="bottom" id="aZw-qT-Pgt"/>
+                                    <constraint firstItem="YVm-SZ-g37" firstAttribute="leading" secondItem="xTC-Rx-JeT" secondAttribute="leading" constant="10" id="byz-rb-qiy"/>
+                                    <constraint firstItem="Whn-1O-zg9" firstAttribute="leading" secondItem="xTC-Rx-JeT" secondAttribute="leading" id="dbu-Kp-zYg"/>
+                                    <constraint firstAttribute="height" constant="580" id="fX4-dT-j1K"/>
+                                    <constraint firstItem="tfU-IE-1fn" firstAttribute="leading" secondItem="xTC-Rx-JeT" secondAttribute="leading" id="hlt-xg-6UZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="o8k-ij-3oB" secondAttribute="trailing" id="iBi-ZJ-owp"/>
+                                    <constraint firstItem="fFK-Oo-Sxc" firstAttribute="leading" secondItem="3XE-l4-tFd" secondAttribute="trailing" constant="10" id="ixN-fC-MYv"/>
+                                    <constraint firstAttribute="trailing" secondItem="tfU-IE-1fn" secondAttribute="trailing" id="mR2-lF-ppl"/>
+                                    <constraint firstAttribute="trailing" secondItem="YVm-SZ-g37" secondAttribute="trailing" constant="10" id="mmf-O4-xjU"/>
+                                    <constraint firstItem="AtV-Jy-zyK" firstAttribute="leading" secondItem="xTC-Rx-JeT" secondAttribute="leading" constant="10" id="q59-Qy-em7"/>
+                                    <constraint firstItem="3XE-l4-tFd" firstAttribute="top" secondItem="2Dq-jK-kaM" secondAttribute="bottom" constant="10" id="tFR-YD-4Sk"/>
+                                    <constraint firstItem="YVm-SZ-g37" firstAttribute="top" secondItem="tfU-IE-1fn" secondAttribute="bottom" constant="10" id="urC-5u-3Oh"/>
+                                    <constraint firstItem="2Dq-jK-kaM" firstAttribute="top" secondItem="AtV-Jy-zyK" secondAttribute="bottom" constant="10" id="wCJ-LJ-x2r"/>
+                                    <constraint firstItem="2Dq-jK-kaM" firstAttribute="leading" secondItem="xTC-Rx-JeT" secondAttribute="leading" id="x7U-Lb-QQR"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Dq-jK-kaM" secondAttribute="trailing" id="zik-JF-hJh"/>
+                                    <constraint firstItem="AtV-Jy-zyK" firstAttribute="top" secondItem="tfU-IE-1fn" secondAttribute="bottom" constant="10" id="zqC-iY-kag"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="xTC-Rx-JeT" firstAttribute="leading" secondItem="CGd-U4-ap0" secondAttribute="leading" constant="20" id="Q8F-QF-VTs"/>
+                            <constraint firstItem="xTC-Rx-JeT" firstAttribute="centerY" secondItem="GYn-uY-uJN" secondAttribute="centerY" id="vzI-MB-SnC"/>
+                            <constraint firstItem="CGd-U4-ap0" firstAttribute="trailing" secondItem="xTC-Rx-JeT" secondAttribute="trailing" constant="20" id="xEQ-K8-WCE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="CGd-U4-ap0"/>
                     </view>
                     <connections>
@@ -5045,7 +5100,7 @@ I will work on....
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9KP-xk-F7Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="gfd-Gh-Naq"/>
             </objects>
-            <point key="canvasLocation" x="1809" y="2322"/>
+            <point key="canvasLocation" x="1808.6956521739132" y="2321.739130434783"/>
         </scene>
         <!--Main MenuVC-->
         <scene sceneID="DWs-NV-DnP">
@@ -5450,13 +5505,13 @@ I will work on....
                                                     <rect key="frame" x="192" y="0.0" width="182" height="40"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0L-V0-g3T">
-                                                            <rect key="frame" x="0.0" y="0.0" width="28.666666666666668" height="40"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="41" height="40"/>
                                                             <fontDescription key="fontDescription" name="FuturaCondMedium" family="Futura Condensed" pointSize="20"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="20" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Xa8-b5-wFi" customClass="RoundTextField" customModule="Integrated" customModuleProvider="target">
-                                                            <rect key="frame" x="38.666666666666657" y="0.0" width="143.33333333333334" height="40"/>
+                                                            <rect key="frame" x="51" y="0.0" width="131" height="40"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" name="FuturaCondMedium" family="Futura Condensed" pointSize="20"/>
@@ -5489,7 +5544,7 @@ I will work on....
                                             <rect key="frame" x="20" y="410" width="374" height="40"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uX-iU-gsZ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="51.666666666666664" height="40"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="67.333333333333329" height="40"/>
                                                     <fontDescription key="fontDescription" name="FuturaCondMedium" family="Futura Condensed" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -5508,7 +5563,7 @@ I will work on....
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="20" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Ymv-C8-cen" customClass="RoundTextField" customModule="Integrated" customModuleProvider="target">
-                                                    <rect key="frame" x="51.666666666666671" y="0.0" width="232.33333333333331" height="40"/>
+                                                    <rect key="frame" x="67.333333333333329" y="0.0" width="216.66666666666669" height="40"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" name="FuturaCondMedium" family="Futura Condensed" pointSize="20"/>
@@ -5539,7 +5594,7 @@ I will work on....
                                             <rect key="frame" x="20" y="460" width="374" height="40"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRf-dZ-WSg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="47" height="40"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="64.333333333333329" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="ZGi-hG-fKG"/>
                                                     </constraints>
@@ -5561,10 +5616,10 @@ I will work on....
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ttz-iu-eFS" userLabel="View - Feet Inch Container">
-                                                    <rect key="frame" x="47" y="0.0" width="207" height="40"/>
+                                                    <rect key="frame" x="64.333333333333329" y="0.0" width="189.66666666666669" height="40"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcx-Bh-vLo">
-                                                            <rect key="frame" x="190.66666666666669" y="0.0" width="16.333333333333343" height="40"/>
+                                                            <rect key="frame" x="167.66666666666669" y="0.0" width="22" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="hFO-AG-4ql"/>
                                                             </constraints>
@@ -5573,7 +5628,7 @@ I will work on....
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="20" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="pBa-Gt-ah8" customClass="RoundTextField" customModule="Integrated" customModuleProvider="target">
-                                                            <rect key="frame" x="90.666666666666657" y="0.0" width="100" height="40"/>
+                                                            <rect key="frame" x="67.666666666666671" y="0.0" width="100.00000000000001" height="40"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="MoM-oh-A8z"/>
@@ -5589,7 +5644,7 @@ I will work on....
                                                             </userDefinedRuntimeAttributes>
                                                         </textField>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ft." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NF-5c-HcB">
-                                                            <rect key="frame" x="74.333333333333343" y="0.0" width="16.333333333333329" height="40"/>
+                                                            <rect key="frame" x="49.666666666666671" y="0.0" width="18" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="7Yy-jT-XWr"/>
                                                             </constraints>
@@ -5598,7 +5653,7 @@ I will work on....
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="20" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Hhb-3N-psm" customClass="RoundTextField" customModule="Integrated" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="74.333333333333329" height="40"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="49.666666666666664" height="40"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="k4c-fS-Yuf"/>
@@ -5632,10 +5687,10 @@ I will work on....
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XIh-W9-IJ5" userLabel="View - Cm Container">
-                                                    <rect key="frame" x="47" y="0.0" width="207" height="40"/>
+                                                    <rect key="frame" x="64.333333333333329" y="0.0" width="189.66666666666669" height="40"/>
                                                     <subviews>
                                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="20" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="mLf-hb-33J" customClass="RoundTextField" customModule="Integrated" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="207" height="40"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="189.66666666666666" height="40"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="FDX-MX-Ebs"/>

@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import UserNotifications
 import IQKeyboardManagerSwift
 
 @UIApplicationMain
@@ -27,7 +28,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		}
 		Parse.initialize(with: parseConfig)
 		
+		UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge, .carPlay ]) {
+			(granted, error) in
+			print("Permission granted: \(granted)")
+			guard granted else { return }
+			self.getNotificationSettings()
+		}
+		
 		return true
+	}
+	
+	func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+		createInstallationOnParse(deviceTokenData: deviceToken)
 	}
 
 	func applicationWillResignActive(_ application: UIApplication) {
@@ -55,6 +67,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	var loginVC: LoginVC? = nil
 	func gotoLoginVC() {
 		self.loginVC?.navigationController?.popToViewController(self.loginVC!, animated: true)
+	}
+	
+	func createInstallationOnParse(deviceTokenData: Data) {
+		if let installation = PFInstallation.current() {
+			installation.setDeviceTokenFrom(deviceTokenData)
+			installation.setObject(["News"], forKey: "channels")
+			installation.saveInBackground {
+				(success: Bool, error: Error?) in
+				if (success) {
+					print("You have successfully saved your push installation to Back4App!")
+				} else {
+					if let myError = error{
+						print("Error saving parse installation \(myError.localizedDescription)")
+					}else{
+						print("Uknown error")
+					}
+				}
+			}
+		}
+	}
+	
+	func getNotificationSettings() {
+		UNUserNotificationCenter.current().getNotificationSettings { (settings) in
+			print("Notification settings: \(settings)")
+			guard settings.authorizationStatus == .authorized else { return }
+			DispatchQueue.main.async(execute: {
+				UIApplication.shared.registerForRemoteNotifications()
+			})
+		}
 	}
 }
 

@@ -44,6 +44,12 @@ public class ViewPager: UIView {
         super.init(frame: frame)
         setupView()
     }
+	
+	override public func layoutSubviews() {
+		super.layoutSubviews()
+		
+		reloadViews()
+	}
     
     func setupView() {
         self.addSubview(scrollView)
@@ -177,6 +183,10 @@ public class ViewPager: UIView {
         view.frame = CGRect(x: self.frame.width * CGFloat(index), y: 0,
 							width: self.frame.width,
 							height: self.frame.height)
+		view.autoresizingMask = UIViewAutoresizing(rawValue: UIViewAutoresizing.flexibleLeftMargin.rawValue
+			| UIViewAutoresizing.flexibleTopMargin.rawValue
+			| UIViewAutoresizing.flexibleWidth.rawValue
+			| UIViewAutoresizing.flexibleHeight.rawValue)
 		print(view.frame)
     }
 }

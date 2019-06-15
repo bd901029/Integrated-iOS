@@ -151,6 +151,7 @@ class ProgressTrackerVC: UIViewController {
 			let cell = ProgressTrackerStateCell.create()!
 			cell.frame = CGRect(x: 0, y: CGFloat(index)*cellHeight, width: customStateContainer.frame.width, height: cellHeight)
 			cell.name = name
+			cell.autoresizingMask = UIViewAutoresizing.flexibleTopMargin
 			
 			customStateContainer.addSubview(cell)
 		}
@@ -172,6 +173,7 @@ class ProgressTrackerVC: UIViewController {
 			cell.goalName = name
 			cell.frame = CGRect(x: 0, y: cellHeight * CGFloat(index),
 								 width: goalValueContainer.frame.width, height: cellHeight)
+			cell.autoresizingMask = UIViewAutoresizing.flexibleTopMargin
 			
 			goalValueContainer.addSubview(cell)
 		}
