@@ -35,6 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			self.getNotificationSettings()
 		}
 		
+		UIApplication.shared.applicationIconBadgeNumber = 0
+		
 		return true
 	}
 	
